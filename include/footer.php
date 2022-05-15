@@ -29,7 +29,7 @@
 					</div>
 			</div>
 			<div class="footer__subscribe">
-				<div class="footer__subscribe-title">Подписаться</div>
+				<div class="footer__subscribe-title">Подписаться на новости</div>
 				<form action="">
 					<div>
 						<input type="text" placeholder="E-mail ..." class="form-input">

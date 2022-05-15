@@ -522,7 +522,7 @@ input {
 }
 
 .footer__lp {
-    margin-right: 6vw;
+    margin-right: 7vw;
 }
 
 .footer__lp .footer__phone {
@@ -551,7 +551,7 @@ input {
     font-size: 14px;
     line-height: 26px;
 }
-
+.footer__subscribe{max-width: 212px;}
 .footer__subscribe>.footer__subscribe-title {
     width: 100%;
     font-weight: 700;

@@ -739,10 +739,10 @@ input {
 .critem__info .critem__info-time .critem__info-timedel:before{content:"—";    margin: 0 7px;}
 .critem__info .critem__info-price{
     font-size: 18px;
-    font-weight: 600;
+    
 }
 .critem__info .critem__info-price span{
-    font-size: 28px;margin-right: 5px;
+    font-size: 28px;margin-right: 5px;font-weight: 600;
 }
 .critem__info .critem__info-price-bl .critem__info-sub{
       margin-bottom: 6px;

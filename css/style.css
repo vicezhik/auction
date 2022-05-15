@@ -665,11 +665,12 @@ input {
 .critem__i .critem__i-num {
     background: #1F3A60;
     color: #fff;
-    padding: 4px 0 4px 23px;
     min-width: 106px;
     font-weight: 700;
     position: relative;
-    max-height: 30px;
+    max-height: 24px;
+    line-height: 24px;
+    padding-left: 23px;
     margin-right: 14px;
 }
 
@@ -678,12 +679,12 @@ input {
     display: block;
     position: absolute;
     bottom: 0;
-    border: 30px solid transparent;
+    border: 24px solid transparent;
     border-left: 6px solid #1F3A60;
     border-top: 0 solid #1F3A60;
     width: 0;
     height: 0;
-    right: -36px;
+    right: -30px;
     height: 0;
 }
 
@@ -705,7 +706,7 @@ input {
 .critem__info .critem__info-modif {
     font-weight: 600;margin-bottom: 10px;
 }
-.critem__info .critem__info-vin {    display: flex;margin-bottom: 10px;}
+.critem__info .critem__info-vin {    display: flex;margin-bottom: 13px;}
 .critem__info .critem__info-vin .vin-t{
     font-weight: 700;
     color: #5D7592;margin-right: 5px;
@@ -733,8 +734,8 @@ input {
 }
 
 .critem__info .critem__info-time{display: flex;
-       align-items: end;    line-height: 17px; margin-top: 11px;
-       margin-bottom: 14px;}
+       align-items: end;    line-height: 17px;     margin-top: 13px;
+       margin-bottom: 15px;}
 .critem__info .critem__info-time .critem__info-timedel:before{content:"—";    margin: 0 7px;}
 .critem__info .critem__info-price{
     font-size: 18px;

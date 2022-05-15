@@ -1,0 +1,13 @@
+@media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0)
+{
+	a {transition: color .3s}
+	a:hover {text-decoration: none}
+    .link:hover{text-decoration: underline;}
+    .header__bt a:hover{
+        color:#3A9C3E;
+    }
+    .footer__menu a:hover{
+        text-decoration: underline;
+    }
+    .critem__info  .critem__info-map a:hover{border:none}
+}

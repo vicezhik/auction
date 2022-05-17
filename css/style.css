@@ -10,8 +10,38 @@
     font-display: block;
 }
 
-.icon-vin-yes:before {
+.icon-bid-active:before {
+    content: "\e90b";
+  }
+  .icon-bid:before {
+    content: "\e90c";
+  }
+  .icon-star-full:before {
     content: "\e901";
+  }
+  .icon-star:before {
+    content: "\e904";
+  }
+  .icon-list-grid:before {
+    content: "\e905";
+  }
+  .icon-list-card:before {
+    content: "\e906";
+  }
+  .icon-bids-all:before {
+    content: "\e907";
+  }
+  .icon-bid-auto:before {
+    content: "\e908";
+  }
+  .icon-delivery:before {
+    content: "\e909";
+  }
+  .icon-tag:before {
+    content: "\e90a";
+  }
+  .icon-nds:before {
+    content: "\e90d";
   }
   .icon-map:before {
     content: "\e902";
@@ -22,6 +52,7 @@
   .icon-login:before {
     content: "\e900";
   }
+  
 
 html,
 body,
@@ -210,7 +241,15 @@ label {
     color: #5D7592;
     font-weight: 300;
 }
-
+.tooltip {
+    position: fixed;
+    padding: 5px 7px;
+    border-radius: 4px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgb(27 58 89 / 5%);
+    border-radius: 4px 5px 4px 0px;
+font-size: 14px;}
 /* site style
 ------------------------------------------------ */
 .viewport-wrapper {
@@ -317,7 +356,7 @@ input {
     font-weight: 500;
     line-height: 20px;
     border-radius: 4px;
-    padding: 8px 0;
+    padding: 15px 0;
     width: 100%;
 }
 
@@ -326,7 +365,10 @@ input {
     background: #fff;
     border: 2px solid #5D7592;
 }
-
+.btn-green{
+    color: #FFFFFF;
+    background: #3A9C3E;
+}
 .color-green {
     color: #3A9C3E;
 }
@@ -611,6 +653,7 @@ input {
     margin: 0 0.74% 20px;
 }
 
+
 .crlist .critem a {
     text-decoration: none;
     color: #1F3A60;
@@ -619,7 +662,42 @@ input {
 .crlist .critem .critem__imgs img {
     width: 100%;
 }
-
+.critem__top{position: relative;}
+.critem__top .critem__top-nds{
+    width: 40px;
+    height: 57px;
+    display: block;
+    position: absolute;
+    background: #3A9C3E;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    padding-top: 4px;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 25%);
+    margin-left: 29px;
+}
+.crlist .critem__top .critem__top-bidsall{
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    width: 48px;
+    height: 49px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    right: 16px;
+    display: none;
+}
+.critem__top .critem__top-nds:before{font-size: 24px;}
+.crlist .critem__top .critem__top-bidsall:before{font-size: 28px;}
 .critem__imgs-pages {
     position: absolute;
     left: 19px;
@@ -660,7 +738,10 @@ input {
 .critem__i {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-right: 21px;line-height: 19px;
 }
+
 
 .critem__i .critem__i-num {
     background: #1F3A60;
@@ -689,24 +770,38 @@ input {
 }
 
 .critem__i .critem__i-type {
-    font-weight: 500;    margin-top: 1px;
+    font-weight: 500;    margin-top: 1px;flex: 1; font-size: 12px;
+}
+.critem__i .critem__i-bid span{
+    font-size: 17px;
+    color:#5D7592;
+}
+.critem__i .critem__i-fav a{
+    font-size: 17px;
+    color:#C3D3EA;
+}
+.critem__i .critem__i-fav{
+    margin-left: 16px;
+}
+.critem__i .critem__i-fav .icon-star.active:before{
+    content:"\e901";color: #5D7592;
 }
 
 .critem__info {
-    padding: 16px 23px 23px;
+    padding: 16px 23px 13px 23px;
 }
 
 .critem__info .critem__info-model {
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .critem__info .critem__info-modif {
-    font-weight: 600;margin-bottom: 10px;
+    font-weight: 600;margin-bottom: 12px;
 }
-.critem__info .critem__info-vin {    display: flex;margin-bottom: 13px;}
+.critem__info .critem__info-vin {    display: flex;margin-bottom: 12px;}
 .critem__info .critem__info-vin .vin-t{
     font-weight: 700;
     color: #5D7592;margin-right: 5px;
@@ -714,17 +809,34 @@ input {
 .critem__info .critem__info-vin .icon-vin{
     width: 23px;
     height: 23px;
-    background: url(/i/icons/vin-yes.svg);
     display: inline-block;margin-left: 8px;
 }
-.critem__info  .critem__info-km{width: 45%;display: inline-block;}
-.critem__info  .critem__info-km:before{color:#5D7592;}
-.critem__info  .critem__info-map{display: inline-block;}
-.critem__info  .critem__info-map:before{color:#5D7592}
+.critem__info .critem__info-vin .icon-vin.vin-yes{
+    background: url(/i/icons/vin-yes.svg);
+}
+.critem__info .critem__info-vin .icon-vin.vin-check{
+    background: url(/i/icons/vin-check.svg);
+}
+.critem__info .critem__info-vin .icon-vin.vin-no{
+    background: url(/i/icons/vin-no.svg);
+}
 
+.critem__info   .text-icon{    display: inline-flex;
+    align-items: center;margin-bottom: 12px;}
+.critem__info .text-icon:before{ color: #5D7592;
+    margin-right: 5px;
+    font-size: 16px;
+    min-width: 20px;
+    text-align: center;}
+.critem__info  .critem__info-km{width: 43%;}
+.critem__info  .critem__info-map{width: 55%;}
+.critem__info  .critem__info-delivery:before{color:#3A9C3E}
+.critem__info  .critem__info-delivery a{color:#3A9C3E; font-weight: 500;}
 
 .critem__info  .critem__info-map a{color: #6AA4FB;
-    border-bottom: dashed 1px #6AA4FB;}
+    border-bottom: dashed 1px #6AA4FB;text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
 
 .critem__info .critem__info-sub{
     display: block;color:#5D7592;
@@ -734,8 +846,8 @@ input {
 }
 
 .critem__info .critem__info-time{display: flex;
-       align-items: end;    line-height: 17px;     margin-top: 13px;
-       margin-bottom: 15px;}
+       align-items: end;    line-height: 17px;     
+       margin-bottom: 12px;}
 .critem__info .critem__info-time .critem__info-timedel:before{content:"—";    margin: 0 7px;}
 .critem__info .critem__info-price{
     font-size: 18px;
@@ -748,3 +860,53 @@ input {
       margin-bottom: 6px;
 
 }
+.critem__info .critem__info-price-bl{
+    margin-top: 7px;    margin-bottom: 12px;    font-weight: 500;
+    font-size: 13px;
+}
+.critem__info .critem__info-price-bl .bid-smaller{
+    color:#811B18;
+}
+.critem__info .critem__info-price-bl .bid-more{
+    color:#3A9C3E;
+}
+.critem__info-bidinput{
+    margin-bottom: 12px;
+}
+.critem__info-bidinput .critem__info-sub{
+    font-size: 12px;
+}
+
+.input__num{border:1px solid #ECF6FF; border-radius:4px;    padding: 9px;display: flex;}
+.input__num input{
+    border:none;
+    padding: 0 20px;
+}
+.input__num a{width: 26px;
+    text-align: center;}
+
+.input__num a:before{content:'-';font-size: 20px; color:#C3D3EA; weight:600; }
+.input__num a.p:before{content:'+';}
+.group-input {display: flex;}
+.group-input .input__num{flex:1;}
+
+.critem__info-bidinput .input__num input{font-size: 20px;font-weight: 500;}
+.critem__info-bidinput .group-input button{    width: 55px;
+    margin-left: 12px;
+    font-size: 21px;    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+.critem__info-bidinput .group-input button.icon-bid{ 
+        font-size: 18px;}
+.critem__info-minprice.minprice-success{
+    color:#3A9C3E;
+    font-weight: 500;
+}
+.critem__info-minprice.minprice-success:before{
+    color:#3A9C3E;
+}
+
+.critem.critem-auth .critem__i {margin-top: 13px;}
+.critem.critem-auth .critem__info-km{width: 100%;}
+.critem.critem-auth .critem__info-map{width: 61%;}

@@ -59,7 +59,7 @@
 <script src="js/jquery.toShowHide.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/slick.min.js"></script>
-<script src="js/script.js"></script>
+<script src="js/script.js?<?=filemtime('js/script.js')?>"></script>
 
 <link href="css/fancy.css?<?=filemtime('css/fancy.css')?>" rel="stylesheet" />
 

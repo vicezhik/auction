@@ -1,7 +1,32 @@
 @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0)
 {
 	a {transition: color .3s}
+    a:hover:before {transition: all .3s}
+    .btn{transition: all .3s}
 	a:hover {text-decoration: none}
+    .btn-green:hover{
+        background:#40BB45;
+    }
+    .btn-green:focus, .btn-green.active{
+        background:#3A9C3E;
+    }
+    .btn-green.disabled{
+        background:#E0E0E0;
+    }
+    .btn-white:hover{
+        color:#1F3A60;
+        border-color:#1F3A60;
+    }
+    .btn-white:focus, .btn-white.active{
+        background:#5D7592;
+        border-color:#5D7592;
+        color:#fff;
+    }
+    .btn-white.disabled{
+        color:#E0E0E0;
+        border-color:#E0E0E0;
+    }
+
     .link:hover{text-decoration: underline;}
     .header__bt a:hover{
         color:#3A9C3E;
@@ -9,5 +34,10 @@
     .footer__menu a:hover{
         text-decoration: underline;
     }
-    .critem__info  .critem__info-map a:hover{border:none}
+    .critem__info  .critem__info-map a:hover{border-color:transparent}
+    .critem__i-fav a.icon-star:not(.active):hover:before{
+        color: #5D7592;
+    }
+    .crlist .critem:hover .critem__top .critem__top-bidsall{display: flex;}
+
 }

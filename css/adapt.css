@@ -210,19 +210,22 @@
         margin-bottom: 0;
     }
     .modal.minfo-xs {
-        padding: 30px;
+        padding: 28px;
     }
     
     .modal.minfo-sm {
-        padding: 30px;
+        padding: 28px;
     }
     
     .modal.minfo-md {
-        padding: 30px;
+        padding: 28px;
     }
     
     .modal.minfo-full {
         padding: 20px;
+    }
+    .modal.minfo-sm2 {
+        padding: 28px;
     }
 }
 
@@ -230,12 +233,12 @@
 (min-width:0\0),
 (min--moz-device-pixel-ratio:0) {
 
-    input,
+    input,textarea,
     .ic-input:before {
         transition: all .3s
     }
 
-    input:hover {
+    input:hover, textarea:hover {
         border-color: #BDC5D7;
     }
 
@@ -243,7 +246,7 @@
         color: #1F3A60;
     }
 
-    input:focus {
+    input:focus,textarea:focus {
         border-color: #3A9C3E;
     }
 
@@ -251,8 +254,8 @@
         color: #3A9C3E
     }
 
-    .error input,
-    input.error {
+    .error input,.error textarea,
+    input.error, textarea.error {
         border-color: #D3918D;
         color: #811B18;
     }

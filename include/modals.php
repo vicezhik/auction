@@ -230,3 +230,21 @@
 	</div>
    
 </div>
+<div class="modal minfo minfo-sm2" id="mfav">
+	<div class="minfo__title">
+        Добавить в избранное
+	</div>
+    <div class="mform__box">
+        <form action="">
+                <div class="mform-item">
+					<div class="mform-val">
+						<textarea name="" id="" placeholder="Ваш комментарий к лоту (необязательно) ..." maxlength = "100"></textarea>
+                        <div class="textarea-counter"><span>0</span>/100</div>
+					</div>
+				</div>
+                <div class="mform-bt">
+                    <button class="btn btn-green" >Добавить в избранное</button>
+                </div>
+        </form>
+    </div>
+</div>

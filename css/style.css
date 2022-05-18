@@ -305,23 +305,23 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 ::-webkit-input-placeholder {
-    color: #C3D3EA;
-    font-weight: 300;
+    color: #5D7592;
+    font-weight: 300;opacity: 1;
 }
 
 :-moz-placeholder {
     color: #5D7592;
-    font-weight: 300;
+    font-weight: 300;opacity: 1;
 }
 
 ::-moz-placeholder {
     color: #5D7592;
-    font-weight: 300;
+    font-weight: 300;opacity: 1;
 }
 
 :-ms-input-placeholder {
     color: #5D7592;
-    font-weight: 300;
+    font-weight: 300;opacity: 1;
 }
 
 .tooltip {
@@ -460,10 +460,29 @@ button {
 
 textarea {
     overflow: auto;
-    resize: none;
+    resize: vertical;
     vertical-align: top;
 }
+textarea {
+    padding: 16px 20px;
+    font-size: 16px;
+    background: #FFFFFF;
+    border: 1px solid #ECF6FF;
+    border-radius: 4px;
+    width: 100%;
+    color: #1F3A60;
+}
 
+textarea::-webkit-resizer {
+
+    background: url(/i/icons/resizer.svg) #fff no-repeat bottom right;border-radius:4px;
+}
+.textarea-counter{    text-align: right;
+    color: #5D7592;
+    margin-bottom: -3px;
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 8px;}
 button {
     cursor: pointer;
     border: 0;
@@ -1530,7 +1549,10 @@ input {
     width: 628px;
     padding: 40px;
 }
-
+.modal.minfo-sm2 {
+    width: 534px;
+    padding: 40px;
+}
 .modal.minfo-full {
     width: 1320px;
     padding: 40px;
@@ -1542,6 +1564,7 @@ input {
     display: flex;
     align-items: center;
 }
+
 
 .modal .mclose {
     color: #BDC5D7;
@@ -1754,3 +1777,4 @@ input {
     margin: 0;
     margin-left: 20px;
 }
+#mfav textarea{min-height: 138px;}

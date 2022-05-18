@@ -913,7 +913,7 @@ include 'include/head.php';
                         <span class="ic-b icon-bid"></span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star active"></a>
+                        <a href="#" class="ic-b icon-star active  mbox" data-src="#mfav"></a>
                     </div>
                 </div>
                 <div class="critem__info">

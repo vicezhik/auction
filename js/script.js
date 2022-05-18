@@ -66,20 +66,27 @@ $(document).ready(function(){
 			catalog.removeClass('view-list');
 		}
    });
-   /*сброс листинга при размере экрана меньше 650*/
-		
-   $(window).on("resize", function (event) {
-		const widthSc = $(window).width();
-		if($('.crlist').length > 0){
-			
-			const catalog = $('.crlist');
-			let offset = 128;
-			if(widthSc <= 650){
-				catalog.removeClass('view-list');
-			}
-		}
-	});
+   /*подсчет количества символов в textarea*/
+   $('textarea').on('input', function(evt){
+		const length = evt.target.value.length;
+		const counter = $(this).next('.textarea-counter').find('span');
+		counter.text(length);
 
+   });
+
+});   
+/*сброс листинга при размере экрана меньше 650*/
+		
+$(window).on("resize", function (event) {
+	const widthSc = $(window).width();
+	if($('.crlist').length > 0){
+		
+		const catalog = $('.crlist');
+		let offset = 128;
+		if(widthSc <= 650){
+			catalog.removeClass('view-list');
+		}
+	}
 });
  function getMapAddress(address) {
 	 $('#mmap__box').html('');

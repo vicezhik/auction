@@ -1,5 +1,29 @@
+@media screen and (max-width:1200px){
+
+}
+
 @media (hover) , (min-width:0\0) , (min--moz-device-pixel-ratio:0)
 {
+    input,.ic-input:before {transition: all .3s}
+    input:hover{
+        border-color:#BDC5D7;
+    }
+    .ic-input:hover:before{color:#1F3A60;}
+    input:focus{
+        border-color:#3A9C3E;
+    }
+    .ic-input.focus:before{color:#3A9C3E}
+    .error input,  input.error{
+        border-color:#D3918D;
+        color:#811B18;
+    }
+    .ic-input.error:before{
+        color:#811B18;
+    }
+   
+
+
+
 	a {transition: color .3s}
     a:hover:before {transition: all .3s}
     .btn{transition: all .3s}
@@ -28,6 +52,7 @@
     }
 
     .link:hover{text-decoration: underline;}
+    .input__num  a:hover:before{color:#5D7592}
     .header__bt a:hover{
         color:#3A9C3E;
     }
@@ -39,5 +64,6 @@
         color: #5D7592;
     }
     .crlist .critem:hover .critem__top .critem__top-bidsall{display: flex;}
+    
 
 }

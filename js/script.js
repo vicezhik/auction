@@ -76,8 +76,69 @@ $(document).ready(function(){
 		$this_in.val(formatPrice(number)).change();
 		return false;
 	});
-});
 
+	/*подключение модалов*/
+	$('.mbox').fancybox({
+		autoFocus: false, hideScrollbar: false, closeExisting: true, touch: false, 
+		btnTpl: {
+			smallBtn: 
+			'<div data-fancybox-close class="icon-close mclose ic-b"></div>'
+		},
+	});
+	/*Добавление класса родителю input при фокусе - для подсветки иконок*/
+	$('input').focus(function () {
+		$(this).parent().addClass('focus');
+	});
+	$('input').blur(function () {
+		$(this).parent().removeClass('focus');
+	});
+	/*яндекс карта*/
+	
+   $('.show_modal_address').on('click', function(){
+	   const addr = $(this).data('address');
+	   getMapAddress(addr);
+   });
+
+   /*переключение отображения grid*/
+   $('.crtop__grid button').on('click', function(){
+		const catalog = $('.crlist');
+		const view = $(this).data('view');
+		$('.crtop__grid button').removeClass('active');
+		$(this).addClass('active');
+		if(view == 'list'){
+			catalog.addClass('view-list');
+		}
+		else{
+			catalog.removeClass('view-list');
+		}
+   });
+
+});
+ function getMapAddress(address) {
+	 $('#mmap__box').html('');
+		var myMap = new ymaps.Map('mmap__box', {
+				center: [55.753994, 37.622093],
+				zoom: 9
+			}); 
+
+			ymaps.geocode(address, {results: 1})
+			.then(function (res) {
+			var firstGeoObject = res.geoObjects.get(0),
+				coords = firstGeoObject.geometry.getCoordinates(),
+				bounds = firstGeoObject.properties.get('boundedBy'),
+				marker = new ymaps.Placemark(coords, {}, {
+					iconLayout: 'default#image',
+					iconImageHref: '/i/icons/marker.svg',
+					iconImageSize: [84, 99],
+					iconImageOffset: [-42, -99],
+					iconCaption: firstGeoObject.getAddressLine(),
+				});
+				myMap.geoObjects.add(marker);
+				myMap.setBounds(bounds, {
+					checkZoomRange: true
+				});
+		});
+    }
 function formatPrice(n) {
     n += "";
     n = new Array(4 - n.length % 3).join("U") + n;

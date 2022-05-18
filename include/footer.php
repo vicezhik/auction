@@ -52,9 +52,12 @@
 
 </div><!-- .viewport-wrapper -->
 
+<?
+include 'include/modals.php';
+?>
 
 <link href="css/aos.css?<?=filemtime('css/aos.css')?>" rel="stylesheet" />
-
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=b7eac659-2f31-49db-82cc-49d914ccb223" type="text/javascript"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.toShowHide.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>

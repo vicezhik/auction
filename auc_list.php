@@ -15,21 +15,15 @@ include 'include/head.php';
         </div>
         <div class="crlist">
 
-        <div class="critem">
+        <div class="critem critem-noauth">
             <div class="critem__top">
                 <div class="critem__top-nds ic-b icon-nds">НДС</div>
                 <div class="critem__imgs">
                     
                     <div class="critem__imgs-list">
-                        <div class="critem__imgs-item">
-                            <img src="/i/cars/car1.jpg" alt="">
-                        </div>
-                        <div class="critem__imgs-item">
-                            <img src="/i/cars/car2.jpg" alt="">
-                        </div>
-                        <div class="critem__imgs-item">
-                            <img src="/i/cars/car1.jpg" alt="">
-                        </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -84,20 +78,16 @@ include 'include/head.php';
                 </div>
             </div>
         </div>
-            <div class="critem">
+            <div class="critem critem-noauth">
             <div class="critem__top">
                     <div class="critem__imgs">
                        
-                        <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
+                        <div class="critem__imgs-list"> 
+                       
                                 <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
                                 <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
                                 <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+           
                         </div>
                     </div>
                 </div>
@@ -150,21 +140,15 @@ include 'include/head.php';
                     </div>
                 </div>
             </div>
-            <div class="critem">
+            <div class="critem critem-noauth">
             <div class="critem__top">
                     <div class="critem__top-nds ic-b icon-nds">НДС</div>
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
+                             <img src="/i/cars/car1.jpg" alt="">
                                 <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
                                 <img src="/i/cars/car1.jpg" alt="">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -217,20 +201,14 @@ include 'include/head.php';
                     </div>
                 </div>
             </div>
-            <div class="critem">
+            <div class="critem critem-noauth">
             <div class="critem__top">
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
+                        <img src="/i/cars/car1.jpg" alt="">
                                 <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
                                 <img src="/i/cars/car1.jpg" alt="">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -286,21 +264,15 @@ include 'include/head.php';
 
             <!--Карточки Продавец -->
 
-            <div class="critem critem-auth">
+            <div class="critem critem-auth ">
                 <div class="critem__top">
                     <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -372,15 +344,9 @@ include 'include/head.php';
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -455,15 +421,9 @@ include 'include/head.php';
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -534,15 +494,9 @@ include 'include/head.php';
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -611,22 +565,16 @@ include 'include/head.php';
                 </div>
             </div>
             <!--Покупатель -->
-            <div class="critem critem-auth">
+            <div class="critem critem-auth critem-buyer">
             <div class="critem__top">
                     <div class="critem__top-nds ic-b icon-nds">НДС</div>
                     <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -725,21 +673,15 @@ include 'include/head.php';
                     </div>
                 </div>
             </div>
-            <div class="critem critem-auth">
+            <div class="critem critem-auth critem-buyer">
             <div class="critem__top">
                     <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -838,22 +780,16 @@ include 'include/head.php';
                     </div>
                 </div>
             </div>
-            <div class="critem critem-auth">
+            <div class="critem critem-auth critem-buyer">
             <div class="critem__top">
                     <div class="critem__top-nds ic-b icon-nds">НДС</div>
                     <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -952,22 +888,16 @@ include 'include/head.php';
                     </div>
                 </div>
             </div>
-            <div class="critem critem-auth">
+            <div class="critem critem-auth critem-buyer">
             <div class="critem__top">
                     <div class="critem__top-nds ic-b icon-nds">НДС</div>
                     <a class="critem__top-bidsall ic-b icon-bids-all mbox" href="#mbidsall" ></a>
                     <div class="critem__imgs">
                        
                         <div class="critem__imgs-list">
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car2.jpg" alt="">
-                            </div>
-                            <div class="critem__imgs-item">
-                                <img src="/i/cars/car1.jpg" alt="">
-                            </div>
+                        <img src="/i/cars/car1.jpg" alt="">
+                        <img src="/i/cars/car2.jpg" alt="">
+                        <img src="/i/cars/car1.jpg" alt="">
                         </div>
                     </div>
                 </div>

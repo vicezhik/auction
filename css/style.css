@@ -526,6 +526,64 @@ input {
     -moz-osx-font-smoothing: grayscale;
     line-height: 1;
 }
+.hvr__images {
+    position: relative;
+  }
+  
+  .hvr__sectors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+  }
+  
+  .hvr__sector {
+    flex-grow: 1;
+  }
+  .hvr__dot {
+    width: 5px;
+    height: 5px;
+    margin: 10px 2px 0;
+    border-radius: 50%;
+    background: #d6dbe0;
+  }
+  
+  .hvr__dot--active {
+    background: #000;
+  }
+
+
+  .hvr__dots  {
+    position: absolute;
+    left: 19px;
+    bottom: 12px;
+    padding: 0;
+    border-radius: 30px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.hvr__dot {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 4px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: background .3s;
+    background: transparent;
+}
+
+.hvr__dot--active {
+    background: #fff;
+}
+
 
 .slick-slider {
     display: block !important;
@@ -859,6 +917,7 @@ input {
     border-radius: 4px;
     font-size: 14px;
     margin: 0 0.74% 20px;
+    position: relative;
 }
 
 
@@ -917,37 +976,14 @@ input {
 .crlist .critem__top .critem__top-bidsall:before {
     font-size: 28px;
 }
-
-.critem__imgs-pages {
-    position: absolute;
-    left: 19px;
-    bottom: 12px;
-    padding: 0;
-    border-radius: 30px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.critem__imgs-pages li {
-    position: relative;
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    margin: 0 4px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    transition: background .3s;
-}
-
-.critem__imgs-pages li.slick-active {
-    background: #fff;
-}
-
-.critem__imgs-pages li>* {
+.critem__imgs-list img{
     display: none;
+    object-fit: cover;
 }
+.critem__imgs-list  img:first-child{
+    display: block;
+}
+
 
 .critem__imgs {
     position: relative;
@@ -1017,7 +1053,7 @@ input {
 }
 
 .critem__info {
-    padding: 16px 23px 13px 23px;
+    padding: 16px 23px 16px 23px;
 }
 
 .critem__info .critem__info-model {
@@ -1240,8 +1276,12 @@ input {
 .crlist.view-list .critem{
     width: 48.508%;
 }
-.crlist.view-list .critem .critem__top{
-    width: 43.1%;
+.crlist.view-list .critem.critem-noauth .critem__top{
+    width: 46%;
+    float: left;
+}
+.crlist.view-list .critem.critem-auth .critem__top{
+    width: 44.5%;
     float: left;
 }
 .crlist.view-list .critem .critem__info{
@@ -1251,12 +1291,81 @@ input {
 .crlist.view-list .critem .critem__info-km{
     width: 100%;
     justify-content: flex-end;
-    margin-top: -35px;
+    margin-top: -30px;
 }
-
-.crlist.view-list .critem  .critem__info {
+.crlist.view-list .critem.critem-auth  .critem__info-km { margin-top: -35px;}
+.crlist.view-list .critem.critem-auth  .critem__info-delivery { margin-top: -33px; width: 100%;
+    justify-content: flex-end;}
+.crlist.view-list .critem-noauth  .critem__info {
     padding: 15px 15px 13px 15px;
 }
+.crlist.view-list  .critem__top .critem__imgs-list{display: flex;}
+.crlist.view-list  .critem__top .critem__imgs-list, .crlist.view-list .hvr, 
+.crlist.view-list .critem-noauth .hvr__images, 
+.crlist.view-list  .critem-noauth .critem__top .critem__imgs,
+.crlist.view-list  .critem-noauth .critem__top{
+    height: 100%;
+}
+.crlist.view-list .critem__info-model, .crlist.view-list .critem-noauth .critem__info-modif, .crlist.view-list .critem-noauth .text-icon,
+ .crlist.view-list .critem-buyer .critem__info-modif, .crlist.view-list .critem-buyer .text-icon
+{    
+    margin-bottom: 8px;
+}
+
+.crlist.view-list .critem-noauth .critem__info .critem__info-time {
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.crlist.view-list .critem-noauth .critem__info-timedel{display: none;}
+.crlist.view-list .critem-noauth .critem__info-price-bl{ margin-left: 44%;
+    margin-top: -51px;
+    margin-bottom: 0;}
+
+.crlist.view-list .critem-noauth .critem__info-model{text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;}
+.crlist.view-list .critem__imgs {
+    border-radius: 4px 0 4px 0;
+}
+
+.crlist.view-list  .critem__info-bid{
+    position: absolute;
+    left: 20px;
+    bottom: 63px;
+}
+
+.crlist.view-list .critem-auth .critem__info-price-bl{
+    margin-bottom: 0;
+    left: 20px;
+    position: absolute;
+    bottom: 13px;
+}
+.crlist.view-list  .critem-auth .critem__info-time{order:2;    margin-bottom: 0;margin-top: 13px;}
+
+.crlist.view-list  .critem-buyer .critem__info-buynow{
+    position: absolute;
+    width: 40%;
+    left: 20px;
+    bottom: 16px;
+}
+.crlist.view-list  .critem-buyer .critem__info-bidinput {
+    margin-bottom: 0;
+    order: 3;
+}
+.crlist.view-list  .critem-buyer .critem__info-price-bl{
+    bottom: 130px;
+}
+.crlist.view-list  .critem-buyer .critem__info-bid{
+    bottom: 95px;
+}
+.crlist.view-list  .critem-buyer  .critem__info-minprice{
+    position: absolute;
+    bottom: 68px;
+    left: 20px;
+}
+.crlist.view-list .critem-buyer .critem__info-time{margin-bottom: 10px;margin-top: 8px;}
+.critem.critem-auth{min-height: 310px;}
 
 .crbot{margin-top: 40px;}
 .crtop {    margin-bottom: 20px;
@@ -1279,7 +1388,7 @@ input {
     margin: 7px 0;
     display: block;}
     .crtop .crtop__grid button.active{color:#3A9C3E}
-
+   
 /*модалы*/
 .modal {
     display: none;

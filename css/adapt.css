@@ -209,6 +209,21 @@
         font-size: 16px;
         margin-bottom: 0;
     }
+    .modal.minfo-xs {
+        padding: 30px;
+    }
+    
+    .modal.minfo-sm {
+        padding: 30px;
+    }
+    
+    .modal.minfo-md {
+        padding: 30px;
+    }
+    
+    .modal.minfo-full {
+        padding: 20px;
+    }
 }
 
 @media (hover),

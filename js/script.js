@@ -1,99 +1,4 @@
 
-document.addEventListener('DOMContentLoaded', function(){
- 
-    let tooltipElem;
-
-    document.onmouseover = function(event) {
-
-      let target = event.target;
-
-      // если у нас есть подсказка...
-      let tooltipHtml = target.dataset.tooltip;
-      if (!tooltipHtml) return;
-
-      // ...создадим элемент для подсказки
-
-      tooltipElem = document.createElement('div');
-      tooltipElem.className = 'tooltip'; 
-      tooltipElem.innerHTML = tooltipHtml;
-      document.body.append(tooltipElem);
-
-      // спозиционируем его сверху от аннотируемого элемента (top-center)
-      let coords = target.getBoundingClientRect();
-
-      //let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) ;
-	  let left = coords.left + target.offsetWidth/4*3;
-      if (left < 0) left = 0; // не заезжать за левый край окна
-
-      //let top = coords.top - tooltipElem.offsetHeight - 5;
-	  let top = coords.top - tooltipElem.offsetHeight/2;
-      if (top < 0) { // если подсказка не помещается сверху, то отображать её снизу
-        top = coords.top + target.offsetHeight + 5;
-      }
-
-      tooltipElem.style.left = left + 'px';
-      tooltipElem.style.top = top + 'px';
-    };
-
-    document.onmouseout = function(e) {
-
-      if (tooltipElem) {
-        tooltipElem.remove();
-        tooltipElem = null;
-      }
-
-    };
-});
-(function ($) {
-	$.fn.HvrSlider = function () {
-	  return this.each(function () {
-		var el = $(this);
-		if (el.find('img').length > 1) {
-		  var hvr = $('<div>', {
-			class: 'hvr',
-			append: [
-			  $('<div>', {
-				class: 'hvr__images',
-				append: $('<div>', {
-				  class: 'hvr__sectors',
-				}),
-			  }),
-			  $('<div>', {
-				class: 'hvr__dots',
-			  }),
-			],
-			insertAfter: el,
-			prepend: el,
-		  });
-		  var hvrImages = $('.hvr__images', hvr);
-		  var hvrImage = $('img', hvr);
-		  var hvrSectors = $('.hvr__sectors', hvr);
-		  var hvrDots = $('.hvr__dots', hvr);
-		  el.prependTo(hvrImages);
-		  hvrImage.each(function () {
-			hvrSectors.prepend('<div class="hvr__sector"></div>');
-			hvrDots.append('<div class="hvr__dot"></div>');
-		  });
-		  $('.hvr__dot:first', hvrDots).addClass('hvr__dot--active');
-		  var setActiveEl = function (el) {
-			hvrImage.hide().eq(el.index()).show();
-			$('.hvr__dot', hvrDots).removeClass('hvr__dot--active').eq(el.index()).addClass('hvr__dot--active');
-		  };
-		  $('.hvr__sector', hvrSectors).hover(function () {
-			setActiveEl($(this));
-		  });
-		  hvrSectors.on('touchmove', function (e) {
-			var position = e.originalEvent.changedTouches[0];
-			var target = document.elementFromPoint(position.clientX, position.clientY);
-			if ($(target).is('.hvr__sector')) {
-			  setActiveEl($(target));
-			}
-		  });
-		}
-	  });
-	};
-  })(jQuery);
-
 $(document).ready(function(){
 	if ($('.critem').length)
 	{
@@ -114,8 +19,6 @@ $(document).ready(function(){
 
 
 	/*input плюс минус*/
-	/*$('.numb input').force_numeric_only().keyup(function(){if($(this).val().length<=0)$(this).val('1')});*/
-
 	$('.numb a').on('click', function(){
 		const $this = $(this);
 		const $this_box = $this.parent();
@@ -163,6 +66,19 @@ $(document).ready(function(){
 			catalog.removeClass('view-list');
 		}
    });
+   /*сброс листинга при размере экрана меньше 650*/
+		
+   $(window).on("resize", function (event) {
+		const widthSc = $(window).width();
+		if($('.crlist').length > 0){
+			
+			const catalog = $('.crlist');
+			let offset = 128;
+			if(widthSc <= 650){
+				catalog.removeClass('view-list');
+			}
+		}
+	});
 
 });
  function getMapAddress(address) {

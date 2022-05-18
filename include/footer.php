@@ -62,6 +62,8 @@ include 'include/modals.php';
 <script src="js/jquery.toShowHide.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/libs.js"></script>
+<script src="js/libs-jquery.js"></script>
 <script src="js/script.js?<?=filemtime('js/script.js')?>"></script>
 
 <link href="css/fancy.css?<?=filemtime('css/fancy.css')?>" rel="stylesheet" />

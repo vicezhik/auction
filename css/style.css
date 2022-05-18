@@ -1562,7 +1562,7 @@ input {
     width: 400px;
     padding: 20px;
     display: flex;
-    align-items: center;
+    align-items: center;z-index: 99999;
 }
 
 

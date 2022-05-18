@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 	/*подключение модалов*/
 	$('.mbox').fancybox({
-		autoFocus: false, hideScrollbar: false, closeExisting: true, touch: false, 
+		autoFocus: false, hideScrollbar: false,  touch: false, hideOnOverlayClick:true,
 		btnTpl: {
 			smallBtn: 
 			'<div data-fancybox-close class="icon-close mclose ic-b"></div>'

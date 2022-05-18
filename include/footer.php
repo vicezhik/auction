@@ -60,7 +60,7 @@ include 'include/modals.php';
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=b7eac659-2f31-49db-82cc-49d914ccb223" type="text/javascript"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.toShowHide.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.fancybox.min.js?<?=filemtime('js/jquery.fancybox.min.js')?>""></script>
 <script src="js/slick.min.js"></script>
 <script src="js/libs.js"></script>
 <script src="js/libs-jquery.js"></script>

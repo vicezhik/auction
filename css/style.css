@@ -1291,11 +1291,17 @@ input {
 .crlist.view-list .critem .critem__info-km{
     width: 100%;
     justify-content: flex-end;
-    margin-top: -30px;
+    margin-top: -35px;
 }
-.crlist.view-list .critem.critem-auth  .critem__info-km { margin-top: -35px;}
-.crlist.view-list .critem.critem-auth  .critem__info-delivery { margin-top: -33px; width: 100%;
-    justify-content: flex-end;}
+.crlist.view-list .critem-auth  .critem__info-km { margin-top: -35px;}
+
+.crlist.view-list .critem-auth  .critem__info-delivery { margin-top: -33px; width: 100%;
+    justify-content: flex-end; }
+
+.crlist.view-list .critem-buyer .critem__info-delivery {
+    margin-top: -28px;
+
+}
 .crlist.view-list .critem-noauth  .critem__info {
     padding: 15px 15px 13px 15px;
 }
@@ -1364,7 +1370,7 @@ input {
     bottom: 68px;
     left: 20px;
 }
-.crlist.view-list .critem-buyer .critem__info-time{margin-bottom: 10px;margin-top: 8px;}
+.crlist.view-list .critem-buyer .critem__info-time{margin-bottom: 10px;margin-top: 0;}
 .critem.critem-auth{min-height: 310px;}
 
 .crbot{margin-top: 40px;}

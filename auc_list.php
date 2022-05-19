@@ -8,9 +8,9 @@ include 'include/head.php';
 
         <div class="crtop">
             <div class="crtop__grid">
-                <button class="crtop__grid-grid ic-b icon-grid active" data-view="grid"></button>
+                <button class="crtop__grid-grid icon-grid active" data-view="grid"></button>
                 <span class="delim"></span>
-                <button class="crtop__grid-list  ic-b icon-list" data-view="list"></button>
+                <button class="crtop__grid-list icon-list" data-view="list"></button>
             </div>
 
         </div>
@@ -18,7 +18,7 @@ include 'include/head.php';
 
             <div class="critem critem-noauth">
                 <div class="critem__top">
-                    <div class="critem__top-nds ic-b icon-nds">НДС</div>
+                    <div class="critem__top-nds icon-nds">НДС</div>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -50,10 +50,10 @@ include 'include/head.php';
                         <span class="icon-vin vin-yes " data-tooltip="VIN проверен"></span>
 
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km  icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
                     <div class="critem__info-time">
@@ -112,10 +112,10 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4************310</a>
                         <span class="icon-vin vin-check " data-tooltip="VIN на проверке"></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
                     <div class="critem__info-time">
@@ -143,7 +143,7 @@ include 'include/head.php';
             </div>
             <div class="critem critem-noauth">
                 <div class="critem__top">
-                    <div class="critem__top-nds ic-b icon-nds">НДС</div>
+                    <div class="critem__top-nds icon-nds">НДС</div>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -173,10 +173,10 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4************310</a>
                         <span class="icon-vin vin-no " data-tooltip="VIN не проверен"></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
                     <div class="critem__info-time">
@@ -233,10 +233,10 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4************310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
                     <div class="critem__info-time">
@@ -267,7 +267,7 @@ include 'include/head.php';
 
             <div class="critem critem-auth ">
                 <div class="critem__top">
-                    <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
+                    <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -285,7 +285,7 @@ include 'include/head.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star"></a>
+                        <a href="#" class="icon-star"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -300,13 +300,13 @@ include 'include/head.php';
                         <a href="" class="vin-n"> X4XKS494900X76310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Александровск-Сахалинск</a>
                     </div>
-                    <div class="critem__info-delivery ic-b icon-delivery text-icon">
+                    <div class="critem__info-delivery icon-delivery text-icon">
                         <a href="#">Доставка</a>
                     </div>
                     <div class="critem__info-time">
@@ -324,10 +324,10 @@ include 'include/head.php';
                             <span>01.02.2022 15:00</span>
                         </div>
                     </div>
-                    <div class="critem__info-bid ic-b icon-bid-active text-icon">
+                    <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-                    <div class="critem__info-minprice ic-b icon-tag text-icon">
+                    <div class="critem__info-minprice icon-tag text-icon">
                         Минимальная цена не достигнута
                     </div>
                     <div class="critem__info-price-bl">
@@ -340,8 +340,8 @@ include 'include/head.php';
             </div>
             <div class="critem critem-auth">
                 <div class="critem__top">
-                    <div class="critem__top-nds ic-b icon-nds">НДС</div>
-                    <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
+                    <div class="critem__top-nds icon-nds">НДС</div>
+                    <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -359,10 +359,10 @@ include 'include/head.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-bid">
-                        <span class="ic-b icon-bid"></span>
+                        <span class="icon-bid"></span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star"></a>
+                        <a href="#" class="icon-star"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -377,13 +377,13 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4XKS494900X76310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
-                    <div class="critem__info-delivery ic-b icon-delivery text-icon">
+                    <div class="critem__info-delivery icon-delivery text-icon">
                         <a href="#">Доставка</a>
                     </div>
                     <div class="critem__info-time">
@@ -401,10 +401,10 @@ include 'include/head.php';
                             <span>01.02.2022 15:00</span>
                         </div>
                     </div>
-                    <div class="critem__info-bid ic-b icon-bid-active text-icon">
+                    <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-                    <div class="critem__info-minprice ic-b icon-tag text-icon">
+                    <div class="critem__info-minprice icon-tag text-icon">
                         Минимальная цена не достигнута
                     </div>
                     <div class="critem__info-price-bl">
@@ -417,8 +417,8 @@ include 'include/head.php';
             </div>
             <div class="critem critem-auth">
                 <div class="critem__top">
-                    <div class="critem__top-nds ic-b icon-nds">НДС</div>
-                    <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
+                    <div class="critem__top-nds icon-nds">НДС</div>
+                    <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -436,7 +436,7 @@ include 'include/head.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star active"></a>
+                        <a href="#" class="icon-star active"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -451,13 +451,13 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4XKS494900X76310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
-                    <div class="critem__info-delivery ic-b icon-delivery text-icon">
+                    <div class="critem__info-delivery icon-delivery text-icon">
                         <a href="#">Доставка</a>
                     </div>
                     <div class="critem__info-time">
@@ -475,10 +475,10 @@ include 'include/head.php';
                             <span>01.02.2022 15:00</span>
                         </div>
                     </div>
-                    <div class="critem__info-bid ic-b icon-bid-active text-icon">
+                    <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-                    <div class="critem__info-minprice minprice-success ic-b icon-tag text-icon">
+                    <div class="critem__info-minprice minprice-success icon-tag text-icon">
                         Минимальная цена достигнута
                     </div>
                     <div class="critem__info-price-bl">
@@ -491,7 +491,7 @@ include 'include/head.php';
             </div>
             <div class="critem critem-auth">
                 <div class="critem__top">
-                    <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
+                    <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -509,10 +509,10 @@ include 'include/head.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-bid">
-                        <span class="ic-b icon-bid"></span>
+                        <span class="icon-bid"></span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star"></a>
+                        <a href="#" class="icon-star"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -527,13 +527,13 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4************310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
-                    <div class="critem__info-delivery ic-b icon-delivery text-icon">
+                    <div class="critem__info-delivery icon-delivery text-icon">
                         <a href="#">Доставка</a>
                     </div>
                     <div class="critem__info-time">
@@ -551,10 +551,10 @@ include 'include/head.php';
                             <span>01.02.2022 15:00</span>
                         </div>
                     </div>
-                    <div class="critem__info-bid ic-b icon-bid-active text-icon">
+                    <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-                    <div class="critem__info-minprice ic-b icon-tag text-icon">
+                    <div class="critem__info-minprice icon-tag text-icon">
                         Минимальная цена не достигнута
                     </div>
                     <div class="critem__info-price-bl">
@@ -568,8 +568,8 @@ include 'include/head.php';
             <!--Покупатель -->
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                    <div class="critem__top-nds ic-b icon-nds">НДС</div>
-                    <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
+                    <div class="critem__top-nds icon-nds">НДС</div>
+                    <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -587,10 +587,10 @@ include 'include/head.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-bid">
-                        <span class="ic-b icon-bid"></span>
+                        <span class="icon-bid"></span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star"></a>
+                        <a href="#" class="icon-star"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -605,13 +605,13 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4************310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
-                    <div class="critem__info-delivery ic-b icon-delivery text-icon">
+                    <div class="critem__info-delivery icon-delivery text-icon">
                         <a href="#">Доставка</a>
                     </div>
                     <div class="critem__info-time">
@@ -635,10 +635,10 @@ include 'include/head.php';
                         </span>
                         <span class="critem__info-price"> <span>3 800 000</span>₽</span>
                     </div>
-                    <div class="critem__info-bid ic-b icon-bid-active text-icon">
+                    <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-                    <div class="critem__info-minprice ic-b icon-tag text-icon">
+                    <div class="critem__info-minprice icon-tag text-icon">
                         Минимальная цена не достигнута
                     </div>
 
@@ -652,7 +652,7 @@ include 'include/head.php';
                                 <input type="text" value="3 500 000" name="count" step="15000">
                                 <a href="" class="p"></a>
                             </div>
-                            <button class="btn btn-green ic-b icon-bid"></button>
+                            <button class="btn btn-green icon-bid"></button>
                         </div>
                     </div>
                     <div class="critem__info-bidinput ">
@@ -665,7 +665,7 @@ include 'include/head.php';
                                 <input type="text" value="3 500 000" name="count" step="15000">
                                 <a href="" class="p"></a>
                             </div>
-                            <button class="btn btn-white ic-b icon-bid-auto"></button>
+                            <button class="btn btn-white icon-bid-auto"></button>
                         </div>
                     </div>
                     <div class="critem__info-buynow">
@@ -676,7 +676,7 @@ include 'include/head.php';
             </div>
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                    <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
+                    <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -694,10 +694,10 @@ include 'include/head.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-bid">
-                        <span class="ic-b icon-bid"></span>
+                        <span class="icon-bid"></span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star active"></a>
+                        <a href="#" class="icon-star active"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -712,13 +712,13 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4************310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
-                    <div class="critem__info-delivery ic-b icon-delivery text-icon">
+                    <div class="critem__info-delivery icon-delivery text-icon">
                         <a href="#">Доставка</a>
                     </div>
                     <div class="critem__info-time">
@@ -742,10 +742,10 @@ include 'include/head.php';
                         </span>
                         <span class="critem__info-price"> <span>3 800 000</span>₽</span>
                     </div>
-                    <div class="critem__info-bid ic-b icon-bid-active text-icon">
+                    <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-                    <div class="critem__info-minprice ic-b icon-tag text-icon">
+                    <div class="critem__info-minprice icon-tag text-icon">
                         Минимальная цена не достигнута
                     </div>
 
@@ -759,7 +759,7 @@ include 'include/head.php';
                                 <input type="text" value="3 500 000" name="count" step="15000">
                                 <a href="" class="p"></a>
                             </div>
-                            <button class="btn btn-green ic-b icon-bid"></button>
+                            <button class="btn btn-green icon-bid"></button>
                         </div>
                     </div>
                     <div class="critem__info-bidinput ">
@@ -772,7 +772,7 @@ include 'include/head.php';
                                 <input type="text" value="3 500 000" name="count" step="15000">
                                 <a href="" class="p"></a>
                             </div>
-                            <button class="btn btn-white ic-b icon-bid-auto"></button>
+                            <button class="btn btn-white icon-bid-auto"></button>
                         </div>
                     </div>
                     <div class="critem__info-buynow">
@@ -783,8 +783,8 @@ include 'include/head.php';
             </div>
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                    <div class="critem__top-nds ic-b icon-nds">НДС</div>
-                    <a class="critem__top-bidsall ic-b icon-bids-all" href=""></a>
+                    <div class="critem__top-nds icon-nds">НДС</div>
+                    <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -802,10 +802,10 @@ include 'include/head.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-bid">
-                        <span class="ic-b icon-bid"></span>
+                        <span class="icon-bid"></span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star"></a>
+                        <a href="#" class="icon-star"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -820,13 +820,13 @@ include 'include/head.php';
                         <a href="" class="vin-n">X4************310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#">Санкт-Петербург</a>
                     </div>
-                    <div class="critem__info-delivery ic-b icon-delivery text-icon">
+                    <div class="critem__info-delivery icon-delivery text-icon">
                         <a href="#">Доставка</a>
                     </div>
                     <div class="critem__info-time">
@@ -850,10 +850,10 @@ include 'include/head.php';
                         </span>
                         <span class="critem__info-price"> <span>3 800 000</span>₽</span>
                     </div>
-                    <div class="critem__info-bid ic-b icon-bid-active text-icon">
+                    <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-                    <div class="critem__info-minprice ic-b icon-tag text-icon">
+                    <div class="critem__info-minprice icon-tag text-icon">
                         Минимальная цена не достигнута
                     </div>
 
@@ -867,7 +867,7 @@ include 'include/head.php';
                                 <input type="text" value="3 500 000" name="count" step="15000">
                                 <a href="" class="p"></a>
                             </div>
-                            <button class="btn btn-green ic-b icon-bid"></button>
+                            <button class="btn btn-green icon-bid"></button>
                         </div>
                     </div>
                     <div class="critem__info-bidinput ">
@@ -880,7 +880,7 @@ include 'include/head.php';
                                 <input type="text" value="3 500 000" name="count" step="15000">
                                 <a href="" class="p"></a>
                             </div>
-                            <button class="btn btn-white ic-b icon-bid-auto"></button>
+                            <button class="btn btn-white icon-bid-auto"></button>
                         </div>
                     </div>
                     <div class="critem__info-buynow">
@@ -891,8 +891,8 @@ include 'include/head.php';
             </div>
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                    <div class="critem__top-nds ic-b icon-nds">НДС</div>
-                    <a class="critem__top-bidsall ic-b icon-bids-all mbox" href="#mbidsall"></a>
+                    <div class="critem__top-nds icon-nds">НДС</div>
+                    <a class="critem__top-bidsall icon-bids-all mbox" href="#mbidsall"></a>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -910,10 +910,10 @@ include 'include/head.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-bid">
-                        <span class="ic-b icon-bid"></span>
+                        <span class="icon-bid"></span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="ic-b icon-star active  mbox" data-src="#mfav"></a>
+                        <a href="#" class="icon-star active  mbox" data-src="#mfav"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -928,14 +928,14 @@ include 'include/head.php';
                         <a href="#mvin" class="vin-n mbox">X4XKS494900X76310</a>
                         <span class="icon-vin vin-yes "></span>
                     </div>
-                    <div class="critem__info-km ic-b icon-speed text-icon">
+                    <div class="critem__info-km icon-speed text-icon">
                         78 000 км
                     </div>
-                    <div class="critem__info-map ic-b icon-map text-icon">
+                    <div class="critem__info-map icon-map text-icon">
                         <a href="#mmap" data-address="Псков Псков, Рижский проспект, 1008"
                             class="show_modal_address mbox">Санкт-Петербург</a>
                     </div>
-                    <div class="critem__info-delivery ic-b icon-delivery text-icon">
+                    <div class="critem__info-delivery icon-delivery text-icon">
                         <a href="#mdelivery" class="mbox">Доставка</a>
                     </div>
                     <div class="critem__info-time">
@@ -959,10 +959,10 @@ include 'include/head.php';
                         </span>
                         <span class="critem__info-price"> <span>3 800 000</span>₽</span>
                     </div>
-                    <div class="critem__info-bid ic-b icon-bid-active text-icon">
+                    <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-                    <div class="critem__info-minprice ic-b icon-tag text-icon">
+                    <div class="critem__info-minprice icon-tag text-icon">
                         Минимальная цена не достигнута
                     </div>
 
@@ -976,7 +976,7 @@ include 'include/head.php';
                                 <input type="text" value="3 500 000" name="count" step="15000">
                                 <a href="" class="p"></a>
                             </div>
-                            <button class="btn btn-green ic-b icon-bid mbox" data-src="#mbidadd"></button>
+                            <button class="btn btn-green icon-bid mbox" data-src="#mbidadd"></button>
                         </div>
                     </div>
                     <div class="critem__info-bidinput ">
@@ -989,7 +989,7 @@ include 'include/head.php';
                                 <input type="text" value="3 500 000" name="count" step="15000">
                                 <a href="" class="p"></a>
                             </div>
-                            <button class="btn btn-white ic-b icon-bid-auto mbox" data-src="#mbidaddauto"></button>
+                            <button class="btn btn-white icon-bid-auto mbox" data-src="#mbidaddauto"></button>
                         </div>
                     </div>
                     <div class="critem__info-buynow">
@@ -1003,13 +1003,13 @@ include 'include/head.php';
         <div class="crbot">
             <div class="pages">
                 <ul>
-                    <li class="page-item"><a class="page-link ic-b icon-prev" href="#"></a></li>
-                    <li class="active page-item"><a href="" class="ic-b page-link">1</a></li>
-                    <li class="page-item"><a class="page-link ic-b" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link ic-b" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link icon-prev" href="#"></a></li>
+                    <li class="active page-item"><a href="" class=" page-link">1</a></li>
+                    <li class="page-item"><a class="page-link " href="#">2</a></li>
+                    <li class="page-item"><a class="page-link " href="#">3</a></li>
                     <li class="page-item delim"></li>
-                    <li class="page-item"><a class="page-link ic-b" href="#">10</a></li>
-                    <li class="page-item"><a class="page-link ic-b icon-next" href="#"></a></li>
+                    <li class="page-item"><a class="page-link " href="#">10</a></li>
+                    <li class="page-item"><a class="page-link icon-next" href="#"></a></li>
                 </ul>
             </div>
             <div class="onpage">

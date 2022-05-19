@@ -221,7 +221,7 @@
     </div>
     </div>
 </div>
-<div class="modal minfo-fixed minfo" id="mbidfadein">
+<div class="modal minfo-fixed minfo" id="mbidfadein" style="display:none">
     <div class="bidsuccess-icon">
         <img src="/i/icons/bid-success.svg" alt="" >
     </div>
@@ -230,7 +230,7 @@
 	</div>
    
 </div>
-<div class="modal minfo minfo-sm2" id="mfav">
+<div class="modal minfo minfo-sm2" id="mfav" >
 	<div class="minfo__title">
         Добавить в избранное
 	</div>

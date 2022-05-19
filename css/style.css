@@ -10,7 +10,11 @@
     font-display: block;
 }
 
-.icon-up:before {
+
+.icon-calendar:before {
+    content: "\e919";
+  }
+  .icon-up:before {
     content: "\e917";
   }
   .icon-down:before {
@@ -18,6 +22,12 @@
   }
   .icon-disc:before {
     content: "\e913";
+  }
+  .icon-photo:before {
+    content: "\e91a";
+  }
+  .icon-home:before {
+    content: "\e91b";
   }
   .icon-close:before {
     content: "\e90e";
@@ -70,6 +80,18 @@
   .icon-next:before {
     content: "\e916";
   }
+  .icon-data:before {
+    content: "\e91c";
+  }
+  .icon-book:before {
+    content: "\e91d";
+  }
+  .icon-user:before {
+    content: "\e91e";
+  }
+  .icon-save:before {
+    content: "\e91f";
+  }
   .icon-print:before {
     content: "\e914";
   }
@@ -85,8 +107,6 @@
   .icon-map-b:before {
     content: "\e910";
   }
-  
-
 html,
 body,
 div,
@@ -533,10 +553,22 @@ input {
 .text-center {
     text-align: center;
 }
-
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .ic-b:before,
 .ic-a:after {
-
+ 
     font-family: 'icomoon';
     speak: none;
     font-style: normal;
@@ -627,7 +659,24 @@ input {
     display: none;
 }
 
-
+ul.breadcrumbs {
+	position: relative; z-index: 5; display: flex; flex-wrap: wrap; padding: 26px 0 13px; font-size: 18px; line-height: 22px; color: #547380;
+}
+ul.breadcrumbs li {
+	display: flex;
+}
+ul.breadcrumbs li:after {
+	position: relative; top: 9px; display: block; content: '/';  width: 16px; height: 8px; margin: 0 10px;
+}
+ul.breadcrumbs li:last-child:after {
+	display: none;
+}
+ul.breadcrumbs li a {
+	color: inherit; text-decoration: none;
+}
+ul.breadcrumbs li .icon-home {
+	font-size: 15px;
+}
 .pages ul {
     display: flex;
 }

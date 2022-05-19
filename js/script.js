@@ -73,6 +73,29 @@ $(document).ready(function(){
 		counter.text(length);
 
    });
+   /*Блок показывать по N штук на странице */
+   $('.onpage').toShowHide({
+		button: '.onpage__level',
+		box: '.onpage__value',
+		effect: 'slide',
+		anim_speed: 300,
+		close_only_button: false,
+		onBefore: function(el){
+			el.addClass('show');
+		},
+		onAfter: function(el){
+			el.removeClass('show');
+		}
+	});
+	const onpage = $('.onpage');
+	onpage.find('.onpage__level span').text(onpage.find('.onpage__value .active').text());
+	onpage.find('.onpage__value a').on('click',function(e){
+		e.preventDefault();
+		$('.onpage').trigger('click');
+		onpage.find('.onpage__level span').text($(this).text());
+		onpage.find('.onpage__value a').removeClass('active');
+		$(this).addClass('active');
+	});
 
 });   
 /*сброс листинга при размере экрана меньше 650*/

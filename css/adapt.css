@@ -150,7 +150,7 @@
     }
 
     .pages {
-        display: inline-block;
+        display: inline-block;    margin-bottom: 30px;
     }
 
     .pages ul li {
@@ -169,6 +169,10 @@
 
     .crbot {
         text-align: center;
+    }
+    .crbot {
+        justify-content: center;
+        flex-direction: column;
     }
 
     .minfo-fixed .minfo__title {
@@ -340,6 +344,8 @@
     .crlist .critem:hover .critem__top .critem__top-bidsall {
         display: flex;
     }
-
+    .crbot .onpage__value a:hover {background: #ECF6FF;color:#1F3A60;font-weight: 500; }
+    .crbot .onpage__value a.active {color:#1F3A60;font-weight: 500; }
+    
 
 }

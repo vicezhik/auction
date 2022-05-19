@@ -10,99 +10,82 @@
     font-display: block;
 }
 
-
-.icon-disc:before {
+.icon-up:before {
+    content: "\e917";
+  }
+  .icon-down:before {
+    content: "\e918";
+  }
+  .icon-disc:before {
     content: "\e913";
-}
-
-.icon-close:before {
+  }
+  .icon-close:before {
     content: "\e90e";
-}
-
-.icon-bid-active:before {
+  }
+  .icon-bid-active:before {
     content: "\e90b";
-}
-
-.icon-bid:before {
+  }
+  .icon-bid:before {
     content: "\e90c";
-}
-
-.icon-star-full:before {
+  }
+  .icon-star-full:before {
     content: "\e901";
-}
-
-.icon-star:before {
+  }
+  .icon-star:before {
     content: "\e904";
-}
-
-.icon-list:before {
+  }
+  .icon-list:before {
     content: "\e905";
-}
-
-.icon-grid:before {
+  }
+  .icon-grid:before {
     content: "\e906";
-}
-
-.icon-bids-all:before {
+  }
+  .icon-bids-all:before {
     content: "\e907";
-}
-
-.icon-bid-auto:before {
+  }
+  .icon-bid-auto:before {
     content: "\e908";
-}
-
-.icon-delivery:before {
+  }
+  .icon-delivery:before {
     content: "\e909";
-}
-
-.icon-tag:before {
+  }
+  .icon-tag:before {
     content: "\e90a";
-}
-
-.icon-nds:before {
+  }
+  .icon-nds:before {
     content: "\e90d";
-}
-
-.icon-map:before {
+  }
+  .icon-map:before {
     content: "\e902";
-}
-
-.icon-speed:before {
+  }
+  .icon-speed:before {
     content: "\e903";
-}
-
-.icon-login:before {
+  }
+  .icon-login:before {
     content: "\e900";
-}
-
-.icon-prev:before {
+  }
+  .icon-prev:before {
     content: "\e915";
-}
-
-.icon-next:before {
+  }
+  .icon-next:before {
     content: "\e916";
-}
-
-.icon-print:before {
+  }
+  .icon-print:before {
     content: "\e914";
-}
-
-.icon-check-false:before {
+  }
+  .icon-check-false:before {
     content: "\e912";
-}
-
-.icon-check-true:before {
+  }
+  .icon-check-true:before {
     content: "\e911";
-}
-
-.icon-map-a:before {
+  }
+  .icon-map-a:before {
     content: "\e90f";
-}
-
-.icon-map-b:before {
+  }
+  .icon-map-b:before {
     content: "\e910";
-}
-
+  }
+  
 
 html,
 body,
@@ -1526,7 +1509,52 @@ input {
 .crtop .crtop__grid button.active {
     color: #3A9C3E
 }
-
+.crbot{display: flex;
+    justify-content: space-between;
+    align-items: center;}
+.crbot .onpage{
+    font-size: 14px;position: relative;
+    padding: 12px 16px;
+    margin-right: -16px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    min-width: 266px;
+}
+.crbot .onpage__level{color:#5D7592;    display: flex;
+    align-items: center;cursor: pointer;font-weight: 500;    justify-content: flex-end;}
+.crbot .onpage__level:after{
+    content:"\e918";
+    font-size: 7px;
+    padding-left: 10px;
+}
+.crbot .onpage__value{
+    display: none;
+    position: absolute;
+    box-shadow: 0px 15px 10px rgb(31 58 96 / 10%);
+    border-radius: 0px 0px 4px 4px; background: #FFFFFF;
+    left: 0;
+    width: 100%;
+    margin-top: 12px;
+    z-index: 2;
+    padding-bottom: 10px;
+}
+.crbot .onpage__value a {display: block;
+    padding: 10px 16px;
+    text-decoration: none;color:#5D7592; }
+.crbot .onpage.show{    
+    background: #FFFFFF;
+    box-shadow: 0px 15px 10px rgb(31 58 96 / 10%);  
+   }
+.crbot .onpage.show .onpage__value{
+    display: block;
+   
+}
+.crbot .onpage.show .onpage__level{
+    color:#1F3A60;
+}
+.crbot .onpage.show .onpage__level:after{
+    content:"\e917";
+}
 /*модалы*/
 .modal {
     display: none;

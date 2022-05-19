@@ -1012,6 +1012,18 @@ include 'include/head.php';
                     <li class="page-item"><a class="page-link ic-b icon-next" href="#"></a></li>
                 </ul>
             </div>
+            <div class="onpage">
+                <div class="onpage__level ic-a">
+                    <span>Показывать по 12 на странице</span>
+                </div>
+                <div class="onpage__value">
+                    <a href="#" class="active">Показывать по 12 на странице</a>
+                    <a href="#">Показывать по 20 на странице</a>
+                    <a href="#" >Показывать по 60 на странице</a>
+                    <a href="#" >Показывать по 100 на странице</a>
+                    <a href="#" >Показывать все лоты</a>
+                </div>
+            </div>
 
         </div>
 

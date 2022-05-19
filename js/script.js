@@ -103,8 +103,8 @@ $(window).on("resize", function (event) {
 				marker = new ymaps.Placemark(coords, {}, {
 					iconLayout: 'default#image',
 					iconImageHref: '/i/icons/marker.svg',
-					iconImageSize: [84, 99],
-					iconImageOffset: [-42, -99],
+					iconImageSize: [31, 50],
+					iconImageOffset: [-15, -25],
 					iconCaption: firstGeoObject.getAddressLine(),
 				});
 				myMap.geoObjects.add(marker);

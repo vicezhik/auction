@@ -1458,16 +1458,16 @@ input {
 }
 
 .crlist.view-list .critem-buyer .critem__info-price-bl {
-    bottom: 130px;
+    bottom: 127px;
 }
 
 .crlist.view-list .critem-buyer .critem__info-bid {
-    bottom: 95px;
+    bottom: 92px;
 }
 
 .crlist.view-list .critem-buyer .critem__info-minprice {
     position: absolute;
-    bottom: 68px;
+    bottom: 65px;
     left: 20px;
 }
 

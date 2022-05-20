@@ -63,7 +63,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/modals.php';
 <script src="js/slick.min.js"></script>
 <script src="js/libs.js"></script>
 <script src="js/HvrSlider.js"></script>
-<script src="js/jquery.selectric.js"></script>
+<script src="js/select2.js"></script>
 
 <script src="js/script.js?<?=rand()?>"></script>
 

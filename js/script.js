@@ -97,8 +97,8 @@ $(document).ready(function(){
 		$(this).addClass('active');
 	});
 	/*select*/
-	$('select').selectric({
-		arrowButtonMarkup: '<i class="button ic-a"></i>',
+	$('select').select2({
+		minimumResultsForSearch: -1
 	});
 
 });   

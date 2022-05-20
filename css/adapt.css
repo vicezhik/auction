@@ -23,11 +23,17 @@
     ul.breadcrumbs{    padding: 32px 0 20px;}
     ul.breadcrumbs li{display: none;}
     ul.breadcrumbs li:nth-last-child(2) {
-        display: block;
+        display: block;font-size: 0;
     }
+  
+
+    
 
     ul.breadcrumbs li:nth-last-child(2):after {
         display: none
+    }
+    ul.breadcrumbs li:nth-last-child(2):after{
+        content:"Вернуться назад";font-size: 14px; color:#5D7592;display: inline-block;
     }
 
     .breadcrumbs li:nth-last-child(2) a {
@@ -36,11 +42,11 @@
 
     .breadcrumbs li:nth-last-child(2):before {
         content: '\e920';
-        margin-right: 10px;
+        margin-right: 5px;color:#5D7592;
         font-family: 'icomoon' !important;    font-size: 12px;
     }
     .wrapper {
-        padding: 23px;
+        padding: 0 23px;
     }
 
     .cars {
@@ -171,8 +177,13 @@
         width: 24.9%;}
     .pf__it-place{width: 75%;}
     .pf__it-passpwho{order:1}
-    .pf__form-radio {
+    .pf__type .pf__form-radio {
         flex-direction: column;
+    }
+
+    .pf__data-title {
+        font-size: 20px;
+        margin-bottom: 20px;
     }
 
 }
@@ -258,6 +269,32 @@
 .pf__type .pf__type-item {
     margin-right: 0;
 }
+.pf__type .pf__form-radio .form_radio {
+    margin-right: 0;
+}
+.pf__progress {
+    padding: 10px 0;}
+.pf__progress-step{border: 0;
+    font-size: 0;
+    background: transparent!important;width: 0;
+}
+
+.pf__progress-step:last-child{font-size: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;color:#5D7592; font-weight: 500;}
+.pf__progress-line{display: none;}
+.pf__progress-step.active{
+    counter-increment: step;
+}
+.pf__progress-step:last-child:after{
+    content: "Шаг "counter(step)"";color:#3A9C3E;
+    font-size: 20px; font-weight: 700;margin-right: 7px;
+}
+.pf__progress-step:last-child span:before{content:" из ";}
+
+
     .minfo-fixed .minfo__title {
         margin-left: 12px;
         font-size: 12px;
@@ -322,7 +359,7 @@
 (min-width:0\0),
 (min--moz-device-pixel-ratio:0) {
 
-    input,textarea,
+    input,textarea,select,.select2-container--default .select2-selection--single,
     .ic-input:before {
         transition: all .3s
     }
@@ -361,11 +398,6 @@
     }
     ul.breadcrumbs li a:hover {
         color:#3A9C3E;
-    }
-    .selectric:hover{border-color: #BDC5D7;}
-    .selectric-open .selectric:hover{border-color: #3A9C3E;}
-    .selectric-items li:hover {
-        background: #ECF6FF; font-weight: 500;
     }
     .btn {
         transition: all .3s

@@ -96,6 +96,10 @@ $(document).ready(function(){
 		onpage.find('.onpage__value a').removeClass('active');
 		$(this).addClass('active');
 	});
+	/*select*/
+	$('select').selectric({
+		arrowButtonMarkup: '<i class="button ic-a"></i>',
+	});
 
 });   
 /*сброс листинга при размере экрана меньше 650*/

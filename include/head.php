@@ -7,12 +7,13 @@ header('Content-type: text/html; charset=Utf-8');
 <meta charset=utf-8>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
+<base href="/">
 <title>Главная</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="css/style.css?<?=filemtime('css/style.css')?>" rel="stylesheet" />
-<link href="css/adapt.css?<?=filemtime('css/adapt.css')?>" rel="stylesheet" />
+<link href="css/style.css?<?=rand()?>" rel="stylesheet" />
+<link href="css/adapt.css?<?=rand()?>" rel="stylesheet" />
 </head>
 <body>
 

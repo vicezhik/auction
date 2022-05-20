@@ -37,13 +37,13 @@
         <form action="">
                 <div class="mform-item">
 					<div class="mform-lvl">Город продажи</div>
-					<div class="mform-val ic-input ic-b icon-map-a ">
+					<div class="mform-val ic-input icon-map-a ">
 						<input type="text" placeholder="Введите название ..." value="">
 					</div>
 				</div>
                 <div class="mform-item">
 					<div class="mform-lvl">Город продажи</div>
-					<div class="mform-val ic-input ic-b icon-map-b">
+					<div class="mform-val ic-input icon-map-b">
 						<input type="text" placeholder="Введите название ..." value="">
 					</div>
 				</div>
@@ -58,7 +58,7 @@
     <div class="minfo__title">
         Адрес продавца
 	</div>
-    <div class="mmap__title ic-b icon-map">
+    <div class="mmap__title icon-map">
         Санкт-Петербург, ул. Ленина, д.25
     </div>
     <div class="mmap__box" id="mmap__box">
@@ -74,14 +74,14 @@
     </div>
     <div class="mvin-text">
         <ul class="list-icons list-2columns">
-            <li class="ic-b icon-check-true">Характеристики совпадают с ПТС <span class="color-lightblue">2 владельца по ПТС</span></li>
-            <li class="ic-b icon-check-false">Реальный пробег</li>
-            <li class="ic-b icon-check-false">Обнаруженно 2 ДТП</li>
-            <li class="ic-b icon-check-true">1 запись с 2019 года в истории техобслуживания</li>
-            <li class="ic-b icon-check-true"> 2 записи с 2019 года в истории пробега</li>
-            <li class="ic-b icon-check-true">Сведения о залоге, розыске, ограничении на регистрацию не обнаружены</li>
-            <li class="ic-b icon-check-true">Проверен на участие в аварийном аукционе</li>
-            <li class="ic-b icon-check-true">Проверен на работу в такси и каршеринге</li>
+            <li class="icon-check-true">Характеристики совпадают с ПТС <span class="color-lightblue">2 владельца по ПТС</span></li>
+            <li class="icon-check-false">Реальный пробег</li>
+            <li class="icon-check-false">Обнаруженно 2 ДТП</li>
+            <li class="icon-check-true">1 запись с 2019 года в истории техобслуживания</li>
+            <li class="icon-check-true"> 2 записи с 2019 года в истории пробега</li>
+            <li class="icon-check-true">Сведения о залоге, розыске, ограничении на регистрацию не обнаружены</li>
+            <li class="icon-check-true">Проверен на участие в аварийном аукционе</li>
+            <li class="icon-check-true">Проверен на работу в такси и каршеринге</li>
         </ul>
         <p class="color-lightblue">Страховые выплаты</p>
         <ul class="list-fast">
@@ -95,12 +95,12 @@
     </div>
 </div>
 <div class="modal minfo-full minfo" id="mbidsall">
-<div class="mbids__table-subtitle ic-b icon-bid-active">
+<div class="mbids__table-subtitle icon-bid-active">
     Протокол торгов <span class="mbids__table-numtag">№8956</span>
 </div>
 <div class="mbids__table-title">
     Mercedes-Benz GLE-класс Coupe
-    <a href="" class="print ic-b icon-print">Печать</a>
+    <a href="" class="print icon-print">Печать</a>
 </div>
 <div class="mbids__table-box">
     <div class="mbids__table">

@@ -19,6 +19,26 @@
 }
 
 @media screen and (max-width:991px) {
+    h1{font-size: 32px;margin-bottom: 20px;}
+    ul.breadcrumbs{    padding: 32px 0 20px;}
+    ul.breadcrumbs li{display: none;}
+    ul.breadcrumbs li:nth-last-child(2) {
+        display: block;
+    }
+
+    ul.breadcrumbs li:nth-last-child(2):after {
+        display: none
+    }
+
+    .breadcrumbs li:nth-last-child(2) a {
+        margin: 0;
+    }
+
+    .breadcrumbs li:nth-last-child(2):before {
+        content: '\e920';
+        margin-right: 10px;
+        font-family: 'icomoon' !important;    font-size: 12px;
+    }
     .wrapper {
         padding: 23px;
     }
@@ -123,9 +143,42 @@
         font-size: 20px;
     }
 
+    .pf__it-lastname{
+        order: -1;
+        width: calc(76% - 165px);
+    }
+    .pf__it-firstname{
+        padding-top: 5px;
+        margin-left: 165px;
+        width: calc(50% - 165px/2);
+    }
+    .pf__it-surname{
+        padding-top: 5px;
+        width: calc(50% - 165px/2);
+    }
+    .pf__type .pf__type-item {
+        margin-right: 40px;
+    }
+    .pf__it-surname .pf__form-value{margin-right: 0;}
+    .pf__it-birth{
+        order: -1;
+        flex: 1;
+    }
+    .pf__it-gender{width: 100%;}
+    .pf__it-nat{    width: 48%;}
+    .pf__it-passp{flex:1}
+    .pf__it-passpdate,.pf__it-passpkod{order: 1;
+        width: 24.9%;}
+    .pf__it-place{width: 75%;}
+    .pf__it-passpwho{order:1}
+    .pf__form-radio {
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (max-width:650px) {
+    h1{font-size: 24px;margin-bottom: 20px;}
     .list-2columns {
         column-count: 1;
         columns: 1;
@@ -174,7 +227,37 @@
         justify-content: center;
         flex-direction: column;
     }
+    .profile{padding-bottom: 0;}
 
+    .pf__form-photo {
+        position: relative;
+        width: 100%;
+        order: -1;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .pf__form-value {
+        margin-right: 0;
+    }
+    .pf__form .pf__form-item {
+        width: 100%;margin-left: 0;order:0;flex: none;
+    }
+    .pf__form .pf__form-item.pf__it-birth, .pf__form .pf__form-item.pf__it-passpdate, .pf__form .pf__form-item.pf__it-passpkod{width: 60%;}
+.pf__it-passp .pf__form-value:first-child {margin-right: 20px;}
+.pf__data-bt .btn {width: 100%;    margin: 0;
+    margin-bottom: 20px;}
+.pf__data-bt  .save-draft{order:1}
+.pf__data-bt {
+    flex-direction: column;
+}
+.pf__type {
+    flex-direction: column;
+}
+.pf__type .pf__type-item:last-child{margin-top: 20px;}
+.pf__type .pf__type-item {
+    margin-right: 0;
+}
     .minfo-fixed .minfo__title {
         margin-left: 12px;
         font-size: 12px;
@@ -231,6 +314,8 @@
     .modal.minfo-sm2 {
         padding: 28px;
     }
+
+    
 }
 
 @media (hover),
@@ -267,10 +352,6 @@
     .ic-input.error:before {
         color: #811B18;
     }
-
-
-
-
     a {
         transition: color .3s
     }
@@ -278,7 +359,14 @@
     a:hover:before {
         transition: all .3s
     }
-
+    ul.breadcrumbs li a:hover {
+        color:#3A9C3E;
+    }
+    .selectric:hover{border-color: #BDC5D7;}
+    .selectric-open .selectric:hover{border-color: #3A9C3E;}
+    .selectric-items li:hover {
+        background: #ECF6FF; font-weight: 500;
+    }
     .btn {
         transition: all .3s
     }
@@ -298,6 +386,18 @@
 
     .btn-green.disabled {
         background: #E0E0E0;
+    }
+    .btn-transparent:hover {
+        color: #1F3A60;
+    }
+
+    .btn-transparent:focus,
+    .btn-transparent.active {
+        color: #1F3A60;
+    }
+
+    .btn-transparent.disabled {
+        color: #E0E0E0;
     }
 
     .btn-white:hover {

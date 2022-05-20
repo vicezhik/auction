@@ -53,20 +53,21 @@
 </div><!-- .viewport-wrapper -->
 
 <?
-include 'include/modals.php';
+include $_SERVER['DOCUMENT_ROOT'].'/include/modals.php';
 ?>
 
-<link href="css/aos.css?<?=filemtime('css/aos.css')?>" rel="stylesheet" />
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=b7eac659-2f31-49db-82cc-49d914ccb223" type="text/javascript"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.toShowHide.js"></script>
-<script src="js/jquery.fancybox.min.js?<?=filemtime('js/jquery.fancybox.min.js')?>""></script>
+<script src="js/jquery.fancybox.min.js?<?=rand()?>"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/libs.js"></script>
 <script src="js/HvrSlider.js"></script>
-<script src="js/script.js?<?=filemtime('js/script.js')?>"></script>
+<script src="js/jquery.selectric.js"></script>
 
-<link href="css/fancy.css?<?=filemtime('css/fancy.css')?>" rel="stylesheet" />
+<script src="js/script.js?<?=rand()?>"></script>
+
+<link href="css/fancy.css?<?=rand()?>" rel="stylesheet" />
 
 </body>
 </html>

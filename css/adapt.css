@@ -1,3 +1,7 @@
+@media screen and (max-width:1630px) {.pf__docs-btns ul {
+    left: auto;
+    z-index: 2;
+}}
 @media screen and (max-width:1210px) {
     .crlist .critem {
         width: 31.808%;
@@ -199,6 +203,52 @@
     .pf__it-street {
         width: 54%;
     }
+    .pf__docs-title {
+        font-size: 20px;
+    }
+    .pf__docs-item {
+        padding: 5px 21px 20px;
+        flex-wrap: wrap;
+    }
+    .pf__docs-item:first-child{margin-top: 20px;}
+.pf__docs-item:not(.pf__docs-item-nofile) .pf__docs-name{margin-top: -25px;}
+.pf__docs-info{    order: 1;
+    width: 92%;
+    padding-left: 52px;
+    margin-top: -19px;}
+    .pf__docs-info .name, .pf__docs-info .date, .pf__docs-info .progress-value {
+        font-size: 12px;
+    }
+    .pf__docs-info .tag span {
+        width: 99px;
+        height: 24px;
+        font-size: 12px;margin-top: -25px;
+    }
+    .pf__docs-info .progress {
+        margin-top: -13px;
+    }
+    .pf__docs-item-nofile .pf__docs-btns .btn{
+        font-size: 0;
+    }
+    .pf__docs-item-nofile .pf__docs-btns .btn:before{
+        font-size: 30px;
+        color: #C3D3EA;
+        margin-right: 0;
+    }
+    .pf__docs-item:after{
+        width: calc(100% - 42px); 
+        height: 1px;
+        background: #ECF6FF;
+        content: "";
+        bottom:0;
+        position: absolute;
+    }
+    .pf__docs-item:last-child:after{display: none;}
+    .pf__docs-text {
+        padding: 0 21px;
+       
+        font-size: 12px;
+    }
 
 }
 
@@ -313,6 +363,27 @@
 }
 .pf__form .pf__it-house, .pf__form .pf__it-korpus{margin-right: 20px;}
 .pf__data-bt .btn.btn-green{order:-1}
+.pf__docs-info{    width: 100%;
+    padding-left: 0; 
+     margin-top: 0; 
+     padding-right: 0;}
+     .pf__docs-info .tag span {
+        margin-top: 0;
+    }
+
+    .pf__docs-btns {
+        min-width: 30px;
+    }
+    .pf__docs-item:not(.pf__docs-item-nofile) .pf__docs-name {
+        margin-top: 0;
+    }
+    .pf__docs-info .name, .pf__docs-info .date, .pf__docs-info .progress-value {
+        margin-top: 3px;
+    }
+    .pf__docs-btns .docs-menu {
+        font-size: 5px;
+        margin-top: -30px;
+    }
     .minfo-fixed .minfo__title {
         margin-left: 12px;
         font-size: 12px;

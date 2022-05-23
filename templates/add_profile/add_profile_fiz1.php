@@ -151,8 +151,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
             </div>
         </div>
         <div class="pf__data-bt">
-            <a href="" class="btn btn-transparent icon-save save-draft">Сохранить как черновик</a>
-            <a class="btn btn-green" href="">Следующий шаг</a>
+            <button class="btn btn-transparent icon-save save-draft">Сохранить как черновик</button>
+            <button class="btn btn-green">Следующий шаг</button>
         </div>
         </div>
         

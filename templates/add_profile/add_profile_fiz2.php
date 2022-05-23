@@ -87,16 +87,72 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
 				</div>
                 <div class="pf__form-item pf__it-address-check ">
 					<div class="pf__form-value form_checkbox">
-                        <input type="checkbox" value="1" name="" id="address-check">
+                        <input type="checkbox" value="1" name="" id="address-check" checked>
                         <label for="address-check">Адрес прописки совпадает с адресом проживания</label>
                     </div>
 				</div>
             </div>
+            <div class="pf__address-home">
+            <div class="pf__data-title">
+                <span class="icon-map"></span>
+                Адрес проживания
+            </div>
+            <div class="pf__form">
+                <div class="pf__form-item pf__it-index">
+					<div class="pf__form-lvl">Индекс</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="Индекс ..." value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__it-region">
+                    <div class="pf__form-lvl">Регион</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="Введите название региона ..." value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__it-district">
+                    <div class="pf__form-lvl">Район</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="Введите название района ..." value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__it-city">
+                    <div class="pf__form-lvl">Город / Населённый пункт</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="Введите название населённого пункта ..." value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__it-street">
+                    <div class="pf__form-lvl">Улица</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="Введите название улицы / переулка / площади / шоссе..." value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__it-house">
+                    <div class="pf__form-lvl">Дом</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="№ дома" value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__it-korpus">
+                    <div class="pf__form-lvl">Корпус</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="№ корп" value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__it-flat">
+                    <div class="pf__form-lvl">Квартира</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="№ кв" value="">
+                        </div>
+				</div>
+            </div>
+            </div>
         </div>
         <div class="pf__data-bt">
-            <a href="" class="btn btn-transparent icon-save save-draft">Сохранить как черновик</a>
-            <a class="btn btn-white" href="">Вернуться назад</a>
-            <a class="btn btn-green" href="">Следующий шаг</a>
+            <button class="btn btn-transparent icon-save save-draft">Сохранить как черновик</button>
+            <button class="btn btn-white" >Вернуться назад</button>
+            <button class="btn btn-green" >Следующий шаг</button>
         </div>
         </div>
         

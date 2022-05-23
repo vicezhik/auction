@@ -100,6 +100,34 @@ $(document).ready(function(){
 	$('select').select2({
 		minimumResultsForSearch: -1
 	});
+	/*Показать форму Адрес проживания */
+	$('#address-check').on('change', function(){
+		if ($(this).is(":checked"))
+		{
+			$('.pf__address-home').slideUp(200);
+		}
+		else{
+			$('.pf__address-home').slideDown(200);
+		}
+	});
+	/*меню в документах профиля*/
+	$('.pf__docs-btns').toShowHide({
+		button: '.docs-menu',
+		box: 'ul',
+		effect: 'fade',
+		anim_speed: 200,
+		close_only_button: false,
+		onBefore: function(el){
+			el.addClass('show');
+		},
+		onAfter: function(el){
+			el.removeClass('show');
+		}
+	});
+	/*открыть загрузку файла на загрузку профиле*/
+	$('.download-file').on('click',function(){
+		$(this).closest('.pf__docs-item').find('.input-doc-file').trigger('click');
+	});
 
 });   
 /*сброс листинга при размере экрана меньше 650*/

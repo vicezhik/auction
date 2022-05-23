@@ -9,7 +9,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
             <li><span>Добавить профиль</span></li>
         </ul>
         <h1>Добавить профиль</h1>
-        <div class="profile-step step1">
+        <div class="profile-step">
             <div class="pf__type">
             <div class="pf__type-item">
                 <div class="pf__type-lvl">Статус</div>

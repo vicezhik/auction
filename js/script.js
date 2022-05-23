@@ -40,10 +40,10 @@ $(document).ready(function(){
 		},
 	});
 	/*Добавление класса родителю input при фокусе - для подсветки иконок*/
-	$('input').focus(function () {
+	$('input').on('focus', function () {
 		$(this).parent().addClass('focus');
 	});
-	$('input').blur(function () {
+	$('input').on('blur', function () {
 		$(this).parent().removeClass('focus');
 	});
 	/*яндекс карта*/

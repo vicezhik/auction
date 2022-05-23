@@ -10,9 +10,11 @@
     font-display: block;
 }
 
-
 .icon-calendar:before {
     content: "\e919";
+  }
+  .icon-check:before {
+    content: "\e921";
   }
   .icon-up:before {
     content: "\e917";
@@ -502,6 +504,35 @@ input {
     height: 100%;
     margin-left: 20px;
 }
+.form_checkbox input {
+    display: none;
+  }
+  .form_checkbox label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    padding-left: 25px;
+  }
+  .form_checkbox label::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    border: 1px solid #D5E1F1;
+    border-radius: 4px;
+  }
+  .form_checkbox input:checked+label::before{
+    content: '\e921';
+    font-size: 8px;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+    background: #3A9C3E;
+    border-color: #3A9C3E;
+    font-family: 'icomoon' !important;
+}
+
 .form_radio {
 	margin-bottom: 10px;
 }
@@ -542,9 +573,9 @@ input {
 .btn {
     font-size: 16px;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 1;
     border-radius: 4px;
-    padding: 15px 0;
+    padding: 17px 0;
     width: 100%;
     display: block;
     text-align: center;
@@ -553,6 +584,7 @@ input {
 
 .btn-white {
     color: #5D7592;
+    padding: 14px 0;
     background: #fff;
     border: 2px solid #5D7592;
 }
@@ -1641,6 +1673,7 @@ ul.breadcrumbs li .icon-home {
     margin-right: 80px;
 }
 .pf__type .pf__type-item:last-child{ margin-right: 0;}
+
 .pf__form .pf__form-lvl{
     margin-bottom: 4px;
     font-size: 12px;
@@ -1648,6 +1681,16 @@ ul.breadcrumbs li .icon-home {
 .pf__type-lvl{
     font-weight: 500;
     margin-bottom: 15px;
+}
+.pf__type-set .pf__type-lvl{
+    color:#5D7592;
+    font-weight: 400;
+}
+.pf__type-set .pf__type-value{
+    font-weight: 500;
+}
+.pf__type .pf__type-item.pf__type-set {
+    width: 32%;
 }
 .pf__form-radio{
     display: flex;
@@ -1676,8 +1719,10 @@ ul.breadcrumbs li .icon-home {
     justify-content: center;
     
 }
-
-
+.pf__progress-step.success span{display: none;}
+.pf__progress-step.success:before{content:'\e921'; font-family: 'icomoon' !important;font-size: 12px;
+    margin-top: 2px;}
+    .pf__progress-step.success+.pf__progress-line{background:#3A9C3E}
 
 .pf__progress-line{
     flex-grow: 1;
@@ -1732,20 +1777,23 @@ ul.breadcrumbs li .icon-home {
 .pf__it-gender{
     font-size: 14px;    margin-left: 165px;
 }
+.pf__form-item{margin-bottom: 8px;margin-right: 20px;}
 .pf__data-box .pf__form-radio{height: 53px;align-items:center }
 .pf__form-row{display: flex;}
-.pf__form-value{margin-right: 20px;position: relative; }
-.pf__it-gender,.pf__it-lastname,.pf__it-firstname,.pf__it-surname,.pf__it-nat, .pf__it-passp {    width: calc(29.16% - 165px/3);}
+.pf__form-value{position: relative; }
+.pf__it-gender,.pf__it-lastname,.pf__it-firstname,.pf__it-surname,.pf__it-nat, .pf__it-passp {width: calc(27.6% - 165px/3);}
 .pf__it-firstname,.pf__it-surname{
     padding-top: 26px;
 }
+.pf__it-passp{flex: 1;}
+.pf__it-passp .pf__form-value:first-child {margin-right: 20px;}
 .pf__it-surname{flex: 1;}
 
-.pf__it-birth, .pf__it-passpdate, .pf__it-passpkod{width: 12.5%;}
-.pf__it-birth .pf__form-value , .pf__it-passpdate  .pf__form-value, .pf__it-passpkod .pf__form-value{margin-right: 0;}
- .pf__it-place{    width: 37.78%;}
+.pf__it-birth, .pf__it-passpdate, .pf__it-passpkod{width: 12.5%;margin-right: 0;}
+
+.pf__it-place{width: 36.2%;}
 .pf__it-passpwho{flex:1}
-.pf__data-box .pf__form-item{margin-bottom: 8px;}
+
 
 .pf__form-value .icon-calendar{
     font-size: 16px;
@@ -1760,7 +1808,19 @@ ul.breadcrumbs li .icon-home {
 .pf__data-bt .save-draft{
     font-size: 14px; 
     margin-right: 40px;
+    margin-left: 0;
 }
+.pf__data-address .pf__form-item{margin-bottom: 15px;}
+.pf__it-index {width: 12.4%;}
+.pf__it-region, .pf__it-district{flex: 1;
+    width: 15%;}
+
+.pf__it-city {    width: 28.5%;margin-right: 0;}
+.pf__it-street {    width: 69.9%;}
+.pf__it-house,.pf__it-korpus, .pf__it-flat {width: 7%;
+    flex-grow: 1;}
+.pf__it-flat{margin-right: 0;}
+.pf__it-address-check {margin-top: 20px;}
 /*модалы*/
 .modal {
     display: none;

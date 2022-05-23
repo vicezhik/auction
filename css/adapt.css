@@ -160,12 +160,12 @@
     }
     .pf__it-surname{
         padding-top: 5px;
-        width: calc(50% - 165px/2);
+        width: calc(50% - 165px/2);margin-right: 0;
     }
     .pf__type .pf__type-item {
         margin-right: 40px;
     }
-    .pf__it-surname .pf__form-value{margin-right: 0;}
+
     .pf__it-birth{
         order: -1;
         flex: 1;
@@ -175,7 +175,8 @@
     .pf__it-passp{flex:1}
     .pf__it-passpdate,.pf__it-passpkod{order: 1;
         width: 24.9%;}
-    .pf__it-place{width: 75%;}
+    .pf__it-place{    width: 65%;
+        flex-grow: 1;}
     .pf__it-passpwho{order:1}
     .pf__type .pf__form-radio {
         flex-direction: column;
@@ -184,6 +185,19 @@
     .pf__data-title {
         font-size: 20px;
         margin-bottom: 20px;
+    }
+
+    .pf__type .pf__type-item.pf__type-set {
+        width: 50%;
+    }
+    .pf__it-index {
+        width: 27.4%;
+    }
+    .pf__it-region{    width: 65%;
+        margin-right: 0;flex: auto;}
+    .pf__it-city{width: 50%;}
+    .pf__it-street {
+        width: 54%;
     }
 
 }
@@ -248,14 +262,14 @@
         justify-content: center;
         margin-bottom: 30px;
     }
-    .pf__form-value {
+    .pf__form-item {
         margin-right: 0;
     }
     .pf__form .pf__form-item {
         width: 100%;margin-left: 0;order:0;flex: none;
     }
     .pf__form .pf__form-item.pf__it-birth, .pf__form .pf__form-item.pf__it-passpdate, .pf__form .pf__form-item.pf__it-passpkod{width: 60%;}
-.pf__it-passp .pf__form-value:first-child {margin-right: 20px;}
+
 .pf__data-bt .btn {width: 100%;    margin: 0;
     margin-bottom: 20px;}
 .pf__data-bt  .save-draft{order:1}
@@ -293,8 +307,12 @@
     font-size: 20px; font-weight: 700;margin-right: 7px;
 }
 .pf__progress-step:last-child span:before{content:" из ";}
-
-
+.pf__type .pf__type-set{display: none;}
+.pf__form .pf__it-house, .pf__form .pf__it-korpus, .pf__form .pf__it-flat {
+    width: 30%;flex: 1;
+}
+.pf__form .pf__it-house, .pf__form .pf__it-korpus{margin-right: 20px;}
+.pf__data-bt .btn.btn-green{order:-1}
     .minfo-fixed .minfo__title {
         margin-left: 12px;
         font-size: 12px;
@@ -388,6 +406,9 @@
 
     .ic-input.error:before {
         color: #811B18;
+    }
+    .form_checkbox label:hover::before{
+        border-color:#C3D3EA;
     }
     a {
         transition: color .3s

@@ -1690,7 +1690,7 @@ ul.breadcrumbs li .icon-home {
     font-weight: 500;
 }
 .pf__type .pf__type-item.pf__type-set {
-    width: 32%;
+    width: 32%;margin-bottom: 10px;
 }
 .pf__form-radio{
     display: flex;

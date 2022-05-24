@@ -31,6 +31,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
             <div class="pf__progress-line"></div>
             <div class="pf__progress-step active"><span>3</span></div>
         </div>
+        <div class="pf__docs-download"><a href="" class="btn btn-green "><span class="icon-download"></span> Скачать договор продавца</a></div>
         <div class="pf__docs-box">
             <div class="pf__docs-title">
                 <span class="icon-docs"></span>

@@ -64,7 +64,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
                     <div class="pf__docs-info">
                         <input type="file" class="input-doc-file">
                         <div class="progress">
-                            <div class="name">
+                            <div class="progress-name">
                                 Scan-0345.pdf
                             </div>
                             <div class="progress-value">

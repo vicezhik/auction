@@ -283,11 +283,13 @@
     }
 
     .pf__docs-info .name,
-    .pf__docs-info .date,
-    .pf__docs-info .progress-value {
+    .pf__docs-info .date{
         font-size: 12px;
     }
-
+    .pf__docs-info .progress-value, .pf__docs-info .progress-name {
+        font-size: 14px;
+        margin-top: 3px;
+    }
     .pf__docs-info .tag span {
         width: 99px;
         height: 24px;
@@ -534,9 +536,11 @@
     }
 
     .pf__docs-info .name,
-    .pf__docs-info .date,
-    .pf__docs-info .progress-value {
+    .pf__docs-info .date {
         margin-top: 3px;
+    }
+    .pf__docs-info .progress-value,  .pf__docs-info .progress-name {
+        margin-top: 10px;
     }
 
     .pf__docs-btns .docs-menu {

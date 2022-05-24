@@ -2196,7 +2196,7 @@ ul.breadcrumbs li .icon-home {
 
 .pf__docs-info .name,
 .pf__docs-info .date,
-.pf__docs-info .progress-value {
+.pf__docs-info .progress-value,.pf__docs-info .progress-name {
     color: #5D7592;
     font-weight: 300
 }

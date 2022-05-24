@@ -26,6 +26,8 @@
 }
 
 @media screen and (max-width:991px) {
+    .text-desctop{display: none;}
+    .text-mobile{display: inline;}
     h1 {
         font-size: 32px;
         margin-bottom: 20px;
@@ -255,22 +257,23 @@
     }
 
     .pf__it-street {
-        width: 54%;
+        width: 48%;
     }
+    .pf__it-office{flex-grow: 1;}
 
     .pf__docs-title {
         font-size: 20px;
     }
 
     .pf__docs-item {
-        padding: 5px 21px 20px;
+        padding: 14px 21px 14px;
         flex-wrap: wrap;
     }
 
     .pf__docs-item:first-child {
         margin-top: 20px;
     }
-
+    .pf__docs-name{font-size: 14px;line-height: 1.2;}
     .pf__docs-item:not(.pf__docs-item-nofile) .pf__docs-name {
         margin-top: -25px;
     }
@@ -295,10 +298,6 @@
         height: 24px;
         font-size: 12px;
         margin-top: -25px;
-    }
-
-    .pf__docs-info .progress {
-        margin-top: -13px;
     }
 
     .pf__docs-item-nofile .pf__docs-btns .btn {
@@ -335,6 +334,27 @@
         margin-bottom: 21px;
         margin-top: -21px;
     }
+    .pf__docs-item-error .pf__docs-info .name{font-size: 14px;}
+    .pf__ip-name{width: 100%;margin-right: 0;order: -1;}
+    .pf__ip-photo{order: -1;}
+    .pf__ip-nalog{order: -1; margin-left: 165px;    margin-right: 20px;}
+    .pf__ip-inn, .pf__ip-ogrn {
+        margin-left: 0;
+        width: 50%;
+    }
+    .pf__ip-inn {
+        margin-right: 0;
+    }
+    .pf__ip-phone, .pf__ip-email {
+        width: 47%;
+    }
+    .pf__ip-email{margin-right: 0;flex: 1;}
+    .pf__ip-site {
+        flex: auto;
+        width: 100%;
+    }
+    .pf__b-rsch, .pf__b-ksch, .pf__b-bik, .pf__b-bank, .pf__p-lname, .pf__p-fname,.pf__p-sname,.pf__b-pos,.pf__b-unum,  .pf__b-osn{flex-grow: 1;    width: 48%;}
+    .pf__b-ksch, .pf__p-fname{margin-right: 0;}
 
 }
 
@@ -511,6 +531,9 @@
     .pf__form .pf__it-korpus {
         margin-right: 20px;
     }
+    .pf__data-address-org .pf__it-korpus{
+        margin-right: 0;
+    }
 
     .pf__data-bt .btn.btn-green {
         order: -1
@@ -614,6 +637,7 @@
     .pf__docs-download a {
         width: 100%;
     }
+
 }
 
 @media (hover),
@@ -623,7 +647,7 @@
     input,
     textarea,
     select,
-    .select2-container--default .select2-selection--single,
+
     .ic-input:before {
         transition: all .3s
     }

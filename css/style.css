@@ -12,168 +12,137 @@
 
 .icon-update:before {
     content: "\e922";
-}
-
-.icon-openmenu:before {
+  }
+  .icon-openmenu:before {
     content: "\e923";
-}
-
-.icon-delete:before {
+  }
+  .icon-delete:before {
     content: "\e924";
-}
-
-.icon-warning:before {
+  }
+  .icon-warning:before {
     content: "\e925";
-}
-
-.icon-download:before {
+  }
+  .icon-download:before {
     content: "\e926";
-}
-
-.icon-info:before {
+  }
+  .icon-info:before {
     content: "\e927";
-}
-
-.icon-calendar:before {
+  }
+  .icon-calendar:before {
     content: "\e919";
-}
-
-.icon-check:before {
+  }
+  .icon-check:before {
     content: "\e921";
-}
-
-.icon-up:before {
+  }
+  .icon-up:before {
     content: "\e917";
-}
-
-.icon-down:before {
+  }
+  .icon-down:before {
     content: "\e918";
-}
-
-.icon-left-bold:before {
+  }
+  .icon-left-bold:before {
     content: "\e920";
-}
-
-.icon-disc:before {
+  }
+  .icon-disc:before {
     content: "\e913";
-}
-
-.icon-photo:before {
+  }
+  .icon-photo:before {
     content: "\e91a";
-}
-
-.icon-home:before {
+  }
+  .icon-home:before {
     content: "\e91b";
-}
-
-.icon-close:before {
+  }
+  .icon-close:before {
     content: "\e90e";
-}
-
-.icon-bid-active:before {
+  }
+  .icon-bid-active:before {
     content: "\e90b";
-}
-
-.icon-bid:before {
+  }
+  .icon-bid:before {
     content: "\e90c";
-}
-
-.icon-star-full:before {
+  }
+  .icon-star-full:before {
     content: "\e901";
-}
-
-.icon-star:before {
+  }
+  .icon-star:before {
     content: "\e904";
-}
-
-.icon-list:before {
+  }
+  .icon-list:before {
     content: "\e905";
-}
-
-.icon-grid:before {
+  }
+  .icon-grid:before {
     content: "\e906";
-}
-
-.icon-bids-all:before {
+  }
+  .icon-bids-all:before {
     content: "\e907";
-}
-
-.icon-bid-auto:before {
+  }
+  .icon-bid-auto:before {
     content: "\e908";
-}
-
-.icon-delivery:before {
+  }
+  .icon-delivery:before {
     content: "\e909";
-}
-
-.icon-tag:before {
+  }
+  .icon-tag:before {
     content: "\e90a";
-}
-
-.icon-nds:before {
+  }
+  .icon-nds:before {
     content: "\e90d";
-}
-
-.icon-map:before {
+  }
+  .icon-map:before {
     content: "\e902";
-}
-
-.icon-speed:before {
+  }
+  .icon-speed:before {
     content: "\e903";
-}
-
-.icon-docs:before {
+  }
+  .icon-ooo:before {
+    content: "\e929";
+  }
+  .icon-bank:before {
+    content: "\e92a";
+  }
+  .icon-ip:before {
+    content: "\e92b";
+  }
+  .icon-docs:before {
     content: "\e928";
-}
-
-.icon-login:before {
+  }
+  .icon-login:before {
     content: "\e900";
-}
-
-.icon-prev:before {
+  }
+  .icon-prev:before {
     content: "\e915";
-}
-
-.icon-next:before {
+  }
+  .icon-next:before {
     content: "\e916";
-}
-
-.icon-data:before {
+  }
+  .icon-data:before {
     content: "\e91c";
-}
-
-.icon-book:before {
+  }
+  .icon-book:before {
     content: "\e91d";
-}
-
-.icon-user:before {
+  }
+  .icon-user:before {
     content: "\e91e";
-}
-
-.icon-save:before {
+  }
+  .icon-save:before {
     content: "\e91f";
-}
-
-.icon-print:before {
+  }
+  .icon-print:before {
     content: "\e914";
-}
-
-.icon-check-false:before {
+  }
+  .icon-check-false:before {
     content: "\e912";
-}
-
-.icon-check-true:before {
+  }
+  .icon-check-true:before {
     content: "\e911";
-}
-
-.icon-map-a:before {
+  }
+  .icon-map-a:before {
     content: "\e90f";
-}
-
-.icon-map-b:before {
+  }
+  .icon-map-b:before {
     content: "\e910";
-}
-
+  }
+  
 html,
 body,
 div,
@@ -454,7 +423,7 @@ H2 {
     font-weight: 700;
 }
 
-
+.text-mobile{display: none;}
 .list-2columns {
 
     -webkit-column-count: 2;
@@ -1921,16 +1890,18 @@ ul.breadcrumbs li .icon-home {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 34px;
-    margin-top: 15px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
 }
 
 .pf__data-title:first-child {
     margin-top: 0;
 }
 
-.pf__data-title span {
+.pf__data-title span[class^="icon-"] {
     color: #5D7592;
-    margin-right: 2px;
+    margin-right: 10px;
 }
 
 .pf__form-photo {
@@ -2102,6 +2073,7 @@ ul.breadcrumbs li .icon-home {
 .pf__it-flat {
     margin-right: 0;
 }
+.pf__it-office{margin-right: 0;width: 9%;}
 
 .pf__it-address-check {
     margin-top: 20px;
@@ -2179,15 +2151,16 @@ ul.breadcrumbs li .icon-home {
 }
 
 .pf__docs-name {
-    flex: 1;
+    flex-grow: 1;
     padding-left: 18px;
+    width: 45%;
 }
-
 .pf__docs-info {
     width: 55%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .pf__docs-info .input-doc-file {
@@ -2195,8 +2168,7 @@ ul.breadcrumbs li .icon-home {
 }
 
 .pf__docs-info .name,
-.pf__docs-info .date,
-.pf__docs-info .progress-value,.pf__docs-info .progress-name {
+.pf__docs-info .date {
     color: #5D7592;
     font-weight: 300
 }
@@ -2210,11 +2182,22 @@ ul.breadcrumbs li .icon-home {
     justify-content: center;
     align-items: center;
     color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .pf__docs-info .tag span.tag-success {
     background: #3A9C3E;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    
+}
+.pf__docs-info .tag span.tag-check{
+    background: #44A9B3;
+}
+.pf__docs-info .tag span.tag-error{
+    background: #811B18;
+}
+
+.pf__docs-item-nofile .pf__docs-info {
+   width: 0;
 }
 
 .pf__docs-btns {
@@ -2231,6 +2214,7 @@ ul.breadcrumbs li .icon-home {
 .pf__docs-btns .dd-btn {
     font-size: 30px;
     color: #C3D3EA;
+    padding: 0;
 }
 
 .pf__docs-btns {
@@ -2316,9 +2300,61 @@ ul.breadcrumbs li .icon-home {
     height: 50px;
 }
 
-.pf__docs-download a span {
+.pf__docs-download a span { 
     margin-right: 7px;
+    
 }
+.pf__docs-info .progress-value,.pf__docs-info .progress-name {
+    color: #5D7592;
+}
+.pf__docs-item-error .progress-name{
+    color: #811B18;
+}
+.pf__docs-item-error .progress-line > div{
+    background: #811B18;
+}
+.pf__docs-item-error .progress-value{
+    color: #811B18;
+    font-size: 12px;
+    font-weight: 300;
+}
+.pf__docs-item-error .pf__docs-info .name{
+    font-weight: 400;
+    color: #811B18;
+}
+.pf__docs-item-error .progress-value:before, .pf__docs-item-error .pf__docs-info .text:before{
+    content: "\e925";
+    font-family: 'icomoon';
+    margin-right: 3px;
+}
+.pf__docs-item-error .pf__docs-info .text{
+    font-weight: 300;
+    font-size: 12px;
+    color: #811B18;
+    line-height: 1;
+    width: 100%;
+}
+.pf__docs-item-error .icon-download:before{content: "\e922";}
+
+.pf__ip-photo .pf__form-preview{background-image: url(/i/icons/preview-ip.svg);background-position: center 13px;}
+.pf__ip-name, .pf__ip-ogrn {
+    margin-left: 165px;    width: 34.2%;
+}
+.pf__ip-torg{    margin-right: 0;
+    flex: 1;
+    min-width: 30%;}
+.pf__ip-nalog{width: 23.2%;margin-right: 0;}
+.pf__ip-inn{flex:1}
+.pf__ip-phone,.pf__ip-email{width: 23.45%;}
+.pf__ip-site{margin-right: 0;flex-grow: 1;}
+.pf__ip-name .pf__form-value:before{content: "ИП";    position: absolute;
+    left: 21px;
+    top: 15px;}
+    .pf__ip-name input{padding-left: 50px;}
+.pf__b-rsch, .pf__b-ksch, .pf__b-bik, .pf__b-bank, .pf__p-lname, .pf__p-fname,.pf__p-sname,.pf__b-pos{flex-grow: 1;    width: 22.7%;}
+ .pf__b-bank, .pf__b-pos{margin-right: 0;}
+ .pf__b-unum{     padding-top: 26px;flex-grow: 1;margin-right: 0;}
+ .pf__b-osn{width: 23.7%;}
 
 /*модалы*/
 .modal {

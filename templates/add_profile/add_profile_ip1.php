@@ -20,11 +20,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
                             <label for="ooo">Юридическое лицо</label>
                         </div>
                         <div class="pf__form-r form_radio">
-                            <input type="radio" id="ip" value="ip"  name="status">
+                            <input type="radio" id="ip" value="ip"  name="status" checked>
                             <label for="ip">Индивидуальный предприниматель</label>
                         </div>
                         <div class="pf__form-r form_radio" >
-                            <input type="radio" id="fiz" value="fiz" checked  name="status">
+                            <input type="radio" id="fiz" value="fiz"   name="status">
                             <label for="fiz">Физическое лицо</label>
                         </div>
                     </div>
@@ -52,102 +52,82 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
             <div class="pf__progress-step"><span>2</span></div>
             <div class="pf__progress-line"></div>
             <div class="pf__progress-step"><span>3</span></div>
+            <div class="pf__progress-line"></div>
+            <div class="pf__progress-step"><span>4</span></div>
         </div>
         <div class="pf__data-box">
             <div class="pf__data-title">
-                <span class="icon-user"></span>
-                Паспортные данные
+                <span class="icon-ip"></span>
+                <span class="text-desctop">Данные индивидуального предринимателя</span> 
+                <span class="text-mobile">Данные ИП</span> 
             </div>
             <div class="pf__form">
-                <div class="pf__form-photo">
+                <div class="pf__form-photo pf__ip-photo">
                     <label>
                         <div class="pf__form-preview"></div>
                         <span class="icon-photo"></span>
                         <input type="file">
                     </label>
                 </div>
-                <div class="pf__form-item pf__it-lastname">
-					<div class="pf__form-lvl">Ваше имя</div>
+                <div class="pf__form-item pf__ip-name">
+					<div class="pf__form-lvl">Индивидуальный предприниматель</div>
 					<div class="pf__form-value">
-						    <input type="text" placeholder="Введите фамилию ..." value="">
+						    <input type="text" placeholder="Введите имя предпринимателя ..." value="">
                         </div>
 				</div>
-                <div class="pf__form-item pf__it-firstname">
+                <div class="pf__form-item pf__ip-torg">
+					<div class="pf__form-lvl">Торговое наименование</div>
 					<div class="pf__form-value">
-						    <input type="text" placeholder="Введите имя ..." value="">
+						    <input type="text" placeholder="Введите наименование ..." value="">
                         </div>
 				</div>
-                <div class="pf__form-item pf__it-surname">
+                <div class="pf__form-item pf__ip-ogrn">
+					<div class="pf__form-lvl">ОГРН</div>
 					<div class="pf__form-value">
-						    <input type="text" placeholder="Введите отчество ..." value="">
+						    <input type="text" placeholder="Введите 13 цифр ОГРН ..." value="">
                         </div>
 				</div>
-                <div class="pf__form-item  pf__it-birth">
-					<div class="pf__form-lvl">Дата рождения</div>
+                <div class="pf__form-item pf__ip-inn">
+					<div class="pf__form-lvl">ИНН</div>
 					<div class="pf__form-value">
-                        <input type="text" placeholder="__.__.____" value="">
-                        <span class="icon-calendar"></span>
-					</div>
-				</div>
-                <div class="pf__form-item pf__it-gender">
-					<div class="pf__form-lvl">Пол</div>
-					<div class="pf__form-radio">
-                        <div class="pf__form-r form_radio">
-                            <input type="radio" id="men" value="men"  checked>
-                            <label for="men">мужской</label>
+						    <input type="text" placeholder="Введите 10 цифр ИНН ..." value="">
                         </div>
-                        <div class="pf__form-r form_radio">
-                            <input type="radio" id="fem" value="fem">
-                            <label for="fem">женский</label>
-                        </div>
-					</div>
 				</div>
-                <div class="pf__form-item pf__it-nat">
-					<div class="pf__form-lvl">Гражданство</div>
+                <div class="pf__form-item pf__ip-nalog">
+					<div class="pf__form-lvl">Тип налогобложения</div>
 					<div class="pf__form-value">
                         <select name="" id="">
-                            <option value="">Российская Федерация</option>
-                            <option value="">Иностранный гражданин</option>
+                            <option value="">УСН</option>
+                            <option value="">ОСН</option>
                         </select>
 					</div>
 				</div>
-                <div class="pf__form-item pf__it-passp">
-					<div class="pf__form-lvl">Паспорт</div>
-					<div class="pf__form-row">
-                        <div class="pf__form-value">
-						    <input type="text" placeholder="Серия" value="">
-                        </div>
-                        <div class="pf__form-value">
-						    <input type="text" placeholder="Номер" value="">
-                        </div>
-					</div>
-				</div>
-                <div class="pf__form-item pf__it-passpdate">
-					<div class="pf__form-lvl">Дата выдачи</div>
-					<div class="pf__form-value">
-                        <input type="text" placeholder="__.__.____" value="">
-                        <span class="icon-calendar"></span>
-					</div>
-				</div>
-                <div class="pf__form-item pf__it-place">
-					<div class="pf__form-lvl">Место рождения</div>
-					<div class="pf__form-value">
-                        <input type="text" placeholder="Введите название ..." value="">
-					</div>
-				</div>
-                <div class="pf__form-item pf__it-passpwho">
-					<div class="pf__form-lvl">Кем выдан</div>
-					<div class="pf__form-value">
-                        <input type="text" placeholder="Введите кем выдан паспорт ..." value="">
-					</div>
-				</div>
-                <div class="pf__form-item pf__it-passpkod">
-					<div class="pf__form-lvl">Код подразделения</div>
-					<div class="pf__form-value">
-                        <input type="text" placeholder="___—___" value="">
-					</div>
-				</div>
+               
 
+            </div>
+            <div class="pf__data-title">
+                <span class="icon-book"></span>
+                Контакты организации 
+            </div>
+            <div class="pf__form">
+                <div class="pf__form-item pf__ip-phone">
+					<div class="pf__form-lvl">Телефон</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="+ 7 (       )" value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__ip-email">
+					<div class="pf__form-lvl">E-mail</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="Введите электронный адрес ..." value="">
+                        </div>
+				</div>
+                <div class="pf__form-item pf__ip-site">
+					<div class="pf__form-lvl">Сайт</div>
+					<div class="pf__form-value">
+						    <input type="text" placeholder="http://" value="">
+                        </div>
+				</div>
             </div>
         </div>
         <div class="pf__data-bt">

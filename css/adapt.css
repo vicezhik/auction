@@ -355,6 +355,24 @@
     }
     .pf__b-rsch, .pf__b-ksch, .pf__b-bik, .pf__b-bank, .pf__p-lname, .pf__p-fname,.pf__p-sname,.pf__b-pos,.pf__b-unum,  .pf__b-osn{flex-grow: 1;    width: 48%;}
     .pf__b-ksch, .pf__p-fname{margin-right: 0;}
+    .pf__org-type {
+        width: 22%;
+    }
+    .pf__org-nalog {
+        width: 22%;
+        margin-right: 20px;
+        margin-left: 165px;
+    }
+    .pf__org-name,.pf__org-email{margin-right: 0;}
+    .pf__org-ogrn{ margin-right: 0;margin-left: 0;}
+    .pf__org-phone, .pf__org-email, .pf__org-site, .pf__org-torg {
+        width: 45%;
+    }
+
+    .pf__org-inn {
+        flex-grow: 0;
+        width: calc(22% + 165px)
+    }
 
 }
 

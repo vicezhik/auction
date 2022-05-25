@@ -128,6 +128,43 @@ $(document).ready(function(){
 	$('.download-file').on('click',function(){
 		$(this).closest('.pf__docs-item').find('.input-doc-file').trigger('click');
 	});
+	/*табы авторизация*/
+	var $cur_block = $('.mlog__block[data-id=1]');
+	$('.mlog__tab a').on('click', function(){
+		var $this = $(this);
+		if($this.data('id') == 2){$('.mlog').addClass('mreg');}else{$('.mlog').removeClass('mreg');}
+		$('.mlog__tab a').removeClass('active');
+		$this.addClass('active');
+		$('.mlog__block').addClass('hidden');
+		$cur_block = $('.mlog__block[data-id='+$this.data('id')+']');
+		$cur_block.removeClass('hidden');
+
+		return false;
+	});
+	$('.mlog__v-tab a').on('click', function(){
+		var $this = $(this);
+		$('.mlog__v-tab a').removeClass('active');
+		$this.addClass('active');
+		$cur_block.find('.mlog__v-box').addClass('hidden');
+		$cur_block.find('.mlog__v-box[data-id='+$this.data('id')+']').removeClass('hidden');
+		return false;
+	});
+	/*глаз пароля*/
+	$('.mlog span.icon-eye').on('click', function(){
+		var $this = $(this);
+		var $inp = $this.parent().find('input');
+		if (!$this.is('.off'))
+		{
+			$inp.attr('type', 'text');
+			$this.addClass('off');
+		}
+		else
+		{
+			$inp.attr('type', 'password');
+			$this.removeClass('off');
+		}
+		return false;
+	});
 
 });   
 /*сброс листинга при размере экрана меньше 650*/

@@ -10,6 +10,26 @@
     font-display: block;
 }
 
+.icon-phone:before {
+    content: "\e92c";
+}
+
+.icon-eye-open:before {
+    content: "\e92d";
+}
+
+.icon-eye:before {
+    content: "\e92e";
+}
+
+.icon-email:before {
+    content: "\e92f";
+}
+
+.icon-key:before {
+    content: "\e930";
+}
+
 .icon-update:before {
     content: "\e922";
 }
@@ -421,6 +441,10 @@ body ::-webkit-scrollbar-thumb:hover {
     font-size: 14px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* site style
 ------------------------------------------------ */
 .viewport-wrapper {
@@ -557,7 +581,7 @@ button {
 }
 
 select {
-    padding: 15px 20px;
+    padding: 14px 20px;
     font-size: 16px;
     background: #FFFFFF;
     border: 1px solid #ECF6FF;
@@ -567,7 +591,7 @@ select {
 }
 
 input {
-    padding: 15px 20px;
+    padding: 14px 20px;
     font-size: 16px;
     background: #FFFFFF;
     border: 1px solid #ECF6FF;
@@ -586,12 +610,16 @@ input {
 
 .ic-input:before {
     position: absolute;
-    font-size: 20px;
+
     color: #5D7592;
     display: flex;
     align-items: center;
     height: 100%;
     margin-left: 20px;
+}
+
+.form_checkbox {
+    position: relative;
 }
 
 .form_checkbox input {
@@ -2505,7 +2533,8 @@ ul.breadcrumbs li .icon-home {
 .pf__org-email,
 .pf__org-site,
 .pf__org-torg {
-    flex-grow: 1;width: 23%;
+    flex-grow: 1;
+    width: 23%;
 }
 
 .pf__org-kpp,
@@ -2559,9 +2588,12 @@ ul.breadcrumbs li .icon-home {
     color: #BDC5D7;
     font-size: 14px;
     position: absolute;
-    top: 21px;
-    right: 15px;
+    top: 19px;
+    right: 16px;
     cursor: pointer;
+    z-index: 20;
+    width: 20px;
+    text-align: center;
 }
 
 .minfo .minfo__title {
@@ -2596,6 +2628,11 @@ ul.breadcrumbs li .icon-home {
 
 .mform__box .mform-item {
     margin-bottom: 12px;
+}
+
+.mform__box .icon-map-a:before,
+.mform__box .icon-map-b:before {
+    font-size: 20px;
 }
 
 #mmap {
@@ -2769,4 +2806,99 @@ ul.breadcrumbs li .icon-home {
 
 #mfav textarea {
     min-height: 138px;
+}
+
+.mlog__tab {
+    display: flex;
+    align-items: flex-start;
+}
+
+.mlog__tab a {
+    font-size: 14px;
+    color: #BDC5D7;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mlog__tab a.active {
+    font-size: 24px;
+    color: #1F3A60;
+    margin-right: 24px;
+    order: -1;
+}
+
+.mlog__tab a.active:after {
+    height: 4px;
+    content: "";
+    width: 100%;
+    border-radius: 4px;
+    background: #3A9C3E;
+    display: block;
+    margin-top: 4px;
+}
+
+.mlog__v-tab a {
+    color: #BDC5D7;
+    font-weight: 500;
+    flex-grow: 1;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+}
+
+.mlog__v-tab a.active {
+    color: #3A9C3E;
+}
+
+.mlog__v-tab a.active:after {
+    height: 3px;
+    content: "";
+    width: 100%;
+    border-radius: 3px;
+    background: #3A9C3E;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.mlog__v-tab {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ECF6FF;
+}
+
+.modal.mlog {
+    width: 440px;
+    padding: 40px 30px;
+    transition: width .5s
+}
+
+.modal.mreg {
+    width: 580px;
+    padding: 40px 30px;
+}
+
+.mlog__form .icon-email:before {
+    font-size: 13px;
+}
+
+.mlog__form .icon-key:before {
+    font-size: 10px;
+}
+
+.mlog__form .icon-eye {
+    position: absolute;
+    right: 20px;
+    font-size: 10px;
+    top: 50%;
+    margin-top: -10px;
+    cursor: pointer;
+    z-index: 2;
+    color: #5D7592;
+}
+
+.mlog__form .icon-eye.off:before {
+    content: "\e92d";
 }

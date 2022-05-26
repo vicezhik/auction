@@ -166,6 +166,8 @@ $(document).ready(function(){
 		}
 		return false;
 	});
+	const vh = window.innerHeight / 100;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 });   
 /*сброс листинга при размере экрана меньше 650*/

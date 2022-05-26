@@ -746,8 +746,8 @@
     }
 
     .mlog__inner {
-        height: calc(100vh - 92px);
-        height: -webkit-fill-available; 
+        min-height: calc(100vh - 92px);
+        min-height: calc(var(--vh, 1vh) * 100  - 92px);
         display: flex;
         flex-direction: column;
     }

@@ -166,9 +166,6 @@ $(document).ready(function(){
 		}
 		return false;
 	});
-	/*высота модалов при регистрации на мобильной версии*/
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 });   
 /*сброс листинга при размере экрана меньше 650*/

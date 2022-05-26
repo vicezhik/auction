@@ -749,7 +749,6 @@
         min-height: calc(100vh - 92px);
         display: flex;
         flex-direction: column;
-        height: calc(var(--vh, 1vh) * 100 - 92px);
     }
 
     .mlog__form {

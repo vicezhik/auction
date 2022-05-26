@@ -47,7 +47,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/footer.php';
 
                         <div class="mlog__form-item mlog__form-insystem">
                             <div class="mlog__form-value form_checkbox">
-                                <input type="checkbox" value="1" name="" id="system" checked>
+                                <input type="checkbox" value="1" name="" id="system">
                                 <label for="system">Оставаться в системе</label>
                             </div>
                         </div>
@@ -69,8 +69,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/footer.php';
                         </div>
                         <div class="mlog__form-item mlog__form-insystem">
                             <div class="mlog__form-value form_checkbox">
-                                <input type="checkbox" value="1" name="" id="system" checked>
-                                <label for="system">Оставаться в системе</label>
+                                <input type="checkbox" value="1" name="" id="system2">
+                                <label for="system2">Оставаться в системе</label>
                             </div>
                         </div>
                         <div class="mlog__form-bt">

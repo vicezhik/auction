@@ -827,7 +827,7 @@
     .error textarea,
     input.error,
     textarea.error {
-        border-color: #D3918D;
+        border-color: #D3918D!important;
         color: #811B18;
     }
 

@@ -463,6 +463,11 @@ body ::-webkit-scrollbar-thumb:hover {
 
 a {
     color: #6AA4FB;
+    text-decoration: none;
+}
+
+.link-green {
+    color: #3A9C3E;
 }
 
 H1,
@@ -605,6 +610,11 @@ input {
 }
 
 .ic-input input {
+    padding-left: 46px;
+}
+
+.ic-input.icon-map-a input,
+.ic-input.icon-map-b input {
     padding-left: 42px;
 }
 
@@ -722,6 +732,12 @@ input {
 .btn-transparent {
     color: #5D7592;
     background: transparent;
+}
+
+.btn[class^="icon-"],
+.btn[class*=" icon-"] {
+    display: inline-flex;
+    align-items: center;
 }
 
 .btn-transparent:before {
@@ -1140,7 +1156,7 @@ ul.breadcrumbs li .icon-home {
 .footer__subscribe .btn {
     color: #1F3A60;
     border: 0;
-    padding: 8px 0;
+    padding: 9px 0;
 
 }
 
@@ -2811,6 +2827,7 @@ ul.breadcrumbs li .icon-home {
 .mlog__tab {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 8px;
 }
 
 .mlog__tab a {
@@ -2867,12 +2884,18 @@ ul.breadcrumbs li .icon-home {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ECF6FF;
+    margin-bottom: 20px;
+}
+
+.mlog__form-error {
+    color: #811B18;
+    font-size: 12px;
 }
 
 .modal.mlog {
     width: 440px;
     padding: 40px 30px;
-    transition: width .5s
+    transition: width .3s;
 }
 
 .modal.mreg {
@@ -2901,4 +2924,161 @@ ul.breadcrumbs li .icon-home {
 
 .mlog__form .icon-eye.off:before {
     content: "\e92d";
+    font-size: 14px;
+}
+
+.mlog__form-item {
+    margin-bottom: 12px;
+}
+
+.mlog__form-insystem {
+    font-size: 14px;
+    margin: 4px 0 16px;
+    display: inline-block;
+}
+
+.mlog__v-forget {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mlog__v-forget a {
+    margin-left: 20px;
+}
+
+.mlog__form-register {
+    padding-top: 15px;
+}
+
+.mlog__form-register .mlog__form-item {
+    width: 47%;
+    flex-grow: 1;
+}
+
+.mlog__form-register .mlog__form-item.mlog__form-name {
+    width: 100%;
+}
+
+.mlog__form-register .mlog__form-item.mlog__form-type {
+    width: 100%;
+}
+
+.mlog__form-register {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mlog__form-register .mlog__form-manager,
+.mlog__form-register .mlog__form-email {
+    margin-right: 20px;
+}
+
+.mlog__form-manager,
+.mlog__form-yurstatus {
+    position: relative;
+}
+
+.mlog__form-manager .select2-container,
+.mlog__form-yurstatus .select2-container {
+    width: 100% !important;
+}
+
+.mlog__form-bt {
+    width: 100%;
+}
+
+.mlog__form-type {
+    display: flex;
+    margin-top: 9px;
+    justify-content: center;
+}
+
+.mlog__form-type .form_radio:first-child {
+    margin-right: 30px;
+}
+
+.mlog__form-policy {
+    font-size: 11px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.mlog__title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 7px;
+    line-height: 1.5;
+}
+
+.mlog__title span {
+    white-space: nowrap;
+}
+
+.mlog__form-mpassw {
+    margin-top: 18px;
+}
+
+.mlog__form-back,
+.mlog__form-repeat {
+    text-align: center;
+}
+
+.mlog__form-back .btn-transparent,
+.mlog__form-repeat .btn-transparent {
+    width: auto;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.mlog__form-repeat .btn-transparent {
+    margin-top: 16px;
+}
+
+.mlog__form-phone-check {
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mlog__form-text {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mlog__form-code {
+    margin-bottom: 16px;
+}
+
+.mlog__form-phone-check .mlog__form-val:before {
+    color: #3A9C3E !important
+}
+
+.mlog__form-btns .btn:first-child {
+    margin-bottom: 16px;
+}
+
+.mlog__form-info {
+    color: #5D7592;
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+    margin-top: 20px;
+    line-height: 1.3;
+}
+
+.mlog__form-info i {
+    margin-right: 7px;
+}
+
+.mlog__form-error-box {
+    background: #FFCCCC;
+    border-radius: 4px;
+    color: #811B18;
+    padding: 7px 10px;
+    margin-top: 28px;
+    font-size: 14px;
+
 }

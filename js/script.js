@@ -174,7 +174,7 @@ $(window).on('orientationchange resize', setVh());
 
 
 /*сброс листинга при размере экрана меньше 650*/
-(window).on("resize", function (event) {
+$(window).on("resize", function (event) {
 	const widthSc = $(window).width();
 	if ($('.crlist').length > 0) {
 
@@ -187,7 +187,7 @@ $(window).on('orientationchange resize', setVh());
 });
 
 function setVh() {
-	const vh = window.innerHeight() / 100;
+	const vh = $(window).innerHeight() / 100;
 	$(document).css('--vh', `${vh}px`);
 }
 

@@ -63,11 +63,12 @@
         display: none
     }
 
-    ul.breadcrumbs li:nth-last-child(2):after {
+    ul.breadcrumbs li:nth-last-child(2) a:after {
         content: "Вернуться назад";
         font-size: 14px;
         color: #5D7592;
         display: inline-block;
+        margin: 0 5px;
     }
 
     .breadcrumbs li:nth-last-child(2) a {

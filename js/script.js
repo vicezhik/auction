@@ -86,13 +86,7 @@ $(document).ready(function(){
 	});
 
 	/*подключение модалов*/
-	$('.mbox').fancybox({
-		autoFocus: false, hideScrollbar: false,  touch: false, hideOnOverlayClick:true,
-		btnTpl: {
-			smallBtn: 
-			'<div data-fancybox-close class="icon-close mclose ic-b"></div>'
-		},
-	});
+	$('.mbox').fancybox();
 	/*Добавление класса родителю input при фокусе - для подсветки иконок*/
 	$('input').on('focus', function () {
 		$(this).parent().addClass('focus');

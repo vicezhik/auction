@@ -19,18 +19,23 @@ header('Content-type: text/html; charset=Utf-8');
 <body>
 
 <div class="viewport-wrapper">
-
 <header class="header">
 	
 	<div class="header__top">
 		<div class="wrapper">
+			
 			<div class="header__logo">
 				<a href=""><img src="i/logo.svg" alt=""/></a>
 			</div>
 			<div class="header__phone">
 				<a href="tel://88122201125">+7 (812) 220-11-26</a>	
 			</div>
-			<div class="header__burger"><span></span></div>
+			<div class="header__mobile">
+				<div class="header__mobile-login icon-login"></div>
+				<div class="header__burger"><span></span></div>
+				
+			</div>
+			<div class="header__layout"></div>
 		</div>
 	</div>
 	<div class="header__bt">
@@ -50,6 +55,7 @@ header('Content-type: text/html; charset=Utf-8');
 					<span>/</span>
 					<a href="">Регистрация</a>
 				</div>
+				
 			</div>
 		</div>
 	</div>

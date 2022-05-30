@@ -1,5 +1,59 @@
 
 $(document).ready(function(){
+	/*меню в шапке сайта*/
+	$('.hd__pmenu').toShowHide({
+		button: '.hd__pmenu-l',
+		box: '.hd__pmenu-box',
+		effect: 'slide',
+		anim_speed: 300,
+		close_only_button: false,
+		onBefore: function(el){
+			el.addClass('show_menu_pr_desctop');
+		},
+		onAfter: function(el){
+			el.removeClass('show_menu_pr_desctop');
+		}
+	});
+
+	$('.header__burger').on('click', function(){
+		if ($('.header').is('.show_menu_pr_mobile')){
+			if(!$('.header__layout').is("visible")) $('.header__layout').fadeIn(200);
+			$('.header').removeClass('show_left');
+			setTimeout(function(){$('.header').removeClass('show_menu_pr_mobile');$('.header').addClass('show_menu');},300);
+		}
+		else if($('.header').is('.show_menu')){
+			$('.header__layout').fadeOut(200);
+			$('.header').removeClass('show_menu');
+		}
+		else{
+			$('.header__layout').fadeIn(200);
+			$('.header').addClass('show_menu');
+		}
+	});
+	$('.header__mobile-profile').on('click', function(){
+		if ($('.header').is('.show_menu')){
+			if(!$('.header__layout').is("visible")) $('.header__layout').fadeIn(200);
+			$('.header').removeClass('show_menu');
+			setTimeout(function(){$('.header').addClass('show_menu_pr_mobile show_left');},300);
+		}
+		else if($('.header').is('.show_menu_pr_mobile')){
+			$('.header__layout').fadeOut(200);
+			$('.header').removeClass('show_left');
+			setTimeout(function(){$('.header').removeClass('show_menu_pr_mobile');},300);
+		}
+		else{
+			$('.header__layout').fadeIn(200);
+			$('.header').addClass('show_menu_pr_mobile show_left');
+		}
+	});
+
+	$('.header__layout').on('click', function(){
+		$('.header__layout').fadeOut(200);
+		$('.header').removeClass('show_menu  show_left');
+		setTimeout(function(){$('.header').removeClass('show_menu_pr_mobile');},300);
+	});
+
+
 	if ($('.critem').length)
 	{
 		$('.critem').each(function(){
@@ -175,6 +229,7 @@ $(window).on("resize orientationchange", function (event) {
 	setVh();
 });
 /*сброс листинга при размере экрана меньше 650*/
+/*скрываем header__layout при ресайзе*/
 		
 $(window).on("resize", function (event) {
 	const widthSc = $(window).width();
@@ -186,10 +241,13 @@ $(window).on("resize", function (event) {
 			catalog.removeClass('view-list');
 		}
 	}
+	if(widthSc > 991){
+		$('.header__layout').fadeOut(0);
+	}
 });
 function setVh(){
 	const widthSc = $(window).width();
-	if(widthSc <= 440){
+	if(widthSc <= 450){
 		const vh = $(window).innerHeight() / 100;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	}

@@ -1,5 +1,5 @@
 <?
-include 'include/head.php';
+include 'include/head_auth.php';
 ?>
 <div class="cars">
     <div class="wrapper">

@@ -1032,7 +1032,7 @@
         flex-grow: 1;
     }
 
-    .show_menu_pr_mobile .header__bt {
+    .show_left .header__bt {
         left: 0;
     }
 

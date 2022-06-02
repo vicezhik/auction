@@ -290,7 +290,7 @@ $(document).ready(function(){
 	var $cur_block = $('.mlog__block[data-id=1]');
 	$('.mlog__tab a').on('click', function(){
 		var $this = $(this);
-		if($this.data('id') == 2){$('#mlog').addClass('mreg');}else{$('#mlog').removeClass('mreg');}
+		if($this.data('id') == 2){$('#auth_registration_modal').addClass('mreg');}else{$('#auth_registration_modal').removeClass('mreg');}
 		$('.mlog__tab a').removeClass('active');
 		$this.addClass('active');
 		$('.mlog__block').addClass('hidden');

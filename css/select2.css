@@ -231,14 +231,19 @@
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--single {
-  background-color: #eee;
+  background-color: #F4F6F8;
   cursor: default;
 }
-
+.select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__rendered{
+  color:#BDC5D7;
+  font-weight: 300;
+}
 .select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear {
   display: none;
 }
-
+.select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__arrow  b:before{
+  color:#BDC5D7;
+}
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b:before {
   transform: rotate(-180deg);
   color: #3A9C3E;

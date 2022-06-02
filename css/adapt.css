@@ -282,7 +282,7 @@
     }
 
     .cars h1 {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 22px;
         line-height: 1.5;
     }
@@ -295,7 +295,7 @@
     }
 
     .crtop {
-        background: #3A9C3E;
+       
     }
 
     .minfo-fixed .minfo__title {
@@ -634,8 +634,89 @@
         width: calc(22% + 165px)
     }
 
-}
+    .cars__search{display: none;}
+    .cars_filter{display: none;}
+    .crtop {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .crtop__bgs{width: 100%;margin-right: 0;margin-bottom: 20px;}
+    .crf__save-search + .crtop .crtop__bgs{margin-bottom: 70px;}
+    .crf__save-search{    position: absolute;
+        margin-top: 70px;    width: 100%;
+        justify-content: left;}
+        .crtop .crtop__btn-mobile{display: flex;}
+    .cars_filter {
+        position: fixed;
+        width: 360px;
+        z-index: 200;
+        left: -360px;
+        top: 0;
+        height: 100vh;
+        display: block;
+        background: #FDFDFD;
+        padding-top: 60px;    overflow: auto;
+        box-shadow: 2px 2px 10px rgb(31 58 96 / 8%);
+        display: flex;
+        flex-direction: column;
+        transition: left .5s;
+    }
+    .cars_filter.show{left: 0;}
+    .crcalendar{
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+       background:transparent;
+       box-shadow:none;
+       display: none;
+       flex-grow: 1;
+    }
+    .crfilter{
+        background:transparent;
+        box-shadow:none;
+        flex-grow: 1;
+    }
+    .crfilter__top p span, .crfilter__top .btn span{display: none;}
 
+    .cars_filter_short .crc__days{
+        display: block;    overflow: inherit;
+    }
+    .cars_filter_short .crc__dopnav{display: none}
+    .cars_filter_short .crc__week div span:before, .cars_filter_short .crc__week div.active:before{display: none;}
+    .cars_filter_short .crc__week>div {
+        height: auto;
+    }
+    .cars_filter_short .crc__daysofweek {
+        display: flex;
+    }
+    .cars_filter_short .crc__week {
+        padding: 0;
+    }
+    .cars_filter_short .crc__date{display: block;}
+    .cars_filter_short .crc__days .active:after{width: 38px;}
+    .cars_filter_short .crc__days .active span{color:#fff}
+    .crtab__mobile{display:flex}
+    .crf__form-item {
+        width: 100%;}
+    .crf__form-bt{display: none;}
+    .crfilter__bot-mobile{display: flex;}
+    .crfilter__bot{    justify-content: center;
+        margin-bottom: 17px;
+        margin-top: 30px;}
+    .crfilter__bot .crfilter__reset {display: none;}
+    .crf__save-search{overflow: auto;}
+    .crf__save-search::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+}
+@media screen and (max-width:800px) {
+    .crtop__sort>div{
+        padding: 0 5px;
+    }
+    .crtop>div{padding: 0;}
+}
 @media screen and (max-width:650px) {
     h1 {
         font-size: 24px;
@@ -1006,7 +1087,11 @@
         width: 100%;
         margin-right: 0;
     }
-
+    .crtop .crtop__sort{display: none;}
+    .crtop .crtop__btn-mobile{margin: 0;}
+    .cars__mylots-btn {display: none;}
+    .crtop__sort-mob-box{display: block;}
+    .crtop  .crtop__sort-mob{display: block;}
 }
 
 @media screen and (max-width:450px) {
@@ -1286,6 +1371,33 @@
         color: #1F3A60;
         font-weight: 500;
     }
+    .crc__days .haslots:not(.active):hover:after{
+        content:"";
+        top: -3px;
+        position: absolute;
+        content: "";
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #ECF6FF;
 
+ 
+    }
 
+    .cars_filter_short .crc__days .haslots:not(.active):hover:after {
+        content: "";
+        width: 100%;
+        line-height: 35px;
+        margin-bottom: 0;
+        margin-left: 0;
+        height: 100%;
+        border-radius: 34px;
+        top: -1px;
+    }
+    .crf__save-search-it button:hover{
+        background: #C3D3EA;
+        border-color: #5D7592;
+    }
+    .crf__save-search-it button:hover i{color: #5D7592;}
+    
 }

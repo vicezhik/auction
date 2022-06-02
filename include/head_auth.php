@@ -16,6 +16,7 @@ header('Content-type: text/html; charset=Utf-8');
     <link href="css/select2.css?<?=rand()?>" rel="stylesheet" />
     <link href="css/style.css?<?=rand()?>" rel="stylesheet" />
     <link href="css/adapt.css?<?=rand()?>" rel="stylesheet" />
+
 </head>
 
 <body>

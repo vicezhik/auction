@@ -58,16 +58,17 @@ $(document).ready(function(){
 	$('.crtop__btn-filter').on('click', function(){
 		if(!$('.cars_filter').hasClass('show')){
 			$('.cars_filter').addClass('show');
+			$('body').append('<div class="crfilter__layout"></div>');
 			$('.crfilter__layout').fadeIn(200);
+			$('.crfilter__layout').on('click', function(){
+				$(".crfilter__layout").fadeOut(300, function() { $(this).remove(); });
+				$('.cars_filter').removeClass('show');
+			});
 		}
 		else{
 			$('.cars_filter').removeClass('show');
-			$('.crfilter__layout').fadeOut(200);
+			$(".crfilter__layout").fadeOut(300, function() { $(this).remove(); });
 		}
-	});
-	$('.crfilter__layout, .cts__form-close').on('click', function(){
-		$('.crfilter__layout').fadeOut(200);
-		$('.cars_filter, .crtop__sort-mob-box').removeClass('show');
 	});
 	/*поиск мобильная*/
 	$('.crtop__btn-search').on('click', function(){
@@ -77,18 +78,28 @@ $(document).ready(function(){
 	$('.crtop__mobile-search input').on('blur', function(){
 		$('.crtop__mobile-search').removeClass('show');
 	});
-	/*сортировка мобильная*/
-	$('.crtop__sort-mob-val').on('click', function(){
-		const box = $('.crtop__sort-mob-box');
-		if(!box.hasClass('show')){
-			box.addClass('show');
-			$('.crfilter__layout').fadeIn(200);
+	/*попап снизу мобильная*/
+	$('[data-mbottom]').on('click', function(){
+		const box = $($(this).data('mbottom'));
+		if(box.length){
+			if(!box.hasClass('show')){
+				box.addClass('show');
+				$('body').append('<div class="mbottom__layout"></div>');
+				$('.mbottom__layout').fadeIn(200);
+				$('.mbottom__layout, .mbottom-close').on('click', function(){
+					$(".mbottom__layout").fadeOut(300, function() { $(this).remove(); });
+					$('.mbottom-mobile.show').removeClass('show');
+				});
+			}
+			else{
+				box.removeClass('show');
+				box.fadeOut(200);
+				$(".mbottom__layout").fadeOut(300, function() { $(this).remove(); });
+			}
 		}
-		else{
-			box.removeClass('show');
-			box.fadeOut(200);
-		}
+	
 	});
+	
 	/*для фильтра в листинге*/
 
 	hiddenArrow();
@@ -356,6 +367,8 @@ $(window).on("resize", function (event) {
 	}
 	if(widthSc > 991){
 		$('.header__layout').fadeOut(0);
+		$('.crfilter__layout').remove();
+		$('.mbottom__layout').remove();
 	}
 });
 function setVh(){

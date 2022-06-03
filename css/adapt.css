@@ -1200,6 +1200,8 @@
     .mlog__block.hidden {
         display: none;
     }
+    .cars_filter{width: 100%;left:-100%}
+    .crtab__mobile{width: 100%;}
 }
 
 @media (hover),

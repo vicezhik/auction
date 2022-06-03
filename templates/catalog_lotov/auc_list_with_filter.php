@@ -13,7 +13,6 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             <div class="cars__search "><div class="ic-input icon-search"><input type="text" placeholder="Поиск по VIN или №лота ..."/></div></div>
             <div  class="cars__mylots-btn "><a class="btn btn-green icon-bid-active">Мои лоты</a></div>
         </div>
-        <div class="crfilter__layout"></div>
         <div class="cars_filter tab-outer">
             <div class="crtab__mobile tab-list">
                 <button class="crtab__mobile-filter icon-filter btn active" data-tab=".crfilter">Фильтр</button>
@@ -361,11 +360,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                 <div class="desc">Год выпуска <span class="icon-arrow-long"></span></div>
                 <div class="desc">Пробег <span class="icon-arrow-long"></span></div>
             </div>
-            <div class="crtop__sort-mob">
-                <div class="crtop__sort-mob-val ic-a">
+            <div class="crtop__sort-mob " >
+                <div class="crtop__sort-mob-val ic-a" data-mbottom="#msort-mobile">
                     <span>Показать лоты сначала дешевле</span>
                 </div>
-                <div class="crtop__sort-mob-box">
+                <div class="crtop__sort-mob-box mbottom-mobile" id="msort-mobile">
                     <div class="cts__form-title">Показать лоты </div>
                     <div class="cts__form">
                         <div class="cts__form-item">
@@ -403,7 +402,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                         </div>
                         <div  class="cts__form-bt"><button class="btn btn-green ">Применить</button></div>
                     </div>
-                    <div class="cts__form-close icon-close"></div>
+                    <div class="cts__form-close mbottom-close icon-close"></div>
                 </div>
             </div>
             

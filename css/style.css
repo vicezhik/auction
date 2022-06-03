@@ -1908,6 +1908,7 @@ ul.breadcrumbs li .icon-home {
 .critem__info-bidinput .critem__info-sub {
     font-size: 12px;
 }
+.critem__info-bidinput .btn:before{margin-right: 0;}
 
 .input__num {
     border: 1px solid #ECF6FF;

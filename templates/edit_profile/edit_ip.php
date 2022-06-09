@@ -29,7 +29,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
                 <div class="pf__edit-user">
                     <div class="name">ИП Курило Денис Петрович</div>
                     <div class="type">Индивидуальный предприниматель / Продавец</div>
-                    <div class="status"><span class="active">Активный</span></div>
+                    <div class="pf__status-user"><span class="active">Активный</span></div>
                 </div>
                 <div class="pf__edit-actions">
                     <button class="btn btn-transparent icon-delete btn_delete">Удалить профиль</button>

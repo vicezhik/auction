@@ -28,7 +28,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
                 <div class="pf__edit-user">
                     <div class="name">Иванов Александр Петрович</div>
                     <div class="type">Физическое лицо / Покупатель</div>
-                    <div class="status"><span class="active">Активный</span><span class="check">На проверке</span><span
+                    <div class="pf__status-user"><span class="active">Активный</span><span class="check">На проверке</span><span
                             class="blocked">Заблокирован</span><span class="draft">Черновик</span></div>
                 </div>
                 <div class="pf__edit-actions">

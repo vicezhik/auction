@@ -702,11 +702,11 @@
         height: 120px;
     }
 
-    .pf__edit-user .status {
+    .pf__edit-user .pf__status-user {
         margin-top: 13px;
     }
 
-    .pf__edit-user .status span {
+    .pf__status-user span {
         padding: 0 24px;
         font-size: 12px;
         line-height: 20px;
@@ -736,7 +736,19 @@
         width: 32px;
         height: 32px;
     }
-
+    .pf__has-item .info {
+        font-size: 14px;
+    }
+    .pf__has-item .type {    float: none;
+        display: block;
+        text-align: left;}
+        .pf__has-item .actions, .pf__has-item .status {
+            width: 25%;
+        }
+        .pf__has-title{ padding: 20px 35px;}
+        .pf__has-title.small {
+            font-size: 18px;
+        }
     .cars__search {
         display: none;
     }
@@ -895,6 +907,7 @@
     .buttonDownloadDogovor2 {
         display: flex;
     }
+    
 }
 
 @media screen and (max-width:800px) {
@@ -913,6 +926,7 @@
         margin-bottom: 20px;
         line-height: 29px;
     }
+    
 
 
 
@@ -1232,7 +1246,7 @@
         padding-left: 0;
     }
 
-    .pf__edit-user .status {
+    .pf__edit-user .pf__status-user {
         margin-top: 0;
         order: -1;
         margin-bottom: 20px;
@@ -1263,7 +1277,31 @@
     .pf__edit-h1 h1 {
         margin-bottom: 30px;
     }
-
+    .pf__has{padding: 0;margin-bottom: 25px;}
+    .pf__has-item .actions{
+        position: absolute;
+        right: 0;
+        top: 13px;
+        width: auto;
+        
+    }
+    .pf__has-item {
+        padding: 20px 15px;
+    }
+    .pf__has-item .preview{margin-right: 20px;}
+    
+    .pf__has-title i {
+        font-size: 30px;   margin-right: 20px;}
+    .pf__has-title,  .pf__has-title.small {
+        font-size: 14px;
+        padding: 15px 20px;
+        line-height: 20px;
+    }
+    .pf__has-item .actions .btn{font-size: 0;}
+    .pf__has-item .actions .btn:before{font-size: 18px;}
+    .pf__has-item .status{    margin-top: 20px; width: 35%;
+        text-align: right;}
+   
     .minfo-fixed .minfo__title {
         margin-left: 12px;
         font-size: 12px;
@@ -1469,6 +1507,10 @@
 
     .crtab__mobile {
         width: 100%;
+    }
+    .pf__has-item .preview{display: none;}
+    .pf__has-item  .pf__status-user span {
+        padding: 0 16px;
     }
 }
 
@@ -1677,4 +1719,5 @@
         color: #5D7592;
     }
 
+    .cdt__i-fav .icon-star:hover{color: #5D7592;}
 }

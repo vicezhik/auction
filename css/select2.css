@@ -46,6 +46,23 @@
   display: inline;
   list-style: none;
   padding: 0;
+} 
+
+.select2-container .select2-selection--multiple .select2-selection__rendered{display: flex;    white-space: nowrap;}
+.select2-container .select2-selection--multiple .select2-selection__rendered li:not(:first-child){
+  counter-increment: city;
+  font-size: 0;
+  width: 0;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered li:last-child:after{
+  content: '+ еще 'counter(city);
+  font-size: 12px;
+  position: absolute;
+  margin-left: 5px;
+  color: #5D7592;
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered li:first-child:after{
+  display:none;
 }
 
 .select2-container .select2-selection--multiple .select2-selection__clear {
@@ -69,7 +86,10 @@
   overflow: hidden;
   word-break: keep-all;
 }
-
+.select2-selection--multiple .select2-search--inline .select2-search__field{
+  margin-top: 0;
+  margin-left: 0;
+}
 .select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
@@ -268,13 +288,13 @@
 }
 
 .select2-container--default .select2-selection--multiple {
-  background-color: white;
-  border: 1px solid #aaa;
+  padding: 10px 20px;
+  line-height: 16px;
+  background-color: #fff;
+  border: 1px solid #ECF6FF;
   border-radius: 4px;
-  cursor: text;
-  padding-bottom: 5px;
-  padding-right: 5px;
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .select2-container--default .select2-selection--multiple.select2-selection--clearable {
@@ -293,7 +313,7 @@
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #e4e4e4;
+  /*background-color: #e4e4e4;
   border: 1px solid #aaa;
   border-radius: 4px;
   box-sizing: border-box;
@@ -307,13 +327,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   vertical-align: bottom;
-  white-space: nowrap;
+  white-space: nowrap;*/
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
   cursor: default;
-  padding-left: 2px;
-  padding-right: 5px;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
@@ -330,6 +348,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  display: none;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
@@ -364,9 +383,10 @@
   margin-right: auto;
 }
 
-.select2-container--default.select2-container--focus .select2-selection--multiple {
-  border: solid black 1px;
+.select2-container--default.select2-container--focus .select2-selection--multiple, .select2-container--default.select2-container--open .select2-selection--multiple {
+  border: solid #3A9C3E 1px;
   outline: 0;
+ 
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--multiple {
@@ -461,4 +481,52 @@
   cursor: default;
   display: block;
   padding: 6px;
+}
+.select2-container--open:after{
+  height: 1px;
+  background: #ECF6FF;
+  content: "";
+  display: block;
+  z-index: 999999;
+  width: calc(100% - 38px );
+  position: absolute;
+  margin-left: 20px;
+}
+.select2-dropdown.select-multiple .select2-results__option{
+  display: flex;align-items:center
+}
+.select2-dropdown.select-multiple .select2-results__option:before{
+  content:"";
+  background: #FFFFFF;
+  border: 1px solid #D5E1F1;
+  border-radius: 4px;
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin-right: 16px;
+  font-family: 'icomoon';
+}
+.select2-dropdown.select-multiple .select2-results__option.select2-results__option--selected:before{
+  content:"\e921";
+  background:#3A9C3E;
+  border-color:#3A9C3E;
+  font-size: 7px;
+  color: #fff;
+  line-height: 16px;
+  text-align: center;
+  padding-left: 1px;
+}
+.select2-selection.select2-selection--multiple:after{
+  content: '\e918';
+    font-family: 'icomoon' !important;
+    font-size: 7px;
+    color: #5D7592;
+    display: inline-block;
+    transition: transform .3s;
+    position: absolute;
+    right: 20px;
+}
+.select2-container--open .select2-selection.select2-selection--multiple:after{
+  transform: rotate(-180deg);
+  color: #3A9C3E;
 }

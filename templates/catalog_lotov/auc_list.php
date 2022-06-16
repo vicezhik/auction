@@ -18,7 +18,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
 
             <div class="critem critem-noauth">
                 <div class="critem__top">
-                    <div class="critem__top-nds icon-nds">НДС</div>
+                <div class="critem__tags card-tags-box">
+                        <span class="tag-nds"> Без НДС</span>
+                        <span class="tag-car"> Только на RRT </span>
+                        <span class="tag-delivery"> Бесплатная доставка </span>
+                    </div>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -47,7 +51,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4************310</a>
-                        <span class="icon-vin vin-yes " data-tooltip="VIN проверен"></span>
+                        <span class="icon-vin icon-vin-success" data-tooltip="VIN проверен"></span>
 
                     </div>
                     <div class="critem__info-km  icon-speed text-icon">
@@ -110,7 +114,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4************310</a>
-                        <span class="icon-vin vin-check " data-tooltip="VIN на проверке"></span>
+                        <span class="icon-vin icon-vin-default " data-tooltip="VIN на проверке"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -143,7 +147,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-noauth">
                 <div class="critem__top">
-                    <div class="critem__top-nds icon-nds">НДС</div>
+                <div class="critem__tags card-tags-box">
+                        <span class="tag-nds"> Без НДС</span>
+                        <span class="tag-car"> Только на RRT </span>
+                        <span class="tag-delivery"> Бесплатная доставка </span>
+                    </div>
                     <div class="critem__imgs">
 
                         <div class="critem__imgs-list">
@@ -171,7 +179,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4************310</a>
-                        <span class="icon-vin vin-no " data-tooltip="VIN не проверен"></span>
+                        <span class="icon-vin icon-vin-error " data-tooltip="VIN не проверен"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -231,7 +239,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4************310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success "></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -298,7 +306,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n"> X4XKS494900X76310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success "></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -340,7 +348,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-auth">
                 <div class="critem__top">
-                    <div class="critem__top-nds icon-nds">НДС</div>
+                    <div class="critem__tags card-tags-box">
+                        <span class="tag-nds"> Без НДС</span>
+                        <span class="tag-car"> Только на RRT </span>
+                        <span class="tag-delivery"> Бесплатная доставка </span>
+                    </div>
                     <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
@@ -375,7 +387,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4XKS494900X76310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -417,7 +429,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-auth">
                 <div class="critem__top">
-                    <div class="critem__top-nds icon-nds">НДС</div>
+                <div class="critem__tags card-tags-box">
+                        <span class="tag-nds"> Без НДС</span>
+                        <span class="tag-car"> Только на RRT </span>
+                        <span class="tag-delivery"> Бесплатная доставка </span>
+                    </div>
                     <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
@@ -449,7 +465,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4XKS494900X76310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -525,7 +541,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4************310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -568,7 +584,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             <!--Покупатель -->
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                    <div class="critem__top-nds icon-nds">НДС</div>
+                <div class="critem__tags card-tags-box">
+                        <span class="tag-nds"> Без НДС</span>
+                        <span class="tag-car"> Только на RRT </span>
+                      
+                    </div>
                     <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
@@ -603,7 +623,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4************310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -710,7 +730,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4************310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -783,7 +803,10 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                    <div class="critem__top-nds icon-nds">НДС</div>
+                <div class="critem__tags card-tags-box">
+                      
+                        <span class="tag-delivery"> Бесплатная доставка </span>
+                    </div>
                     <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
@@ -818,7 +841,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="" class="vin-n">X4************310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км
@@ -891,7 +914,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                    <div class="critem__top-nds icon-nds">НДС</div>
+                <div class="critem__tags card-tags-box">
+                        <span class="tag-nds"> Без НДС</span>
+                        <span class="tag-car"> Только на RRT </span>
+                        <span class="tag-delivery"> Бесплатная доставка </span>
+                    </div>
                     <a class="critem__top-bidsall icon-bids-all mbox" href="#mbidsall"></a>
                     <div class="critem__imgs">
 
@@ -926,7 +953,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-vin">
                         <span class="vin-t">VIN</span>
                         <a href="#mvin" class="vin-n mbox">X4XKS494900X76310</a>
-                        <span class="icon-vin vin-yes "></span>
+                        <span class="icon-vin icon-vin-success"></span>
                     </div>
                     <div class="critem__info-km icon-speed text-icon">
                         78 000 км

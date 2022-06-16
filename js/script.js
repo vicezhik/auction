@@ -304,9 +304,15 @@ $(document).ready(function () {
 		$(this).addClass('active');
 	});
 	/*select*/
-	$('select').select2({
+	$('select:not([multiple])').select2({
 		minimumResultsForSearch: -1,
-
+	});
+	$('select[multiple]').select2({
+		minimumResultsForSearch: -1,
+		closeOnSelect : false,
+		allowHtml: true,
+		tags: true,
+		dropdownCssClass : "select-multiple",
 	});
 	/*Показать форму Адрес проживания */
 	$('#address-check').on('change', function () {

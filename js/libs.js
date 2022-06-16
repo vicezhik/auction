@@ -1,47 +1,31 @@
 
-document.addEventListener('DOMContentLoaded', function(){
- 
-    let tooltipElem;
+const tooltip = new (function() {
+  const node = document.createElement('div');
+  node.className = 'tooltip';
+  node.classList.add('hidden');
+  document.body.appendChild(node);
 
-    document.onmouseover = function(event) {
+  this.follow = function(event) {
+    node.style.left = event.pageX + 5 + 'px';
+    node.style.top = event.pageY  - node.offsetHeight + 'px';
+  };
 
-      let target = event.target;
+  this.show = function(event) {
+    node.innerHTML = event.target.dataset.tooltip;
+    node.classList.add(event.target.dataset.tpclass);
+    node.classList.remove('hidden');
+  };
 
-      // если у нас есть подсказка...
-      let tooltipHtml = target.dataset.tooltip;
-      if (!tooltipHtml) return;
+  this.hide = function(event) {
+    node.classList.add('hidden');
+    node.classList.add(event.target.dataset.tpclass);
+  };
+})();
 
-      // ...создадим элемент для подсказки
+const links = document.querySelectorAll('[data-tooltip]');
 
-      tooltipElem = document.createElement('div');
-      tooltipElem.className = 'tooltip'; 
-      tooltipElem.innerHTML = tooltipHtml;
-      document.body.append(tooltipElem);
-
-      // спозиционируем его сверху от аннотируемого элемента (top-center)
-      let coords = target.getBoundingClientRect();
-
-      //let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) ;
-	  let left = coords.left + target.offsetWidth/4*3;
-      if (left < 0) left = 0; // не заезжать за левый край окна
-
-      //let top = coords.top - tooltipElem.offsetHeight - 5;
-	  let top = coords.top - tooltipElem.offsetHeight/2;
-      if (top < 0) { // если подсказка не помещается сверху, то отображать её снизу
-        top = coords.top + target.offsetHeight + 5;
-      }
-
-      tooltipElem.style.left = left + 'px';
-      tooltipElem.style.top = top + 'px';
-    };
-
-    document.onmouseout = function(e) {
-
-      if (tooltipElem) {
-        tooltipElem.remove();
-        tooltipElem = null;
-      }
-
-    };
+links.forEach(link => {
+  link.onmouseover = tooltip.show;
+  link.onmousemove = tooltip.follow;
+  link.onmouseout = tooltip.hide;
 });
-

@@ -160,7 +160,7 @@ $(document).ready(function () {
 	function setWeek() {
 
 		const shortCalendar = $('.cars_filter_short.crcalendar');
-		if (shortCalendar.length) {
+		if (shortCalendar.length && shortCalendar.find('.crc__week.active_week').length ) {
 			const offset = shortCalendar.find('.crc__week.active_week').position().left;
 			const blDays = shortCalendar.find('.crc__days');
 			blDays.scrollLeft(offset);
@@ -561,7 +561,6 @@ $(document).ready(function () {
 	});
 	icleft.on('click', function(){
 		$curr = $(this).parent().find('.active').prevAll('button:not(.tab-disabled)').first();
-		console.log($curr);
 		if($curr.length > 0){
 			$curr.trigger('click');
 			icright.removeClass('disabled');
@@ -570,6 +569,28 @@ $(document).ready(function () {
 			icleft.addClass('disabled');
 		}
 	});
+		/*табы-слайдеры для периода в фильтре*/
+		const periodBox = $('.crc__period-tag ul');
+		const icleftp = $('.crc__period-tag i.left');
+		const icrightp = $('.crc__period-tag i.right');
+		icrightp.on('click', function(){
+			$curr = $(this).parent().find('.active').removeClass('active').nextAll('li').first();
+			if($curr.length > 0){		
+				$curr.addClass('active');
+			}
+			else{
+				periodBox.find('li').first().addClass('active');
+			}
+		});
+		icleftp.on('click', function(){
+			$curr = $(this).parent().find('.active').removeClass('active').prevAll('li').first();
+			if($curr.length > 0){		
+				$curr.addClass('active');
+			}
+			else{
+				periodBox.find('li').last().addClass('active');
+			}
+		});
 
 
 	/*tooltip для развертки авто*/

@@ -1103,10 +1103,7 @@ ul.breadcrumbs li .icon-home {
     color: #5D7592;
 }
 
-.pages ul li:not(.active) a:hover,
-.pages ul li:not(.active) a:hover:before {
-    color: #1F3A60
-}
+
 
 .pages ul li.active a {
     background: #5D7592;
@@ -1998,7 +1995,7 @@ ul.breadcrumbs li .icon-home {
 }
 
 .critem__info .critem__info-price-bl {
-    margin-top: 7px;
+    /*margin-top: 7px;*/
     margin-bottom: 12px;
     font-weight: 500;
     font-size: 13px;
@@ -2250,6 +2247,19 @@ ul.breadcrumbs li .icon-home {
 
 .critem.critem-auth {
     min-height: 310px;
+}
+.crlist__archive.view-list .critem__info-bid{
+    position: relative;
+    margin-bottom: 0;
+    bottom: 0;
+    left: 0;
+}
+.crlist__archive.view-list .critem-auth .critem__info-price-bl {
+    bottom: 24px;
+}
+
+.crlist__archive .critem.critem-auth{
+    min-height: 300px;
 }
 
 .crbot {
@@ -4901,6 +4911,69 @@ background:#3A9C3E;
     content:"\e93c";
 }
 .critem__tags{top:12px; left:13px}
+.crc__period .crc__title {
+    justify-content: start;
+}
+.crcalendar-archive {
+    padding: 17px 20px;
+}
+.crc__period-tag{position: relative;    background: #ECF6FF;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 38px;}
+.crc__period-tag i{
+    position: absolute;
+    font-size: 11px;
+    top: 0;
+    margin-top: 1px;
+    display: inline;
+    left: 3px;
+    padding: 0 10px;
+    z-index: 20;
+    cursor: pointer;
+}
+.crc__period-tag i.right{right: 3px;transform: rotate(180deg);    left: auto; margin-top: -1px;
+}
+.crc__period-tag i.disabled{
+pointer-events: none;
+color:#ECF6FF;
+}
+.crc__period-tag ul li{display: none;}
+.crc__period-tag ul li.active{display: block;}
+.crc__period-lvl{font-size: 12px;}
+.crc__period-val{position: relative;}
+.crc__period-val input{padding-left: 46px;}
+.crc__period-val > span{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.crcalendar-archive .crc__info{
+    padding: 0;
+}
+.crc__period-tag{
+    -moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;  
+}
+.crc__period-item{margin: 16px 0;}
+.crc__period-delim::before{content:"\e949"; font-family:"icomoon";     color: #C3D3EA;
+    font-size: 9px;margin: 0 7.5px;display: none;}
+.cars_filter_short .crc__info .crc__title{display: none;}
+.cars_filter_short .crc__period-lvl{display: none;}
+
+    .cars_filter_short .crc__period-box{
+        display: flex;
+    align-items: center;
+    }
+    .cars_filter_short .crc__period-val > span{
+        display: none;
+    }
+    .cars_filter_short  .crc__period-val input{padding-left: 20px;}
+    .cars_filter_short .crc__period-delim::before{
+        display: block;
+    }
+    .cars_filter_short .crc__period-item{margin-bottom: 5px;}
 /*модалы*/
 .modal {
     display: none;

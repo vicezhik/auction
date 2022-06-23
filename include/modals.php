@@ -248,3 +248,19 @@
         </form>
     </div>
 </div>
+<div class="modal minfo minfo-xs mbox-delete" id="mdelete" >
+	<div class="minfo__title">
+    Вы уверены, что хотите удалить лот?
+	</div>
+    <div class="mform__box">
+        <form action="">
+            
+                <div class="mform-bt">
+                    <button class="btn btn-green" >Да, удалить</button>
+                </div>
+                <div class="mform-bt">
+                    <button class="btn btn-white" >Нет, не удалять</button>
+                </div>
+        </form>
+    </div>
+</div>

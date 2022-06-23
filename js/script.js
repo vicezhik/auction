@@ -118,14 +118,18 @@ $(document).ready(function () {
 		const scrLeft = $('.crtop__bgs-scroll').scrollLeft();
 		let blWidth = 0;
 		$(".crtop__bgs-item").each(function () {
-			blWidth += $(this).outerWidth();
+			if($(this).is(':visible')){
+				blWidth += $(this).outerWidth();
+			}
 		});
+		
 		const blScrollWidth = $('.crtop__bgs').width();
 		if (scrLeft === 0) {
 			$('.crtop__bgs-prev').addClass('disabled');
 		} else {
 			$('.crtop__bgs-prev').removeClass('disabled');
 		}
+		
 		if (scrLeft + blScrollWidth >= blWidth) {
 			$('.crtop__bgs-next').addClass('disabled');
 		} else {
@@ -146,12 +150,59 @@ $(document).ready(function () {
 			hiddenArrow()
 		});
 	});
-	$('.crtop__bgs-item').on('click', function () {
+	$('.crtop__bgs-item:not(.crtop__bgs-radio)').on('click', function () {
+		const select = $(this).parent().prev('.crtop__bgs-select-title');
 		$('.crtop__bgs-item').removeClass('active');
 		$(this).addClass('active');
+		if(select.length > 0) {
+			const widthSc = $(window).width();
+			select.text($(this).text());
+			if(widthSc <=650){
+				select.trigger('click');
+			}
+		}
+		if($(this).next('.crtop__bgs-radio').length > 0){
+			$(this).next('.crtop__bgs-radio').trigger('click');
+		}
+		hiddenArrow();
+	});
+	$('.crtop__bgs-radio').on('click', function () {
+		const select = $(this).parent().prev('.crtop__bgs-select-title');
+		$('.crtop__bgs-radio').removeClass('active');
+		$(this).addClass('active');
+		$('.crtop__bgs-item:not(.crtop__bgs-radio)').removeClass('active');
+		$(this).prevAll('.crtop__bgs-item:not(.crtop__bgs-radio)').first().addClass('active');
+		if(select.length > 0){
+			const widthSc = $(window).width();
+			select.text($(this).children(".title-mob").text());
+			if(widthSc <=650){
+				select.trigger('click');
+			}
+		} 
+		hiddenArrow();
 	});
 	$('.crtop__bgs-scroll').on('scroll', function () {
 		hiddenArrow();
+	});
+	/*Сортировка Мои аукционы - мобильная версия*/
+	$('.crtop__bgs-scroll').toShowHide({
+		button: '.crtop__bgs-select-title',
+		box: '.crtop__bgs-list-mylots',
+		effect: 'slide',
+		anim_speed: 300,
+		close_only_button: false,
+		onBefore: function (el) {
+			el.addClass('crtop__bgs_show');
+		},
+		onAfter: function (el) {
+			el.removeClass('crtop__bgs_show');
+		}
+	});
+	$(window).on("resize", function (event) {
+		const widthSc = $(window).width();
+		if ($('.crtop__bgs-list-mylots').length > 0 && widthSc > 650 )  {
+			$('.crtop__bgs-list-mylots').removeAttr('style');
+		}
 	});
 
 	/*листание - недели*/

@@ -26,6 +26,9 @@
         max-width: 675px;
         margin: auto;
     }
+    .crtop>div.crtop__search {
+        min-width: 450px;
+    }
 
 }
 
@@ -308,13 +311,13 @@
     .card__info{
         width: 100%;
         display: grid;
+            column-gap: 20px;
         grid-template-columns: repeat(2, 1fr);padding: 0; 
     }
     .cri__how{
         grid-column-start: 1;
         grid-row-start: 1;
         grid-row-end: 5;
-           padding-right: 20px;
     }
     .cri__price{margin-top:20px}
     .cri__md{
@@ -990,19 +993,31 @@
     .card__info-seller .cri__time{
         grid-column-start: 1;
         grid-row-start: 1;
-        grid-row-end: 3;
-        padding-right: 20px;
+        grid-row-end: 2;
+        padding: 0;
         border: 0;
         margin-bottom: 16px;
+        font-size: 16px;
+    }
+    .card__info-seller .cri__md{
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        margin-top: -30px;
     }
     .card__info-seller .cri__btn{
         grid-column-start: 2;
         grid-row-start: 3;
-        grid-row-end: 5;
+        grid-row-end: 8;
         border: 0;
         margin: 0;
     }
-    .card__info-seller .cri__bid, .card__info-seller .cri__minprice{margin-bottom: 0;    font-size: 14px;}
+    .card__info-seller .cri__price{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    .card__info-seller .cri__bid, .card__info-seller .cri__minprice, .card__info-seller .cri__startprice{margin-bottom: 5px;    font-size: 14px;}
     .card__info-seller .cri__time .cri__time-sub {
         font-size: 14px;
     }
@@ -1062,49 +1077,240 @@
     .cdt__dopdata-btn{width:50%; padding-left: 30px;}
     .cdt__dopdata-btn .btn{width: 100%;}
     .card__tabs .cdt__dopdata-tabs .tab-content{padding: 20px 0;}
-    .card__info.card__info-buyer{
+    .card__info-buyer{
         display: grid;
         column-gap: 20px;
     }
-    .card__info.card__info-buyer .cri__price{
+    .card__info-buyer .cri__price{
         grid-column-start: 2;
         grid-row-start: 1;
-        grid-row-end: 3;
+        grid-row-end: 7;
     }
-    .card__info.card__info-buyer .cri__md{
+    .card__info-buyer .cri__md{
         margin-top: 20px
     }
-    .card__info.card__info-buyer .cri__minprice{
+    .card__info-buyer .cri__minprice{
         grid-column-start: 1;
         grid-row-start: 4;
         grid-row-end: 4;
     }
-    .card__info.card__info-buyer .cri__bid{
+    .card__info-buyer .cri__startprice{
+        grid-column-start: 1;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+    .card__info-buyer .cri__bid{
         grid-column-start: 1;
         grid-row-start: 3;
         grid-row-end: 3;
     }
-    .card__info.card__info-buyer .cri__bidinput {
+    .card__info-buyer .cri__bidinput {
         grid-column-start: 2;
         grid-row-start: 3;
         grid-row-end: 5;
     }
-    .card__info.card__info-buyer .cri__bidinput-bid{
+    .card__info-buyer .cri__bidinput-bid{
         margin-top: -90px;
     }
-    .card__info.card__info-buyer .cri__btn{
+    .card__info-buyer .cri__btn{
         grid-column-start: 2;
         grid-row-start: 5;
         grid-row-end: 5;
         margin-top: 10px;
     }
-    .card__info.card__info-buyer .cri__btn-prbid{
+    .card__info-buyer .cri__btn-prbid{
         margin-top: 10px;
     }
+    .cri__time-smtablet{
+        flex-direction: row;font-size: 16px;align-items: end;
+    }
+    .cri__time-smtablet .cri__time-del{display: block;}
+    .card__mylots-bidsgo .cri__time{
+        grid-column-start: 1;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+    
+    .card__mylots-bidsgo .cri__btn-prbid {
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+    .card__mylots-bidsgo .cri__bid{
+        grid-row-start: 2;
+        grid-row-end: 2;
+        margin-bottom: 10px;
+    }
+    .card__mylots-bidsgo .cri__minprice{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        margin-bottom: 10px;
+    }
+    .card__mylots-bidsgo .cri__startprice{
+        grid-row-start: 4;
+        grid-row-end: 4;
+        margin-bottom: 10px;
+    }
+    .card__mylots-bidsgo .cri__bidinput{
+        grid-column-start: 2;
+        grid-row-start: 4;
+        grid-row-end: 7;
+        margin-top: 20px;
+ 
+    }
+ 
+    .card__mylots-bidsgo .cri__bidinput-bid{
+        margin-top: -60px;
+    }
+    .card__mylots-bidsgo .cri__btn{
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
     .cdt__i-btn{display:none}
+    .card__seller-mylots .cdt__i-btn{display:block}
+    .card__seller-mylots h1{flex-grow: 1;}
     .cri__btn-prbid{display:block}
     .crc__period .crc__title{display: none;}
     .cars__archive .cars__mylots-btn{margin-bottom: 15px;}
+    .cars__mylots .crtop{
+        margin-top: 8px;
+    }
+    .crtop__bgs-mylots{
+        width: auto;
+        max-width: calc(100% - 126px);
+    }
+    .crtop__search {
+        position: absolute;
+        order: -1;
+        margin-top: -68px;
+        min-width: 50%!important;
+        right: 0;
+    }
+    .cars__mylots .breadcrumbs{
+        display: none;
+    }
+    .ml-status{
+        bottom: 12px;
+        right: 13px;
+        padding: 1px 12px;
+    }
+    .crlist-empty{
+        min-height: 400px;
+    }
+    .crlist-empty p{
+        margin-top: 30px;
+    }
+    .card__mylots-bidsend .cri__time{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 6;
+        border:none;
+        margin-bottom: 5px;
+    }
+    .card__mylots-bidsend .cri__btn{
+        grid-column-start: 2;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+    .card__mylots-bidsend .cri__btn-tr{margin-top: 10PX;    grid-column-start: 1;
+        grid-row-start: 6;
+        grid-row-end: 6;}
+    .card__mylots-bidsend .cri__bid, .card__mylots-bidsend .cri__minprice, .card__mylots-bidsend .cri__startprice, .card__mylots-bidsend .cri__yourbid{
+        margin: 5px 0;
+    }
+    .card__mylots-bidsend  .cri__md{
+        padding-bottom: 0;
+        border:0;
+    }
+    .crtop__seller .crtop__search {
+        margin-top: 0;
+        position: relative;
+        flex-grow: 1;
+        margin-bottom: 20px;
+
+    }
+    .crtop__seller .crtop__addlot-btn{
+        position: relative;
+        margin-top: 0;
+        right: 0;
+    }
+    .card__info-seller-noactivate {
+        column-gap: 20px;
+        border: 1px solid #ECF6FF;
+        padding-top: 20px;
+        margin-top: 30px;
+    }
+    .card__info-seller-noactivate .cri__price{
+        grid-column-start: 2;
+        grid-row: 1/3;
+        margin-top: 0;
+    }
+    .card__info-seller-noactivate .cri__md{
+        grid-column-start: 2;
+    grid-row: 3/4;
+    padding-bottom: 0;
+    border-bottom:none;
+    margin-bottom:0
+    }
+    .card__info-seller-noactivate .cri__btn-mod{
+        grid-column-start: 2;
+    grid-row: 5/5;
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+    margin-top: 15px;
+    }
+    .card__info-seller-noactivate .cri__btn{
+        grid-column-start: 1;
+        grid-row: 5/5;
+        margin-top: 15px;
+    }
+    .cdt__info-btn{
+        position: absolute;
+        right: 23px;
+    }
+    .cri__info-moderation{
+        padding-top: 0;
+        border-top:none;
+        margin-bottom: 0;
+    }
+    .cri__btn-cancel{
+        grid-column-start: 2;
+        grid-row: 4/4;
+       
+        margin-top: 15px;
+        display: flex;
+        align-items:flex-end
+    }
+    .cri__info-modbox {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .card__info-seller .cri__bid{
+        grid-column-start: 1;
+        grid-row: 2/4;
+    }
+    .card__info-seller-bsuccess .cri__price{
+        grid-column-start: 2;
+        grid-row: 1/8;
+    }
+    .card__info-seller-bsuccess .cri__md{
+        grid-column-start: 2;
+        grid-row: 3/4;
+    }
+    .card__info-seller-bsuccess .cri__confirm{
+        grid-column-start: 2;
+        grid-row: 4/5;
+        border: none;
+        padding: 7px 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .card__info-seller-bsuccess  .cri__btn{
+        grid-column-start: 2;
+        grid-row: 5/5;
+    }
+
 }
 
 @media screen and (max-width:800px) {
@@ -1117,7 +1323,9 @@
     }
     .cri__md{flex-direction: column;}
     .cri__md-delivery{margin-left:0;margin-top: 5px;}
-
+    .card__seller-mylots .cdt__i-btn{order: 2;
+        margin-top: 15px;
+        width: 100%;}
 }
 
 @media screen and (max-width:650px) {
@@ -1611,7 +1819,7 @@
     .cri__time .cri__time-del {
         display: block;
     }
-    .cri__how{margin-top: 30px;font-size: 14px;padding-right: 0;}
+    .cri__how{margin-top: 30px;font-size: 14px;}
     .cri__how .title{font-size: 16px;}
     .cri__how ul li{margin-top: 15px;}
     .cri__price-sub{font-size:14px}
@@ -1770,15 +1978,112 @@
     .card__tabs .cdt__dopdata-tabs .tab-list button.active:after {
         height: 2px;
         
-    }.card__info.card__info-buyer {display: flex;}
-    .card__info.card__info-buyer .cri__bidinput-bid {
+    }.card__info-buyer {display: flex;}
+    .card__info-buyer .cri__bidinput-bid {
          margin-top: 10px; 
     }
-    .card__info.card__info-buyer .cri__md{margin-top: 0;}
+    .card__info-buyer .cri__md{margin-top: 0;}
+    .crtop__search {
+        position: relative;
+        margin: 0;
+        order: 1;
+        width: 100%;
+    }
+    .crtop__bgs-mylots{
+        width: 100%;
+        max-width: 100%;
+    }
+    .crtop__bgs-mylots .title-desc{
+        display: none;
+    }
+    .crtop__bgs-mylots .title-mob{
+        display: block;
+    }
+    .crtop__bgs-radio{
+        display: inline-flex;
+    }
+    .crtop__delim{display: none!important;}
+    .crtop__bgs-list-mylots .crtop__bgs-item .radio{
+        display: none
+    }
+    .crtop__bgs-select-title{
+        display: block;
+    }
+    .crtop__bgs-select .crtop__bgs-prev, .crtop__bgs-select .crtop__bgs-next{
+        display: none;
+    }
+    .crtop>div.crtop__bgs-select{height: auto;    position: unset;}
+    .crtop__bgs-select .crtop__bgs-list{
+        display: none;
+        width: calc(100% - 46px);
+        z-index: 99;position: absolute;
+        background: #fff;
+    }
+    .crtop__bgs-select .crtop__bgs-item{
+        width: 100%;
+        justify-content: center;
+        background: #fff!important;
+        color:#1F3A60!important
+    }
+    .crtop__bgs-select .crtop__bgs-item:after{
+        background:#ECF6FF;
+        height: 1px;
+        width: calc(100% - 40px);
+        content:"";
+        position: absolute;
+        bottom: 0;
+       
+    }
+    
+    .crtop__bgs-select .crtop__bgs-item:last-child::after{display: none;}
+    .crlist-empty{
+        min-height: 250px;
+    }
+    .crlist-empty img{width: 80px;}
+    .crlist-empty p{font-size: 20px;}
+    .card__mylots-bidsgo .cri__bidinput{margin-top: auto;}
+    .card__mylots-bidsend .cri__time{padding-top: 0;}
+    .crtop__seller .crtop__addlot-btn{
+        order: 2;
+        width: 100%;
+    }
+    .crtop__seller .crtop__addlot-btn .btn{
+        color: #5D7592;
+        padding: 15px 24px;
+        background: #fff;
+        border: 2px solid #5D7592;
+    }
+    .crtop__seller .crtop__addlot-btn .btn:before{
+        content:"\e90c"
+    }
+    .card__info-seller-noactivate .cri__bid, .card__info-seller-noactivate .cri__minprice, .card__info-seller-noactivate .cri__buynow, .card__info-seller-noactivate .cri__md{
+        margin-bottom: 20px;
+    }
+    .card__info-seller-noactivate .cri__btn-mod{
+        margin-bottom: 0;
+    }
+    .cdt__info .cdt__info-btn .btn{
+        font-size: 0;
+
+    }
+    .card__info-seller-noactivate {
+        border: none;
+        padding-top: 0;
+        margin-top: 20px;
+    }
+    .card__info-seller .cri__md{
+        margin-top: 0;
+    }
+    .card__info-seller-bsuccess .cri__confirm{
+        padding: 16px 0;
+        border-top: 1px solid #ECF6FF;
+        border-bottom: 1px solid #ECF6FF;
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width:450px) {
-    .header__phone { 
+    .header__phone {  
         opacity: 0;
         font-size: 16px;
     }
@@ -1975,11 +2280,6 @@
     .btn {
         transition: all .3s
     }
-
-    a:hover {
-        /*text-decoration: underline*/
-    }
-
     .btn-green:hover {
         background: #40BB45;
     }
@@ -2067,7 +2367,7 @@
         border-color: transparent
     }
 
-    .critem__i-fav a.icon-star:not(.active):hover:before {
+    .critem__i-fav a.icon-star:not(.active):hover:before ,.critem__i .critem__i-del a:hover, .critem__i .critem__i-edit a:hover{
         color: #5D7592;
     }
 

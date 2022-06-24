@@ -398,6 +398,16 @@
     .minfo .mbids__table-subtitle {
         font-size: 20px;
     }
+    .mbids__table-title-flex .gobid{
+        margin-right: 0;
+    }
+    .mbids__table-bottom{
+        margin-top: 20px;
+        padding-top: 16px;
+    }
+    .mbids__table-bottom span{
+        min-width: 50%;
+    }
 
     .pf__it-lastname {
         order: -1;
@@ -1310,7 +1320,21 @@
         grid-column-start: 2;
         grid-row: 5/5;
     }
-
+    .cars__favorite .crtop__mobile-search
+    {
+        width: auto;
+        position: relative;
+        box-shadow: none;
+        flex-grow: 1;
+        margin-right: 20px;
+    }
+    .cars__favorite .crtop__sort{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        margin-top: 20px;
+        padding:0 20px ;
+    }
 }
 
 @media screen and (max-width:800px) {
@@ -1769,7 +1793,9 @@
     .modal.minfo-sm2 {
         padding: 28px;
     }
-
+    .mbids__table-bottom span{
+        min-width: 100%;
+    }
     .pf__docs-download {
         margin-top: 0;
     }
@@ -2080,6 +2106,15 @@
         border-bottom: 1px solid #ECF6FF;
         margin-bottom: 15px;
     }
+    .mcomment  .mform-bt .btn{
+        width: 100%;
+    }
+    .mcomment  .mform-bt .btn:first-child{
+        margin-bottom: 12px;
+    }
+    .minfo .minfo__title{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width:450px) {
@@ -2372,6 +2407,9 @@
     }
 
     .crlist .critem:hover .critem__top .critem__top-bidsall {
+        display: flex;
+    }
+    .crlist .critem:hover .critem__top-comment {
         display: flex;
     }
 

@@ -13,7 +13,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head.php';
             <div class="cdt__i">
             </div>
             <div class="cdt__i-btn">
-                <button class="btn btn-green icon-bid-active">Протокол торгов</button>
+                <button class="btn btn-green icon-bid-active mbox" data-src="#mresult">Протокол торгов</button>
             </div>
             <div class="cdt__info">
                 <div class="cdt__info-num">

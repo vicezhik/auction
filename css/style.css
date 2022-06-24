@@ -185,6 +185,9 @@
   .icon-nds:before {
     content: "\e90d";
   }
+  .icon-comment:before {
+    content: "\e950";
+  }
   .icon-vin-default:before {
     content: "\e945";
   }
@@ -778,7 +781,7 @@ input {
     border: 1px solid #D5E1F1;
     width: 20px;
     height: 20px;
-
+margin-top: -1px;
     border-radius: 50%;
 }
 
@@ -792,6 +795,7 @@ input {
     height: 10px;
     top: 5px;
     border-radius: 50%;
+    margin-top: -1px;
 }
 
 .btn {
@@ -2003,7 +2007,29 @@ ul.breadcrumbs li .icon-home {
 .crlist .critem__top .critem__top-bidsall:before {
     font-size: 28px;
 }
-
+.critem__top-comment {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    width: 48px;
+    height: 49px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 14px;
+    right: 16px;
+    display: none;
+}
+.critem__top-comment:before{
+    font-size: 24px;
+    color: #fff;
+    margin-top: 5px;
+}
 .critem__imgs-list img {
     display: none;
     -o-object-fit: cover;
@@ -2561,6 +2587,7 @@ ul.breadcrumbs li .icon-home {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    background:#FFFFFF;
 }
 
 
@@ -6023,6 +6050,21 @@ color:#ECF6FF;
          .cri__btn-win{
              margin-bottom: 10px;
          }
+.crtop__sort-nds:before{
+    content: "";
+    width: 1px;
+    height: 38px;
+    background: #ECF6FF;
+    position: absolute;
+    left: 0;
+}
+.crtop__sort-nds .form_radio{
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+.crtop__sort-nds .form_radio:last-child{
+    margin-right: 0;
+}
 /*модалы*/
 .modal {
     display: none;
@@ -6272,11 +6314,7 @@ color:#ECF6FF;
     margin-right: 10px;
 }
 
-.mbids__table-title .print {
-    position: absolute;
-    right: 0;
-    top: 40%;
-}
+
 
 .mbids__table-subtitle {
     font-size: 24px;
@@ -6655,7 +6693,44 @@ color:#ECF6FF;
 .mbox-delete .mform-bt:first-child{
     margin-bottom: 12px;
 }
-
+.mcomment textarea{
+    min-height: 200px;
+}
+.mcomment  .mform-bt{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.mcomment  .mform-bt .btn{
+    width: 48.5%;
+}
+.mbids__table-title-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.mbids__table-title-flex .gobid{
+    font-size: 14px;
+    color:#5D7592;
+    margin-right: 63px;
+}
+.mbids__table-title-flex .gobid:after{
+    content:'\e93f';
+    font-size: 11px;
+    margin-left: 8px;
+}
+.mbids__table-title-links{display: flex;}
+.mbids__table-bottom{
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top:4px solid #3A9C3E;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
 .buttonDownloadDogovor1 a {
     width: 310px;
     height: 50px;

@@ -3,17 +3,19 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
 ?>
 <div class="cars cars__favorite">
     <div class="wrapper">
-       
+
         <div class="cars_title">
             <div class="cars_title-h1">
-                 <h1>В избранном <span class="color-green">5296</span> автомобилей</h1>
+                <h1>В избранном <span class="color-green">5296</span> автомобилей</h1>
             </div>
-            
-            <div class="cars__search "><div class="ic-input icon-search"><input type="text" placeholder="Поиск по VIN или №лота ..."/></div></div>
-            <div  class="cars__mylots-btn "><a class="btn btn-green icon-bid-active">Мои лоты</a></div>
+
+            <div class="cars__search ">
+                <div class="ic-input icon-search"><input type="text" placeholder="Поиск по VIN или №лота ..." /></div>
+            </div>
+            <div class="cars__mylots-btn "><a class="btn btn-green icon-bid-active">Мои лоты</a></div>
         </div>
         <div class="crtop">
-           
+
             <div class="crtop__sort">
                 <div class="active asc"> Цена <span class="icon-arrow-long"></span></div>
                 <div class="desc">Год выпуска <span class="icon-arrow-long"></span></div>
@@ -21,7 +23,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
 
                 <div class="crtop__sort-nds">
                     <div class="form_radio">
-                        <input type="radio" id="n1" value="n1" name="sort-nds">
+                        <input type="radio" id="n1" value="n1" name="sort-nds" checked>
                         <label for="n1">ВСЕ</label>
                     </div>
                     <div class="form_radio">
@@ -34,7 +36,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     </div>
                 </div>
             </div>
-            <div class="crtop__sort-mob " >
+            <div class="crtop__mobile-search icon-search ic-input"><input type="text" placeholder="Поиск по №лота ...">
+            </div>
+            <div class="crtop__sort-mob ">
                 <div class="crtop__sort-mob-val ic-a" data-mbottom="#msort-mobile">
                     <span>Показать лоты сначала дешевле</span>
                 </div>
@@ -44,43 +48,67 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                         <div class="cts__form-item">
                             <div class="cts__form-lvl">по стоимости</div>
                             <div class="cts__form-r form_radio">
-                                <input type="radio" id="s1" value="s1" data-value="Показать лоты сначала дороже" name="mobile-sort">
+                                <input type="radio" id="s1" value="s1" data-value="Показать лоты сначала дороже"
+                                    name="mobile-sort">
                                 <label for="s1">По возрастанию</label>
                             </div>
                             <div class="cts__form-r form_radio">
-                                <input type="radio" id="s2" value="s2" checked data-value="Показать лоты сначала дешевле" name="mobile-sort">
+                                <input type="radio" id="s2" value="s2" checked
+                                    data-value="Показать лоты сначала дешевле" name="mobile-sort">
                                 <label for="s2">По уменьшению</label>
                             </div>
                         </div>
                         <div class="cts__form-item">
                             <div class="cts__form-lvl">по пробегу</div>
                             <div class="cts__form-r form_radio">
-                                <input type="radio" id="s4" value="s4" data-value="Показать лоты сначала меньше пробег" name="mobile-sort">
+                                <input type="radio" id="s4" value="s4" data-value="Показать лоты сначала меньше пробег"
+                                    name="mobile-sort">
                                 <label for="s4">По возрастанию</label>
                             </div>
                             <div class="cts__form-r form_radio">
-                                <input type="radio" id="s5" value="s5" data-value="Показать лоты сначала больше пробег" name="mobile-sort">
+                                <input type="radio" id="s5" value="s5" data-value="Показать лоты сначала больше пробег"
+                                    name="mobile-sort">
                                 <label for="s5">По уменьшению</label>
                             </div>
                         </div>
                         <div class="cts__form-item">
                             <div class="cts__form-lvl">по году выпуска</div>
                             <div class="cts__form-r form_radio">
-                                <input type="radio" id="s6" value="s6" data-value="Показать лоты по году: новее" name="mobile-sort">
+                                <input type="radio" id="s6" value="s6" data-value="Показать лоты по году: новее"
+                                    name="mobile-sort">
                                 <label for="s6">По возрастанию</label>
                             </div>
                             <div class="cts__form-r form_radio">
-                                <input type="radio" id="s7" value="s7" data-value="Показать лоты по году: старше" name="mobile-sort">
+                                <input type="radio" id="s7" value="s7" data-value="Показать лоты по году: старше"
+                                    name="mobile-sort">
                                 <label for="s7">По уменьшению</label>
                             </div>
                         </div>
-                        <div  class="cts__form-bt"><button class="btn btn-green ">Применить</button></div>
+                        <div class="cts__form-item cts__form-item-nds">
+                            <div class="cts__form-lvl">по налогообложению</div>
+                            <div class="cts__form-r form_radio">
+                                <input type="radio" id="n4" value="n4" checked
+                                    data-value="Показать лоты по налогообложению: все" name="mobile-nds">
+                                <label for="n4">Показывать все</label>
+                            </div>
+                            <div class="cts__form-r form_radio">
+                                <input type="radio" id="n5" value="n5"
+                                    data-value="Показать лоты по налогообложению: с НДС" name="mobile-nds">
+                                <label for="n5">С НДС</label>
+                            </div>
+                            <div class="cts__form-r form_radio">
+                                <input type="radio" id="n6" value="n6"
+                                    data-value="Показать лоты по налогообложению: без НДС" name="mobile-nds">
+                                <label for="n6">БЕЗ НДС</label>
+                            </div>
+                        </div>
+                        <div class="cts__form-bt"><button class="btn btn-green ">Применить</button></div>
                     </div>
                     <div class="cts__form-close mbottom-close icon-close"></div>
                 </div>
             </div>
-            <div class="crtop__mobile-search icon-search ic-input"><input type="text" placeholder="Поиск по №лота ..."></div>
-            
+
+
             <div class="crtop__grid">
                 <button class="crtop__grid-grid icon-grid active" data-view="grid"></button>
                 <span class="delim"></span>
@@ -112,7 +140,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                         <span>Открытые торги</span>
                     </div>
                     <div class="critem__i-fav">
-                        <a href="#" class="icon-star"></a>
+                        <a href="#" class="icon-star active"></a>
                     </div>
                 </div>
                 <div class="critem__info">
@@ -154,7 +182,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-          
+
                     <div class="critem__info-price-bl">
                         <span class="critem__info-sub">
                             Стартовая цена
@@ -165,7 +193,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-auth">
                 <div class="critem__top">
-                     <div class="critem__tags card-tags-box">
+                    <div class="critem__tags card-tags-box">
                         <span class="tag-nds"> Без НДС</span>
                         <span class="tag-car"> Только на RRT </span>
                         <span class="tag-delivery"> Бесплатная доставка </span>
@@ -233,7 +261,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-      
+
                     <div class="critem__info-price-bl">
                         <span class="critem__info-sub">
                             Стартовая цена
@@ -244,7 +272,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-auth">
                 <div class="critem__top">
-                     <div class="critem__tags card-tags-box">
+                    <div class="critem__tags card-tags-box">
                         <span class="tag-nds"> Без НДС</span>
                         <span class="tag-car"> Только на RRT </span>
                         <span class="tag-delivery"> Бесплатная доставка </span>
@@ -309,7 +337,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-             
+
                     <div class="critem__info-price-bl">
                         <span class="critem__info-sub">
                             Стартовая цена
@@ -383,7 +411,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <div class="critem__info-bid icon-bid-active text-icon">
                         Шаг аукциона: 15 000 ₽
                     </div>
-    
+
                     <div class="critem__info-price-bl">
                         <span class="critem__info-sub">
                             Стартовая цена
@@ -391,15 +419,15 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                         <span class="critem__info-price"> <span>3 800 000</span>₽</span>
                     </div>
                 </div>
-                
+
             </div>
-                  <!--Покупатель -->
-                  <div class="critem critem-auth critem-buyer">
+            <!--Покупатель -->
+            <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                <div class="critem__tags card-tags-box">
+                    <div class="critem__tags card-tags-box">
                         <span class="tag-nds"> Без НДС</span>
                         <span class="tag-car"> Только на RRT </span>
-                      
+
                     </div>
                     <a class="critem__top-comment icon-comment" href=""></a>
                     <div class="critem__imgs">
@@ -615,8 +643,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                <div class="critem__tags card-tags-box">
-                      
+                    <div class="critem__tags card-tags-box">
+
                         <span class="tag-delivery"> Бесплатная доставка </span>
                     </div>
                     <a class="critem__top-comment icon-comment" href=""></a>
@@ -726,7 +754,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
             </div>
             <div class="critem critem-auth critem-buyer">
                 <div class="critem__top">
-                <div class="critem__tags card-tags-box">
+                    <div class="critem__tags card-tags-box">
                         <span class="tag-nds"> Без НДС</span>
                         <span class="tag-car"> Только на RRT </span>
                         <span class="tag-delivery"> Бесплатная доставка </span>
@@ -858,9 +886,9 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                 <div class="onpage__value">
                     <a href="#" class="active">Показывать по 12 на странице</a>
                     <a href="#">Показывать по 20 на странице</a>
-                    <a href="#" >Показывать по 60 на странице</a>
-                    <a href="#" >Показывать по 100 на странице</a>
-                    <a href="#" >Показывать все лоты</a>
+                    <a href="#">Показывать по 60 на странице</a>
+                    <a href="#">Показывать по 100 на странице</a>
+                    <a href="#">Показывать все лоты</a>
                 </div>
             </div>
 

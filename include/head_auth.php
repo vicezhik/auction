@@ -31,6 +31,11 @@ header('Content-type: text/html; charset=Utf-8');
                     <div class="header__logo">
                         <a href=""><img src="i/logo.svg" alt="" /></a>
                     </div>
+                    <div class="timer_openlots">
+                        <div class="icon"><i class="icon-time-open"></i></div>
+                        <div class="time"><span>02</span> : <span>28</span> : <span class="seconds">37</span></div>
+                        <div class="subtext">до окончания торгов осталось</div>
+                    </div>
                     <div class="header__phone">
                         <a href="tel://88122201125">+7 (812) 220-11-26</a>
                     </div>

@@ -98,8 +98,7 @@ $(document).ready(function () {
 						$(this).remove();
 					});
 					$('.mbottom-mobile.show').removeClass('show');
-				});
-			} else {
+				});} else {
 				box.removeClass('show');
 				box.fadeOut(200);
 				$(".mbottom__layout").fadeOut(300, function () {

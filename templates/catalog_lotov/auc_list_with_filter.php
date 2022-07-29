@@ -44,7 +44,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                             <div><span>1 </span></div>
                             <div><span>2 </span></div>
                             <div><span>3 </span></div>
-                            <div class="haslots"><span>4 </span></div>
+                            <div class="haslots"><a href=""><span>4 </span></a></div>
                             <div class="weekend"><span>5 </span></div>
                             <div class="weekend"><span>6 </span></div>
                         </div>
@@ -100,7 +100,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                         <div class="crc__date">9 февраля</div>
                         <ul>
                             <li class="active"><span>276</span> авто на открытых торгах</li>
-                            <li><span>34</span> авто на закрытых торгах</li>
+                            <li><a href=""><span>34</span> авто на закрытых торгах</a></li>
                             <li><span>12</span> авто на экспресс торгах</li>
                         </ul>
                     </div>

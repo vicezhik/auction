@@ -466,6 +466,7 @@
 
 .select2-container--default .select2-results__option--disabled {
   color: #999;
+  display:none;
 }
 
 .select2-container--default .select2-results__option--selected {

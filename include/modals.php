@@ -427,3 +427,65 @@
         <span>Победившая ставка: 5 200 000</span>
     </div>
 </div>
+
+<div class="cars_search-box">
+    <div class="wrapper">
+        <div class="cs__input-box">
+            <div class="cs__input icon-search ic-input">
+                <input type="text" placeholder="Введите не менее 4 символов ..." >
+                <button class="cs__close">Отменить</button>
+            </div> 
+        </div>
+        <div id="cars_search-result">
+          <div class="cars_search-ajax">
+            <div class="cs__title">Найдено <span>2</span> автомобиля ... </div>
+            <div class="cs__result">
+                <div class="cs__result-list">
+                    <div class="cs__result-item">
+                        <div class="cs__result-img"><img src="/i/search.png" alt=""></div>
+                        <div class="cs__result-info">
+                            <div class="info"><span class="num">№ 877</span> Открытые торги</div>
+                            <div class="cs__result-model">
+                                <a href="#">Mercedes-Benz GLE-класс Coupe</a>
+                            </div>
+                            <div class="cs__result-modif">
+                                30d 3.0d AT (249 л.с.) 4WD 2018 г.
+                            </div>
+                            <div class="cs__result-vin">
+                                <span class="vin-t">VIN</span>
+                                <span class="vin-n"> X4XKS494900X76310</span>
+                                <span class="icon-vin icon-vin-success"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs__result-item">
+                        <div class="cs__result-img"><img src="/i/search.png" alt=""></div>
+                        <div class="cs__result-info">
+                            <div class="info"><span class="num">№ 877</span> Открытые торги</div>
+                            <div class="cs__result-model">
+                                <a href="#">Mercedes-Benz GLE-класс Coupe</a>
+                            </div>
+                            <div class="cs__result-modif">
+                                30d 3.0d AT (249 л.с.) 4WD 2018 г.
+                            </div>
+                            <div class="cs__result-vin">
+                                <span class="vin-t">VIN</span>
+                                <span class="vin-n"> X4XKS494900X76310</span>
+                                <span class="icon-vin icon-vin-success"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+           <div class="cars_search-layout">
+                <div>
+                    <i class="icon-search-page"></i>
+                    <p>Введите VIN или номер лота <br/>для поиска авто</p>
+                </div>
+           </div>
+        </div>
+
+       
+    </div>
+</div>

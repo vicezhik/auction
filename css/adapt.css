@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 @media screen and (max-width:1630px) {
     .pf__docs-btns ul {
         left: auto;
@@ -36,7 +29,18 @@
     .crtop>div.crtop__search {
         min-width: 450px;
     }
-
+    .cdg__pv-item {
+        height: auto!important;
+    }
+    .cdg__big-item {
+        height: 100%;
+    }
+    .cdtgal__pv-item {
+        height: auto!important;
+    }
+    .cdtgal__big-item {
+        height: 100%;
+    }
 }
 
 @media screen and (max-width:991px) {
@@ -1192,9 +1196,9 @@
         -webkit-box-ordinal-group: 2;
             -ms-flex-order: 1;
                 order: 1;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: end;
+        -webkit-box-pack: flex-end;
+            -ms-flex-pack: flex-end;
+                justify-content: flex-end;
     }
     .cdt__info{width: 80%;}
     .cdt__state-item .title{font-size:20px}
@@ -1592,7 +1596,8 @@
     }
     .timer_openlots{
         background: rgba(19, 36, 60, 0.8);
-        box-shadow: -4px -4px 8px rgb(31 58 96 / 10%);
+        -webkit-box-shadow: -4px -4px 8px rgb(31 58 96 / 10%);
+                box-shadow: -4px -4px 8px rgb(31 58 96 / 10%);
         border-radius: 8px 0px 0px 0px;
         position: fixed;
         right: 0;
@@ -1614,7 +1619,8 @@
     .timer_openlots .icon{
         display: block;
         background: #FFFFFF;
-        box-shadow: 2px 2px 10px rgba(31, 58, 96, 0.25);
+        -webkit-box-shadow: 2px 2px 10px rgba(31, 58, 96, 0.25);
+                box-shadow: 2px 2px 10px rgba(31, 58, 96, 0.25);
         border-radius:50%;
         font-size: 20px;
         color:#1F3A60;
@@ -1642,9 +1648,19 @@
      
         top: 9px;
         text-shadow: rgba(31, 58, 96, 0.25) 2px 2px 10px;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
-  animation: ping 1s linear infinite;
+  -webkit-animation: ping 1s linear infinite;
+          animation: ping 1s linear infinite;
     }
+    @-webkit-keyframes ping {
+        0%   {left:-22px}
+        25%  {left:-20px}
+        50%  {left:-18px}
+        75%  {left:-20px}
+        100% {left:-22px}
+      }
     @keyframes ping {
         0%   {left:-22px}
         25%  {left:-20px}
@@ -1652,6 +1668,33 @@
         75%  {left:-20px}
         100% {left:-22px}
       }
+      .cs__input-box{display: block;}
+    .cars_search-box, .cars_search-box .wrapper{
+        height: calc(100vh - 90px);
+        height: calc(var(--vh, 1vh) * 100 - 90px);
+        position: fixed;
+        padding-top: 40px;
+        top: 90px;
+        overflow: auto;
+    }
+    .cs__title {
+        margin-bottom: 15px;
+    }
+    .cars_search-layout p{
+        font-size: 24px;
+        line-height: 42px;
+        text-align: center;
+        color: #5D7592;
+    }
+    .cars_search-layout i{
+        font-size: 132px;
+        color: #C3D3EA;
+        margin-bottom: 20px;
+        display: block;
+    }
+    #cars_search-result{height: calc(100% - 70px);}
+    .cars_search-layout{height: 100%;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;text-align: center;}
+    .cars_search-ajax + .cars_search-layout{display: none;}
 }
 
 @media screen and (max-width:800px) {
@@ -2552,6 +2595,20 @@
         width: 100%;
         margin-top: 10px;
     }
+    .cars_search-box, .cars_search-box .wrapper{
+        top: 64px;
+        height: calc(100vh - 64px);
+        height: calc(var(--vh, 1vh) * 100 - 64px);
+    }
+    .cs__result-item{-webkit-box-align: start;-ms-flex-align: start;align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;}
+    .cs__result-item .cs__result-info{
+        margin: 0;
+        margin-top: 13px;
+    }
 }
 
 @media screen and (max-width:450px) {
@@ -2735,228 +2792,231 @@
         .cri__md-delivery{margin-left: 0;}
 }
 
-@media (hover),
-(min-width:0\0),
-(min--moz-device-pixel-ratio:0) {
-
-    input,
-    textarea,
-    select,
-
-    .ic-input:before {
-        -webkit-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s
-    }
-
-    input:hover,
-    textarea:hover {
-        border-color: #BDC5D7;
-    }
-
-    .ic-input:hover:before {
-        color: #1F3A60;
-    }
-
-    input:focus,
-    textarea:focus {
-        border-color: #3A9C3E;
-    }
-
-    .ic-input.focus:before {
-        color: #3A9C3E
-    }
-
-    .error input,
-    .error textarea,
-    input.error,
-    textarea.error {
-        border-color: #D3918D !important;
-        color: #811B18;
-    }
-
-    .ic-input.error:before {
-        color: #811B18;
-    }
-
-    .form_checkbox label:hover::before {
-        border-color: #C3D3EA;
-    }
-
-    a {
-        -webkit-transition: color .3s;
-        -o-transition: color .3s;
-        transition: color .3s
-    }
-
-    a:hover:before {
-        -webkit-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s
-    }
-
-    ul.breadcrumbs li a:hover {
-        color: #3A9C3E;
-    }
-    .pages ul li:not(.active) a:hover,
-    .pages ul li:not(.active) a:hover:before {
-        background: #ECF6FF;
-    }
-
-    .btn {
-        -webkit-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s
-    }
-    .btn-green:hover {
-        background: #40BB45;
-    }
-
-    .btn-green:focus,
-    .btn-green.active {
-        background: #3A9C3E;
-    }
-
-    .btn-green.disabled {
-        background: #E0E0E0;
-    }
-
-    .btn-transparent:hover {
-        color: #1F3A60;
-    }
-
-    .btn-transparent:focus,
-    .btn-transparent.active {
-        color: #1F3A60;
-    }
-
-    .btn-transparent.disabled {
-        color: #E0E0E0;
-    }
-
-    .btn-white:hover {
-        color: #1F3A60;
-        border-color: #1F3A60;
-    }
-
-    .btn-white:focus,
-    .btn-white.active {
-        background: #5D7592;
-        border-color: #5D7592;
-        color: #fff;
-    }
-
-    .btn-white.disabled {
-        color: #E0E0E0;
-        border-color: #E0E0E0;
-    }
-
-    .link:hover {
-        text-decoration: underline;
-    }
-
-    .input__num a:hover:before {
-        color: #5D7592
-    }
-
-    .header__menu a:hover,
-    .hd__profile__noauth a:hover {
-        color: #3A9C3E;
-        text-decoration: none;
-    }
-
-    .hd__pmenu-active a.icon-user-set:hover {
-        color: #1F3A60;
-    }
-
-    .hd__pmenu-box a.link-settings:hover {
-        color: #1F3A60;
-    }
-
-    .hd__pmenu-l:hover {
-        cursor: pointer;
-    }
-
-    .hd__pmenu-item:hover .link-settings {
-        display: block;
-        z-index: 21;
-    }
-
-    .hd__pmenu-item:hover {
-        cursor: pointer;
-        background: #F4FAFF
-    }
-
-    .footer__menu a:hover {
-        text-decoration: underline;
-    }
-
-    .critem__info .critem__info-map a:hover {
-        border-color: transparent
-    }
-
-    .critem__i-fav a.icon-star:not(.active):hover:before ,.critem__i .critem__i-del a:hover, .critem__i .critem__i-edit a:hover{
-        color: #5D7592;
-    }
-
-    .crlist .critem:hover .critem__top .critem__top-bidsall {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-    .crlist .critem:hover .critem__top-comment {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-
-    .crbot .onpage__value a:hover {
-        background: #ECF6FF;
-        color: #1F3A60;
-        font-weight: 500;
-    }
-
-    .crbot .onpage__value a.active {
-        color: #1F3A60;
-        font-weight: 500;
-    }
-
-    .crc__days .haslots:not(.active):hover:after {
-        content: "";
-        top: -3px;
-        position: absolute;
-        content: "";
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        background: #ECF6FF;
+/*Наведение, фокус, ошибки*/
 
 
-    }
 
-    .cars_filter_short .crc__days .haslots:not(.active):hover:after {
-        content: "";
-        width: 100%;
-        line-height: 35px;
-        margin-bottom: 0;
-        margin-left: 0;
-        height: 100%;
-        border-radius: 34px;
-        top: -1px;
-    }
+input,
+textarea,
+select,
 
-    .crf__save-search-it button:hover {
-        background: #C3D3EA;
-        border-color: #5D7592;
-    }
+.ic-input:before {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s
+}
 
-    .crf__save-search-it button:hover i {
-        color: #5D7592;
-    }
+input:hover,
+textarea:hover {
+    border-color: #BDC5D7;
+}
 
-    .cdt__i-fav .icon-star:hover{color: #5D7592;}
-    .cdt_state .car-drow path[data-tooltip]:hover{cursor:pointer}
-    .cdtgal__big-item:hover .video:before{
-        background: rgba(0, 0, 0, 0.4);
-    }
+.ic-input:hover:before {
+    color: #1F3A60;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3A9C3E;
+}
+
+.ic-input.focus:before {
+    color: #3A9C3E
+}
+
+.error input,
+.error textarea,
+input.error,
+textarea.error {
+    border-color: #D3918D !important;
+    color: #811B18;
+}
+
+.ic-input.error:before {
+    color: #811B18;
+}
+
+.form_checkbox label:hover::before {
+    border-color: #C3D3EA;
+}
+
+a {
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s
+}
+
+a:hover:before {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s
+}
+
+ul.breadcrumbs li a:hover {
+    color: #3A9C3E;
+}
+.pages ul li:not(.active) a:hover,
+.pages ul li:not(.active) a:hover:before {
+    background: #ECF6FF;
+}
+
+.btn {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s
+}
+.btn-green:hover {
+    background: #40BB45;
+}
+
+.btn-green:focus,
+.btn-green.active {
+    background: #3A9C3E;
+}
+
+.btn-green.disabled {
+    background: #E0E0E0;
+}
+
+.btn-transparent:hover {
+    color: #1F3A60;
+}
+
+.btn-transparent:focus,
+.btn-transparent.active {
+    color: #1F3A60;
+}
+
+.btn-transparent.disabled {
+    color: #E0E0E0;
+}
+
+.btn-white:hover {
+    color: #1F3A60;
+    border-color: #1F3A60;
+}
+
+.btn-white:focus,
+.btn-white.active {
+    background: #5D7592;
+    border-color: #5D7592;
+    color: #fff;
+}
+
+.btn-white.disabled {
+    color: #E0E0E0;
+    border-color: #E0E0E0;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.input__num a:hover:before {
+    color: #5D7592
+}
+
+.header__menu a:hover,
+.hd__profile__noauth a:hover {
+    color: #3A9C3E;
+    text-decoration: none;
+}
+
+.hd__pmenu-active a.icon-user-set:hover {
+    color: #1F3A60;
+}
+
+.hd__pmenu-box a.link-settings:hover {
+    color: #1F3A60;
+}
+
+.hd__pmenu-l:hover {
+    cursor: pointer;
+}
+
+.hd__pmenu-item:hover .link-settings {
+    display: block;
+    z-index: 21;
+}
+
+.hd__pmenu-item:hover {
+    cursor: pointer;
+    background: #F4FAFF
+}
+
+.footer__menu a:hover {
+    text-decoration: underline;
+}
+
+.critem__info .critem__info-map a:hover {
+    border-color: transparent
+}
+
+.critem__i-fav a.icon-star:not(.active):hover:before ,.critem__i .critem__i-del a:hover, .critem__i .critem__i-edit a:hover{
+    color: #5D7592;
+}
+
+.crlist .critem:hover .critem__top .critem__top-bidsall {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.crlist .critem:hover .critem__top-comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.crbot .onpage__value a:hover {
+    background: #ECF6FF;
+    color: #1F3A60;
+    font-weight: 500;
+}
+
+.crbot .onpage__value a.active {
+    color: #1F3A60;
+    font-weight: 500;
+}
+
+.crc__days .haslots:not(.active):hover:after {
+    content: "";
+    top: -3px;
+    position: absolute;
+    content: "";
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ECF6FF;
+
+
+}
+
+.cars_filter_short .crc__days .haslots:not(.active):hover:after {
+    content: "";
+    width: 100%;
+    line-height: 35px;
+    margin-bottom: 0;
+    margin-left: 0;
+    height: 100%;
+    border-radius: 34px;
+    top: -1px;
+}
+
+.crf__save-search-it button:hover {
+    background: #C3D3EA;
+    border-color: #5D7592;
+}
+
+.crf__save-search-it i:hover {
+    color: #5D7592;
+}
+
+.cdt__i-fav .icon-star:hover{color: #5D7592;}
+.cdt_state .car-drow path[data-tooltip]:hover{cursor:pointer}
+.cdtgal__big-item:hover .video:before{
+    background: rgba(0, 0, 0, 0.4);
+}
+.cs__result-item:hover{
+    background: rgba(236, 246, 255, 0.3);
+    cursor: pointer;
 }

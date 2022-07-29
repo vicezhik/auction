@@ -77,14 +77,7 @@ $(document).ready(function () {
 			});
 		}
 	});
-	/*поиск мобильная*/
-	$('.crtop__btn-search').on('click', function () {
-		$('.crtop__mobile-search').addClass('show');
-		$('.crtop__mobile-search input').focus();
-	});
-	$('.crtop__mobile-search input').on('blur', function () {
-		$('.crtop__mobile-search').removeClass('show');
-	});
+
 	/*попап снизу мобильная*/
 	$('[data-mbottom]').on('click', function () {
 		const box = $($(this).data('mbottom'));
@@ -98,7 +91,8 @@ $(document).ready(function () {
 						$(this).remove();
 					});
 					$('.mbottom-mobile.show').removeClass('show');
-				});} else {
+				});
+			} else {
 				box.removeClass('show');
 				box.fadeOut(200);
 				$(".mbottom__layout").fadeOut(300, function () {
@@ -117,18 +111,18 @@ $(document).ready(function () {
 		const scrLeft = $('.crtop__bgs-scroll').scrollLeft();
 		let blWidth = 0;
 		$(".crtop__bgs-item").each(function () {
-			if($(this).is(':visible')){
+			if ($(this).is(':visible')) {
 				blWidth += $(this).outerWidth();
 			}
 		});
-		
+
 		const blScrollWidth = $('.crtop__bgs').width();
 		if (scrLeft === 0) {
 			$('.crtop__bgs-prev').addClass('disabled');
 		} else {
 			$('.crtop__bgs-prev').removeClass('disabled');
 		}
-		
+
 		if (scrLeft + blScrollWidth >= blWidth) {
 			$('.crtop__bgs-next').addClass('disabled');
 		} else {
@@ -153,14 +147,14 @@ $(document).ready(function () {
 		const select = $(this).parent().prev('.crtop__bgs-select-title');
 		$('.crtop__bgs-item').removeClass('active');
 		$(this).addClass('active');
-		if(select.length > 0) {
+		if (select.length > 0) {
 			const widthSc = $(window).width();
 			select.text($(this).text());
-			if(widthSc <=650){
+			if (widthSc <= 650) {
 				select.trigger('click');
 			}
 		}
-		if($(this).next('.crtop__bgs-radio').length > 0){
+		if ($(this).next('.crtop__bgs-radio').length > 0) {
 			$(this).next('.crtop__bgs-radio').trigger('click');
 		}
 		hiddenArrow();
@@ -171,13 +165,13 @@ $(document).ready(function () {
 		$(this).addClass('active');
 		$('.crtop__bgs-item:not(.crtop__bgs-radio)').removeClass('active');
 		$(this).prevAll('.crtop__bgs-item:not(.crtop__bgs-radio)').first().addClass('active');
-		if(select.length > 0){
+		if (select.length > 0) {
 			const widthSc = $(window).width();
 			select.text($(this).children(".title-mob").text());
-			if(widthSc <=650){
+			if (widthSc <= 650) {
 				select.trigger('click');
 			}
-		} 
+		}
 		hiddenArrow();
 	});
 	$('.crtop__bgs-scroll').on('scroll', function () {
@@ -199,7 +193,7 @@ $(document).ready(function () {
 	});
 	$(window).on("resize", function (event) {
 		const widthSc = $(window).width();
-		if ($('.crtop__bgs-list-mylots').length > 0 && widthSc > 650 )  {
+		if ($('.crtop__bgs-list-mylots').length > 0 && widthSc > 650) {
 			$('.crtop__bgs-list-mylots').removeAttr('style');
 		}
 	});
@@ -210,7 +204,7 @@ $(document).ready(function () {
 	function setWeek() {
 
 		const shortCalendar = $('.cars_filter_short.crcalendar');
-		if (shortCalendar.length && shortCalendar.find('.crc__week.active_week').length ) {
+		if (shortCalendar.length && shortCalendar.find('.crc__week.active_week').length) {
 			const offset = shortCalendar.find('.crc__week.active_week').position().left;
 			const blDays = shortCalendar.find('.crc__days');
 			blDays.scrollLeft(offset);
@@ -359,10 +353,10 @@ $(document).ready(function () {
 	});
 	$('select[multiple]').select2({
 		minimumResultsForSearch: -1,
-		closeOnSelect : false,
+		closeOnSelect: false,
 		allowHtml: true,
 		tags: true,
-		dropdownCssClass : "select-multiple",
+		dropdownCssClass: "select-multiple",
 	});
 	/*Показать форму Адрес проживания */
 	$('#address-check').on('change', function () {
@@ -447,11 +441,11 @@ $(document).ready(function () {
 	});
 	$('.card__tabs [data-accordeon]:not(.acc-disabled)').on('click', function () {
 		$('.card__tabs > .tab-outer > .tab-list [data-tab]').removeClass('active');
-		$('.card__tabs [data-tab="'+$(this).data('accordeon')+'"]').addClass('active');
+		$('.card__tabs [data-tab="' + $(this).data('accordeon') + '"]').addClass('active');
 	});
 	/*аккордеон для комплектации - мобильная версия*/
-	$('.cdt__compl-item .title').on('click', function(){
-		if($(window).width() <=650){
+	$('.cdt__compl-item .title').on('click', function () {
+		if ($(window).width() <= 650) {
 			$(this).next('ul').toggleClass('open');
 			$(this).toggleClass('open');
 		}
@@ -462,17 +456,16 @@ $(document).ready(function () {
 		if (!$(this).hasClass('accordeon-open')) {
 			accordeon.find('[data-accordeon]').removeClass('accordeon-open');
 			$(this).addClass('accordeon-open');
-			if(!$(this).is(":hidden")){
+			if (!$(this).is(":hidden")) {
 				accordeon.find('.accordeon-box').slideUp(300);
 				accordeon.find($(this).data('accordeon')).stop(true, true).slideDown(300);
-			}
-			else{
+			} else {
 				accordeon.find('.accordeon-box').hide();
 				accordeon.find($(this).data('accordeon')).show();
 			}
-			
+
 		} else {
-			if(!$(this).is(":hidden")){
+			if (!$(this).is(":hidden")) {
 				$(this).removeClass('accordeon-open');
 				accordeon.find($(this).data('accordeon')).slideUp(300);
 			}
@@ -488,7 +481,7 @@ $(document).ready(function () {
 			asNavFor: $('.cdg__pv-list'),
 			infinite: false,
 		});
-		if(widthSc > 650){
+		if (widthSc > 650) {
 			$('.cdg__pv-list').slick({
 				speed: 300,
 				slidesToShow: 4,
@@ -500,8 +493,7 @@ $(document).ready(function () {
 				infinite: false,
 				vertical: true,
 			});
-		}
-		else if(widthSc < 450) {
+		} else if (widthSc < 450) {
 			$('.cdg__pv-list').slick({
 				speed: 300,
 				slidesToShow: 3,
@@ -513,8 +505,7 @@ $(document).ready(function () {
 				infinite: false,
 				vertical: false,
 			});
-		}
-		else{
+		} else {
 			$('.cdg__pv-list').slick({
 				speed: 300,
 				slidesToShow: 4,
@@ -528,7 +519,7 @@ $(document).ready(function () {
 			});
 		}
 
-	
+
 	}
 	setSliderCard();
 	$(window).on('resize', function () {
@@ -539,8 +530,8 @@ $(document).ready(function () {
 	});
 
 	/*слайдеры в табах карточка*/
-	function getSettingsGalBig(pvGal){
-		
+	function getSettingsGalBig(pvGal) {
+
 		return {
 			speed: 300,
 			arrows: false,
@@ -550,33 +541,33 @@ $(document).ready(function () {
 			fade: true,
 		};
 	}
-	function getSettingsGalPv(bigGal,pvGal){
+
+	function getSettingsGalPv(bigGal, pvGal) {
 		widthSc = $(window).width();
-		if(widthSc > 991){
+		if (widthSc > 991) {
 			return {
 				speed: 300,
 				slidesToShow: 4,
 				focusOnSelect: true,
-				asNavFor: bigGal, 
+				asNavFor: bigGal,
 				prevArrow: pvGal.parent().find('.cdtgal__pv-arr.l'),
 				nextArrow: pvGal.parent().find('.cdtgal__pv-arr.r'),
 				vertical: true,
 				infinite: false,
 			};
-		}
-		else{
+		} else {
 			return {
 				speed: 300,
 				slidesToShow: 4,
 				focusOnSelect: true,
-				asNavFor: bigGal, 
+				asNavFor: bigGal,
 				prevArrow: pvGal.parent().find('.cdtgal__pv-arr.l'),
 				nextArrow: pvGal.parent().find('.cdtgal__pv-arr.r'),
 				vertical: false,
 				infinite: false,
 			};
 		}
-		
+
 	}
 	$('.cdt__gallery').each(function () {
 		const bigGal = $(this).find('.cdtgal__big-list');
@@ -597,50 +588,48 @@ $(document).ready(function () {
 	/*табы-слайдеры для мобильной версии  в карточке*/
 	const icleft = $('.card__tabs .cdt__dopdata-tabs .tab-list i.left');
 	const icright = $('.card__tabs .cdt__dopdata-tabs .tab-list i.right');
-	icright.on('click', function(){
+	icright.on('click', function () {
 		$curr = $(this).parent().find('.active').nextAll('button:not(.tab-disabled)').first();
-		
 
-		if($curr.length > 0){
+
+		if ($curr.length > 0) {
 			$curr.trigger('click');
 			icleft.removeClass('disabled');
 		}
-		if($curr.next().is('i')){
+		if ($curr.next().is('i')) {
 			icright.addClass('disabled');
 		}
 	});
-	icleft.on('click', function(){
+	icleft.on('click', function () {
 		$curr = $(this).parent().find('.active').prevAll('button:not(.tab-disabled)').first();
-		if($curr.length > 0){
+		if ($curr.length > 0) {
 			$curr.trigger('click');
 			icright.removeClass('disabled');
 		}
-		if($curr.prev().is('i')){
+		if ($curr.prev().is('i')) {
 			icleft.addClass('disabled');
 		}
 	});
-		/*табы-слайдеры для периода в фильтре*/
-		const periodBox = $('.crc__period-tag ul');
-		const icleftp = $('.crc__period-tag i.left');
-		const icrightp = $('.crc__period-tag i.right');
-		icrightp.on('click', function(){
-			$curr = $(this).parent().find('.active').removeClass('active').nextAll('li').first();
-			if($curr.length > 0){		
-				$curr.addClass('active');
-			}
-			else{
-				periodBox.find('li').first().addClass('active');
-			}
-		});
-		icleftp.on('click', function(){
-			$curr = $(this).parent().find('.active').removeClass('active').prevAll('li').first();
-			if($curr.length > 0){		
-				$curr.addClass('active');
-			}
-			else{
-				periodBox.find('li').last().addClass('active');
-			}
-		});
+	/*табы-слайдеры для периода в фильтре*/
+	const periodBox = $('.crc__period-tag ul');
+	const icleftp = $('.crc__period-tag i.left');
+	const icrightp = $('.crc__period-tag i.right');
+	icrightp.on('click', function () {
+		$curr = $(this).parent().find('.active').removeClass('active').nextAll('li').first();
+		if ($curr.length > 0) {
+			$curr.addClass('active');
+		} else {
+			periodBox.find('li').first().addClass('active');
+		}
+	});
+	icleftp.on('click', function () {
+		$curr = $(this).parent().find('.active').removeClass('active').prevAll('li').first();
+		if ($curr.length > 0) {
+			$curr.addClass('active');
+		} else {
+			periodBox.find('li').last().addClass('active');
+		}
+	});
 
 
 	/*tooltip для развертки авто*/
@@ -658,6 +647,61 @@ $(document).ready(function () {
 		$('.tooltip').css('left', e.pageX);
 		$('.tooltip').css('top', e.pageY);
 	});
+
+	
+	/*Поиск*/
+	const searchBox = $('.cars_search-box');
+	$('.cars__search input').on('focus', function(){
+		$(this).attr('placeholder', 'Введите не менее 4 символов ...');
+		$(this).parent().addClass('active');
+
+	});
+	$('.cars__search input').on('blur', function(){
+		$(this).attr('placeholder', 'Поиск по VIN или №лота ...');
+		$(this).parent().removeClass('active');
+	});
+	$('.cars__search input').keyup(function(event){
+		if(event.keyCode == 13){
+			$(this).trigger('input');
+		}
+	});
+	$('.cars__search input').on('input', function(){
+		const val = $(this).val();
+		if(val.length >=4){
+			$.post('/', '' , function (data) {
+				if(!searchBox.hasClass('active')){
+					searchBox.fadeIn(200).addClass('active');
+					searchBox.after('<div class="search__layout"></div>');
+					searchBox.next('.search__layout').fadeIn(200);
+					$('.search__layout').on('click', function(){
+						searchBox.fadeOut(200).removeClass('active');
+						$('.search__layout').fadeOut(200).remove();
+					});
+				}
+			});
+		}
+		else{
+			searchBox.fadeOut(200).removeClass('active');
+			$('.search__layout').fadeOut(200).remove();
+		}
+	});
+	$('.cs__result-item').on('click', function(){
+		const url = $(this).find('a').attr('href');
+		document.location.href = url;
+	});
+	/*поиск мобильная*/
+	$('.crtop__btn-search').on('click', function () {
+
+		searchBox.addClass('active');
+		searchBox.find('input').focus();
+	});
+
+	$('.cs__close').on('click', function(){
+		searchBox.removeClass('active');
+		searchBox.find('.cars_search-ajax').remove();
+		searchBox.find('input').val('');
+	});
+
 
 });
 /*правильное отображение модальных окон на мобильных устройствa*/

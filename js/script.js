@@ -358,6 +358,7 @@ $(document).ready(function () {
 		tags: true,
 		dropdownCssClass: "select-multiple",
 	});
+
 	/*Показать форму Адрес проживания */
 	$('#address-check').on('change', function () {
 		if ($(this).is(":checked")) {
@@ -702,6 +703,20 @@ $(document).ready(function () {
 		searchBox.find('input').val('');
 	});
 
+	/*Редактирование сохраненных поисков*/
+	searchesEdit();
+	$('.schbox input').on('change', function(){
+		searchesEdit();
+	});
+
+	/*аккордеон для комплектации ДОБАВЛЕНИЕ ЛОТА - мобильная версия*/
+	$('.lt__form-litem .lt__form-litem-title').on('click', function () {
+		if ($(window).width() <= 650) {
+			$(this).next('.lt__form-litem-inputs').toggleClass('open');
+			$(this).toggleClass('open');
+		}
+	});
+
 
 });
 /*правильное отображение модальных окон на мобильных устройствa*/
@@ -767,4 +782,19 @@ function formatPrice(n) {
 	n += "";
 	n = new Array(4 - n.length % 3).join("U") + n;
 	return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+}
+
+function searchesEdit(){
+	const countSearches = $('.schbox input:checked').length;
+	if(countSearches > 1){
+		$('.schbox .schitem-edit').addClass('disabled');
+	}
+	else if(countSearches === 0){
+		$('.schbox .schitem-edit').addClass('disabled');
+		$('.schbox .schitem-delete').addClass('disabled');
+	}
+	else{
+		$('.schbox .schitem-edit').removeClass('disabled');
+		$('.schbox .schitem-delete').removeClass('disabled');
+	}
 }

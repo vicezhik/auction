@@ -411,12 +411,10 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                 <div class="critem__top">
           
                     <a class="critem__top-bidsall icon-bids-all" href=""></a>
-                    <div class="critem__imgs css-loader7">
+                    <div class="critem__imgs">
 
-                        <div class="critem__imgs-list">
-                            <img src="/i/cars/car1.jpg" alt="">
-                            <img src="/i/cars/car2.jpg" alt="">
-                            <img src="/i/cars/car1.jpg" alt="">
+                        <div class="critem__imgs-list css-loader7 ">
+      
                         </div>
                     </div>
                 </div>
@@ -486,10 +484,8 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     <a class="critem__top-bidsall icon-bids-all" href=""></a>
                     <div class="critem__imgs">
 
-                        <div class="critem__imgs-list">
-                            <img src="/i/cars/car1.jpg" alt="">
-                            <img src="/i/cars/car2.jpg" alt="">
-                            <img src="/i/cars/car1.jpg" alt="">
+                        <div class="critem__imgs-list css-loader8">
+                   
                         </div>
                     </div>
                 </div>

@@ -253,8 +253,8 @@ $(document).ready(function () {
 
 	/*календарь*/
 	$('.crc__week div.haslots').on('click', function () {
-		$('.crc__week  div').removeClass('active');
-		$(this).addClass('active');
+		$('.crc__week  div').removeClass('show-active');
+		$(this).addClass('show-active');
 	});
 
 	/*слайдер изображений в листинге*/

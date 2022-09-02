@@ -97,11 +97,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/include/head_auth.php';
                     
                   
                 </div>  <div class="crc__info">
-                        <div class="crc__date">9 февраля</div>
+                        <div class="crc__date"><span class="num">9</span> февраля, <span>ПН</span></div>
                         <ul>
-                            <li class="active"><span>276</span> авто на открытых торгах</li>
-                            <li><a href=""><span>34</span> авто на закрытых торгах</a></li>
-                            <li><span>12</span> авто на экспресс торгах</li>
+                            <li class="active"><span class="num">276</span> <span class="text">  авто на открытых торгах</span></li>
+                            <li><a href="" data-tooltip="Перейти к лотам"><span class="num">34</span><span class="text"> авто на закрытых торгах</span><i class="icon-link"></i></a></li>
+                            <li><span class="num">12</span><span class="text"> авто на экспресс торгах</span></li>
                         </ul>
                     </div>
 

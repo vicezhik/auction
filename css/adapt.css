@@ -55,6 +55,10 @@
     h1 {
         font-size: 32px;
         margin-bottom: 20px;
+        
+    }
+    .card__top h1{
+        min-width: 50%;
     }
 
     ul.breadcrumbs {
@@ -3143,8 +3147,10 @@ ul.breadcrumbs li a:hover {
     color: #1F3A60;
     font-weight: 500;
 }
-
-.crc__days .haslots:not(.active):hover:after {
+.crc__info ul li a:hover span.text{
+    text-decoration: underline;
+}
+.crc__days .haslots:not(.active):not(.show-active):hover:after {
     content: "";
     top: -3px;
     position: absolute;
@@ -3157,15 +3163,21 @@ ul.breadcrumbs li a:hover {
 
 }
 
-.cars_filter_short .crc__days .haslots:not(.active):hover:after {
-    content: "";
+.cars_filter_short .crc__days .haslots:not(.active):not(.show-active):hover:after {
+   /* content: "";
     width: 100%;
     line-height: 35px;
     margin-bottom: 0;
     margin-left: 0;
     height: 100%;
     border-radius: 34px;
-    top: -1px;
+    top: -1px;*/
+    content: "";
+    width: 32px;
+    height: 32px;
+    border-radius: 34px;
+    bottom: 4px;
+    top: auto;
 }
 
 .crf__save-search-it button:hover {

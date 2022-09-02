@@ -11,8 +11,17 @@
 }
 
 
-.icon-search-page:before {
+.icon-sort-desc:before {
+    content: "\e955";
+  }
+  .icon-sort-asc:before {
+    content: "\e956";
+  }
+  .icon-search-page:before {
     content: "\e952";
+  }
+  .icon-link:before {
+    content: "\e957";
   }
   .icon-uncheck:before {
     content: "\e94e";
@@ -2911,6 +2920,14 @@ ul.breadcrumbs li .icon-home {
     color: #3A9C3E;
     cursor: pointer;
 }
+.crc__days .haslots:not(.active) span:before{
+    color: #1F3A60!important;
+    font-weight: 400;
+}
+
+.crc__week div:nth-child(7):not(.active):not(.disabled) span:before, .crc__week div:nth-child(6):not(.active):not(.disabled) span:before{
+    color: #D4564F!important;
+}
 .crc__days .haslots a{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2940,9 +2957,25 @@ ul.breadcrumbs li .icon-home {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: #5D7592;
+    background: #1F3A60;
     display: block;
 }
+.crc__days .show-active span {
+    color: #fff;
+    font-weight: 500;
+    z-index: 3;
+}
+.crc__days .show-active:after{
+    content: "";
+    width: 38px;
+    height: 38px;
+    border-radius: 34px;
+    bottom: 4px;
+    top: -3px;
+    background: #5D7592;
+    position: absolute;
+}
+
 
 .crc__info {
     padding: 0 16px;
@@ -2950,9 +2983,11 @@ ul.breadcrumbs li .icon-home {
 }
 
 .crc__date {
-    font-size: 20px;
+    font-size: 14px;
 }
-
+.crc__date span {
+    font-size: 16px;
+}
 .crc__info ul {
     font-size: 14px;
     color: #5D7592;
@@ -2961,21 +2996,23 @@ ul.breadcrumbs li .icon-home {
 }
 
 .crc__info ul li {
-    margin: 12px 0;
+    margin: 10px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-.crc__info ul li a{display: -webkit-box;display: -ms-flexbox;display: flex;}
+.crc__info ul li a{display: -webkit-box;display: -ms-flexbox;display: flex;color: #1F3A60;
+    font-weight: 500;}
 .crc__info ul li:last-child {
     margin-bottom: 0;
 }
 
-.crc__info ul li span {
-    font-size: 20px;
-    font-weight: 500;
+.crc__info ul li span.num {
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 7px;
     color: #1F3A60;
-    display: -webkit-inline-box;
+    /*display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     min-width: 62px;
@@ -2984,9 +3021,14 @@ ul.breadcrumbs li .icon-home {
     justify-content: flex-end;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    align-items: center;*/
+}
+.crc__info ul li a i{
+font-size: 16px;
+margin-left: 6px;
 }
 
+/*
 .crc__info ul li span:after {
     content: "";
     width: 6px;
@@ -2999,7 +3041,7 @@ ul.breadcrumbs li .icon-home {
 
 .crc__info ul li.active span:after {
     background: #3A9C3E;
-}
+}*/
 
 .crfilter {
     -webkit-box-flex: 1;
@@ -3177,7 +3219,7 @@ ul.breadcrumbs li .icon-home {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    line-height: 32px;
+    line-height: 30px;
     position: relative;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -3359,12 +3401,9 @@ ul.breadcrumbs li .icon-home {
     content: "ВС";
 }
 
-.cars_filter_short .crc__date {
-    display: none;
-}
 
 .cars_filter_short .crc__info ul {
-    padding-top: 7px;
+    /*padding-top: 7px;*/
 }
 
 .cars_filter_short .crc__days .active:after {
@@ -3374,7 +3413,7 @@ ul.breadcrumbs li .icon-home {
     line-height: 35px;
     height: 100%;
     border-radius: 34px;
-
+    background: #5D7592;
 }
 
 .cars_filter_short .crc__week div.active:before {
@@ -3388,7 +3427,11 @@ ul.breadcrumbs li .icon-home {
     z-index: 2;
     bottom: 5px;
 }
-
+.cars_filter_short .crc__days .show-active:after {
+    width: 32px;
+    height: 32px;
+    top: auto;
+}
 .cars_filter_short .crc__dopnav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3434,15 +3477,6 @@ ul.breadcrumbs li .icon-home {
     font-size: 16px;
 }
 
-.crtop__sort>div.active {
-    color: #3A9C3E
-}
-
-.crtop__sort>div.desc span {
-    -webkit-transform: rotate(-180deg);
-    -ms-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-}
 
 .crtop .crtop__sort-mob {
     margin-top: 20px;
@@ -3464,7 +3498,19 @@ ul.breadcrumbs li .icon-home {
 .crtop__sort-mob-val:after {
     content: "\e941";
 }
-
+.crtop__sort .desc .ic-b:before{
+    content:"\e955";
+    margin-left: 5px;
+    color: #5D7592;
+}
+.crtop__sort .asc .ic-b:before{
+    margin-left: 5px;
+    content:"\e956";
+    color: #5D7592;
+}
+.crtop__sort>div.active, .crtop__sort>div.active .ic-b:before {
+    color: #3A9C3E
+}
 .cts__form {
     font-size: 14px;
     display: -webkit-box;
@@ -6678,6 +6724,25 @@ ul.breadcrumbs li .icon-home {
     font-size: 20px;
 }
 
+
+.icon-vin-success {
+    color: #3A9C3E;
+    font-size: 23px;
+}
+
+.icon-vin-error {
+    color: #811B18;
+    font-size: 23px;
+}
+
+.icon-vin-default {
+    color: #5D7592;
+    font-size: 23px;
+}
+
+.icon-time-open:before {
+    content: "\e951";
+}
 #mmap {
     padding: 22px;
 }
@@ -7633,51 +7698,4 @@ font-size: 16px;
 }
 .lt__scan-desc li span.lt__scan-desc-red{
     background-color:#FF8380;
-}
-
-.css-loader {
-    -webkit-animation: Post_postImageLoader__1lArj 1.5s linear infinite;
-    -moz-animation: Post_postImageLoader__1lArj 1.5s linear infinite;
-    animation: Post_postImageLoader__1lArj 1.5s linear infinite;
-}
-
-
-@-webkit-keyframes Post_postImageLoader__1lArj{0%{background-color:rgba(0,0,0,.05)}50%{background-color:rgba(0,0,0,.11)}to{background-color:rgba(0,0,0,.05)}}
-@-moz-keyframes Post_postImageLoader__1lArj{0%{background-color:rgba(0,0,0,.05)}50%{background-color:rgba(0,0,0,.11)}to{background-color:rgba(0,0,0,.05)}}
-@keyframes Post_postImageLoader__1lArj{0%{background-color:rgba(0,0,0,.05)}50%{background-color:rgba(0,0,0,.11)}to{background-color:rgba(0,0,0,.05)}}
-
-.css-loader2{
-    background: rgba(0,0,0,.05) no-repeat center;
-    background-image: url(/i/load/814.svg);
-
-}
-.css-loader3{
-    background: rgba(0,0,0,.05) no-repeat center;
-    background-image: url(/i/load/4.svg);
-
-}
-.css-loader4{
-    background: rgba(0,0,0,.05) no-repeat center;
-    background-image: url(/i/load/6.svg);
-
-}
-.css-loader5{
-    background: rgba(0,0,0,.05) no-repeat center;
-    background-image: url(/i/load/91.svg);
-
-}
-.css-loader6{
-    background: rgba(0,0,0,.05) no-repeat center;
-    background-image: url(/i/load/331.svg);
-
-}
-.css-loader7{
-    background: rgba(0,0,0,.05) no-repeat center;
-    background-image: url(/i/load/785.svg);
-
-}
-.css-loader8{
-    background: rgba(0,0,0,.05) no-repeat center;
-    background-image: url(/i/load/771.svg);
-
 }

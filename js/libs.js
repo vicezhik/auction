@@ -11,7 +11,9 @@ const tooltip = new (function() {
   };
 
   this.show = function(event) {
+    if(!event.target.dataset.tooltip) event.target.dataset.tooltip = event.target.parentNode.dataset.tooltip;
     node.innerHTML = event.target.dataset.tooltip;
+
     node.classList.add(event.target.dataset.tpclass);
     node.classList.remove('hidden');
   };
